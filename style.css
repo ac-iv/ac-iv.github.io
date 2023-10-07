@@ -28,11 +28,8 @@ font-size: 2.0vw;
 
 
 }
-.menuitems p:hover {
-    color: blue;
-    text-decoration: underline;
-    font-weight: bold;
-}
+
+
 a {
     text-decoration: none;
     color: black;
@@ -54,11 +51,11 @@ a {
     border-right: solid black 1px;
     border-left: solid black 1px;
     border-bottom: solid black 0px;
-   
+
     vertical-align: middle;
     text-align: center;
     align-content: center;
-   
+  
 }
 
 .table {
@@ -80,9 +77,11 @@ ul#horizontal-list {
 ul#horizontal-list li {
      display: inline;
     font-family: 'Courier New', Courier, monospace;
-    font-size: small;         
+    font-size: 1.2vw;         
     display: table-cell;
-    vertical-align: middle
+    vertical-align: middle;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
  ul#horizontal-list a {
@@ -109,8 +108,12 @@ ul#horizontal-list li:hover {
     margin-top: -8%;
     margin-left: 12%;
     margin-right: 12%;
-	height: 75%;
-
+	height: fit-content;
+    min-width: fit-content;
+}
+.contents svg {
+    text-align: center;
+    margin: auto;
 }
 footer{
     
@@ -125,7 +128,7 @@ footer{
     border-bottom: solid black 1px;
     border-right: solid black 1px;
     border-left: solid black 1px;
-    margin-bottom: 12%;
+    margin-bottom: 18%;
 }
 footer img {
     padding-right: 30px;
