@@ -110,6 +110,9 @@ ul#horizontal-list li:hover {
     margin-right: 12%;
 	height: fit-content;
     min-width: fit-content;
+   
+    vertical-align:top;
+    
 }
 .contents svg {
     text-align: center;
@@ -128,11 +131,10 @@ footer{
     border-bottom: solid black 1px;
     border-right: solid black 1px;
     border-left: solid black 1px;
-    margin-bottom: 18%;
+    margin-bottom: 400px;
 }
 footer img {
-    padding-right: 30px;
-    padding-bottom: 15px;
+    padding-right: 10px;
+    padding-bottom: 5px;
 
 }
-
