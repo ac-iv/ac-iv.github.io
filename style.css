@@ -121,7 +121,6 @@ ul#horizontal-list li:hover {
 footer{
     
     text-align: right;
-    
     border-top: solid rgb(255, 255, 255) 0px;
     background-color: white;
     min-width: fit-content;
@@ -131,7 +130,7 @@ footer{
     border-bottom: solid black 1px;
     border-right: solid black 1px;
     border-left: solid black 1px;
-    margin-bottom: 400px;
+    margin-bottom: 10%;
 }
 footer img {
     padding-right: 10px;
