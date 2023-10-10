@@ -35,7 +35,7 @@ a {
     color: black;
 }
 .menuitems a:hover {
-    color: blue;
+    color: #E25959;
     text-decoration: underline;
     font-weight: bold;
 }
