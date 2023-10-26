@@ -45,28 +45,41 @@ header{
 .head1{
     grid-column: 1;
     grid-row: 1;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    text-align: center;
 }
 .head2{
     grid-column: 2;
     grid-row: 1;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    text-align: center;
 
-    
 }
 .logomark{
     grid-column: 3;
     grid-row: 1;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    text-align: center;
 
 }
 .head3{
     grid-column: 4;
     grid-row: 1;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    text-align: center;
 
 }
 .head4{
     grid-column: 5;
     grid-row: 1;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    text-align: center;
 
-    
 }
 header a { 
     text-align: center;
@@ -101,6 +114,13 @@ main h2 {
    
     padding-right: 3%;
     padding-bottom: -2%;
+   }
+   .wrapprod2 {
+    float: left; 
+    margin-top: -.35rem;
+   margin-left: -.3rem;
+    padding-right:2.5%;
+    padding-bottom: -1.5%;
    }
    main  .wraprightp {
     float: right; 
@@ -574,4 +594,58 @@ h4{
     justify-content: right;
     align-items: right;
     float: right;
+}
+
+#widgetgrid{
+    display: grid;
+    margin: 1rem;
+    margin-top: 1rem;
+    grid-template-columns: (10,10%);
+    grid-template-rows: repeat(fit-content);
+    border: black 1px solid;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.widgethead{
+    margin-left: 1.2rem;
+    grid-column: 1/2;
+    grid-row: 1;
+    margin-right: 1.2rem;
+
+}
+.widgethead img{
+    float: left;
+    margin-right: 1rem;
+    grid-row: 1;
+}
+.widgetnexttxt{
+    grid-row: 3;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+
+}
+.feedsite{
+    display: grid;
+    margin: 1rem;
+    margin-top: 1rem;
+    grid-template-columns: (10,10%);
+    grid-template-rows: repeat(fit-content);
+    border: black 1px solid;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-items: center;
+}
+.feedsite img{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.feedsite p{
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+}
+.feedhead {
+    margin-top: .5rem;
+    margin: 1rem;
 }
