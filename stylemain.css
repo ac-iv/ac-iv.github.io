@@ -649,3 +649,6 @@ h4{
     margin-top: .5rem;
     margin: 1rem;
 }
+footer .socials img:hover{
+    opacity: 40%;
+}
