@@ -4,7 +4,7 @@ p, h2 {
 
 
 
-html {
+head {
     padding-left: 12%;
     padding-right: 12%;
     padding-top: 4%;
@@ -62,12 +62,34 @@ h3{
     line-height: 180%;
     text-transform: capitalize;
     text-align: center;
+    font-size: 200%;
 }
 .footercenter{
    padding-left: 15%;
    padding-right: 15%;
 }
+button{
+    padding: 1%;
+    padding-left:2%;
+    padding-right: 2%;
+    margin-right:2% ;
+    background-color: white;
+    border: black solid 1px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+    font-size: smaller;
+    text-align: center;
+    color: black;
+    border-radius: 0%;
+    border-radius: 0%;
+}
+button:hover{
+    color: blue;
+}
 
+a:hover{
+    color: blue;
+}
 .password{
     text-align: center;
 align-items: center;
@@ -121,3 +143,20 @@ a, .capitalize{
 a:hover{
     color: blue;
 }
+.icon-container{
+    vertical-align: middle;
+    align-items: center;
+    text-align: center;
+}
+.icon-container a{
+    padding: 2%;
+}
+.icon-container a:hover{
+opacity: 50%;}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 1%;
+   
+ }
