@@ -1,0 +1,29 @@
+html {
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding-top: 10%;
+}
+
+a {
+    color: red;
+}
+
+header {
+    color: white;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: gray;
+}
+
+main {
+    margin-top: 20px;
+    color: white;
+}

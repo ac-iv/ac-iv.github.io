@@ -7,43 +7,51 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Home - Avelino J. Cortina IV</title>
+        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="stylehome.css">
-        <link rel="icon" href="IMG/logoicontrans.png">  
+        <link rel="stylesheet" href="style.css">
+        <style>
+            /* Add CSS style for centering buttons */
+            .centered-buttons {
+                text-align: center;
+            }
 
+            .centered-buttons button {
+                margin: 5px; /* Adjust margin as needed */
+            }
+        </style>
+        <script>
+            function checkPassword() {
+                var password = document.getElementById("password").value;
+                if (password === "samba") {
+                    window.location.href = "home.html"; // Redirect to home.html if password is correct
+                } else {
+                    alert("Incorrect password. Please try again."); // Show an error message if password is incorrect
+                }
+            }
+        </script>
     </head>
-<div class="homeflex">
     <body>
-   
-    
-        <img src="IMG/index page.png" alt="Index Page" width="70%">
-    
-
-<div class="menuitems">
-<p>
-    <a href="index.html"> < Home</a> 
-</p>
-<p>
-   <a href="AboutMe.html"> < About Me</a> 
-</p>
-<p>
-    <a href="productdesign.html"> < Product Design</a> 
-</p>
-<p>
-    <a href="graphicdesign.html"> < Graphic Design</a> 
-</p>
-<p>
-    <a href="photo.html"> < Photography</a> 
-</p>
-<p>
-    <a href="websoftwaredesign.html"> < Web + Software Design</a>
-</p>
-</div>        
-
-    
+        <footer>
+            <div class="footerhome">           
+                 <img src="img/Asset 7@4x.png" width="20%">
+            </div>
+        </footer>
+        <header>
+          
+            <!-- Add three buttons with a common class -->
+            <div class="centered-buttons">
+                
+                    <p>
+                        <a href="work.html">work</a>
+                        <a href="contact.html">contact me</a> 
+                        <a href="aboutme.html">about me</a>
+                       
+                    </p>
+                
+            </div>
+        </header>
+        
     </body>
-</div>
-    
 </html>

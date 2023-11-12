@@ -1,0 +1,50 @@
+let currentSlide = 0;
+
+function showSlide(n) {
+    const slides = document.querySelectorAll('.slide');
+    const slideText = document.getElementById('slideText');
+
+    if (n >= slides.length) {
+        currentSlide = 0;
+    } else if (n < 0) {
+        currentSlide = slides.length - 1;
+    } else {
+        currentSlide = n;
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+    }
+
+    slides[currentSlide].style.display = 'block';
+
+    // Update the text based on the current slide
+    switch (currentSlide) {
+        case 0:
+            slideText.innerText = "This was the primary design for my Ad campaign. The RealReal is a Luxury reseller, and this Ad enhances the fact that Luxury means more than designer clothing.";
+            break;
+        case 1:
+            slideText.innerText = "This Ad is a collage style layout which is meant to capture a similar message as the previous Ad, that TRR is a consignment for anything luxury, more than just clothing.";
+            break;
+        case 2:
+            slideText.innerText = "Similar to the Ad above, yet this banner features a SMEG Dulce & Gabanna water kettle, a unique, yet luxurious item.";
+            break;
+        case 3:
+            slideText.innerText = "This Ad is an abstraction of the previous furniture ad, featuring a Chaise Lounge designed by Le Corbusier";
+            break;
+        case 4:
+            slideText.innerText = "I hesitated to include this in the examples, mainly because its style leans towards the more classic side, which might differ from the previously showcased styles. Nevertheless, I appreciate the color palette and the strategic placement of elements.";
+            break;
+        // Add more cases if you have more slides
+    }
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+document.addEventListener('DOMContentLoaded', showSlide(currentSlide));

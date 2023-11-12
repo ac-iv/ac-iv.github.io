@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Send2Lino</title>
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <p>
+            <a href="index.html">home</a><br>
+            <br>
+            <a href="aboutme.html">about me</a><br>
+            <br>
+            <a href="work.html">work</a>
+        </p>
+    </header>
+
+    <form id="sheetdb-form">
+        <h2>send a message to avelino:</h2>
+        <h4 id="datetime"></h4>
+        <script src="dateandtime.js"></script>
+        <p> 
+            Name: <br>
+            <br>
+            <textarea style="width: 97%; height: 18px;" name="name" placeholder="Enter your name"></textarea>
+            <br>
+            <br>
+            Email: <br><br>
+            <textarea style="width: 97%; height: 18px;" type="email" name="email" placeholder="Enter your email" required></textarea>
+            <br>
+            <br>
+            Message: <br><br>
+            <textarea style="width: 97%; height: 150px;" name="message" placeholder="Enter your message" required></textarea>
+        </p>
+        <br>
+        <button type="button" class="cancelbtn" id="cancelBtn">Cancel</button>
+        <button type="button" class="signupbtn" id="submitButton">Send</button>
+    </form>
+<style>
+footer {
+    text-align: right;
+    margin-right: .5rem;
+    margin-top: 1rem; /* Adjust margin-top as needed */
+}
+</style>
+    <script>
+        emailjs.init("user_rQB-Hyd7r6vFbW--z");
+
+        var form = document.getElementById('sheetdb-form');
+        var cancelBtn = document.getElementById('cancelBtn');
+        var submitButton = document.getElementById('submitButton');
+
+        cancelBtn.addEventListener('click', function() {
+            var confirmation = confirm("Are you sure you want to cancel? This will delete your message.");
+            if (confirmation) {
+                form.reset();
+            }
+        });
+
+        submitButton.addEventListener("click", function() {
+            form.submit(); // Trigger form submission
+        });
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            submitButton.disabled = true; // Disable the submit button
+
+            emailjs.sendForm("service_bjpk6ho", "template_kbtfjmi", form)
+                .then(function(response) {
+                    alert('Message sent successfully!');
+                    form.reset(); // Reset the form after successful submission
+                    submitButton.disabled = false; // Enable the submit button
+                }, function(error) {
+                    console.log("Failed to send email:", error);
+                    alert('Failed to send message. Please try again.'); // Display an error message
+                    submitButton.disabled = false; // Enable the submit button in case of failure
+                });
+        });
+    </script>
+<br> <br>
+<footer>
+    <img src="img/barcode.jpg" width="200rem">
+    <br>
+    <br>
+    <br>
+</footer>
+</body>
+</html>

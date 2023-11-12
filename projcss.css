@@ -1,0 +1,118 @@
+p,
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+html {
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 4%;
+}
+
+header {
+    font-family: 'Courier New', Courier, monospace;
+text-align: center;
+align-items: center;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding-inline: 13%;
+    text-align: center;
+}
+
+a:hover {
+    color: blue;
+}
+
+.carousel-container {
+    margin: 20px auto;
+    width: 57rem;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    width: 100%;
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.project-details {
+    width: 50rem;
+    margin: 20px auto;
+margin-top: 5%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: .125%;
+    padding-bottom: .125%;
+    background-color: #f4f4f4;
+    
+}
+
+footer {
+    margin-top: 4%;
+    text-transform: capitalize;
+}
+
+.carousel-btn {
+    font-size: 1.5rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-btn:hover {
+    background-color: #ddd;
+}
+
+#prevBtn {
+    justify-self: start;
+    margin-right: 20%;
+}
+
+#nextBtn {
+    justify-self: end;
+    margin-left: 20%;
+}
+
+button {
+    border: black solid 1px;
+    border-radius: 0%;
+}
+
+.text-box {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#slideText {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: -1%;
+    margin-left: 17%;
+    margin-right: 17%;
+    margin-bottom: 2%;
+    padding: 10px;
+    font-size: medium;
+    background-color: #f4f4f4;
+
+}
+section .slide{
+    height: fit-content;
+    
+}

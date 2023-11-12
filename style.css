@@ -1,0 +1,142 @@
+p, h2 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+html {
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 4%;
+    text-transform: lowercase;
+}
+
+#footernorm {
+    text-align: right;
+    padding-top: 6%;
+}
+#txt1{
+    vertical-align: top;
+    vertical-align: text-top;
+    
+}
+
+textarea
+{ border: 1px solid black;
+
+    vertical-align: top;
+    height: 100%; /* Set the height to 100% */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    padding: 10px;
+    border-radius: 0%;
+}
+p{
+    font-weight: bold;
+}
+h4{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+}
+
+
+
+f
+h2{
+    font-size: larger;
+   
+}
+header{
+    text-align: right;
+    
+    
+}
+header a{
+    color: black;
+}
+h3{
+    text-align: justify;
+    font-family:'Courier New', Courier, monospace;
+    font-weight:lighter;
+    text-transform:lowercase;
+    line-height: 180%;
+}
+.footercenter{
+   padding-left: 15%;
+   padding-right: 15%;
+}
+button{
+    padding: 1%;
+    padding-left:2%;
+    padding-right: 2%;
+    margin-right:2% ;
+    background-color: white;
+    border: black solid 1px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+    font-size: smaller;
+    text-align: center;
+    color: black;
+    border-radius: 0%;
+    border-radius: 0%;
+}
+button:hover{
+    color: red;
+}
+
+a:hover{
+    color: red;
+}
+.password{
+    text-align: center;
+align-items: center;
+align-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+}
+input{
+    border: 1px black solid;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 2.25%;
+    color: red;
+    border-radius: 0%;
+}
+h1{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.footerhome, .centered-buttons{
+    align-items: center;
+    text-align: center;
+}
+.footerhome{
+    margin-bottom: 5%;
+}
+header a{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+h3 img{
+    align-items: center;
+    text-align: center;
+    align-content: center;
+}
+
+.footerme{
+text-align: right ;
+}
+h3 img{
+    height: 20rem;
+    width: auto;
+}
+a, .capitalize{
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+}
+a:hover{
+    color: blue;
+}

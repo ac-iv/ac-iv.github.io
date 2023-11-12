@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Page Template</title>
+    <link rel="stylesheet" href="projcss.css">
+</head>
+
+<body>
+    <header>
+        <a href="work.html">PREVIOUS</a>
+        <a href="work.html">Work</a>
+        <a href="send2lino.html">NEXT</a>
+    </header>
+    <main>
+        <section class="project-details">
+            <h2>The RealReal Web Banner Project</h2>
+            <p>
+                For a Visual Communication class I am taking this Fall (2023), I was tasked to create an array of web banners for a local San Francisco based company. The company I chose was The RealReal. Through the process of creating a variety of web banners for The RealReal, I gained valuable insights into the intricate balance between visual aesthetics and conveying the essence of a San Francisco-based company, fostering a deeper understanding of the complexities of visual communication in the realm of digital design.
+            </p>
+        </section>
+        <section class="carousel-container">
+            <button id="prevBtn" class="carousel-btn" onclick="prevSlide()">❮</button>
+            <div class="carousel">
+                <div class="slide"><img src="img/ps/Artboard 1 (1000x550)@2x.jpg" alt="Image 1"></div>
+                <div class="slide"><img src="img/ps/Artboard 2 (1000x550)@2x.jpg" alt="Image 2"></div>
+                <div class="slide"><img src="img/ps/Artboard 3 (851x315)@2x.jpg" alt="Image 3"></div>
+                <div class="slide"><img src="img/ps/Artboard 4 (851x315)@2x.jpg" alt="Image 4"></div>
+                <div class="slide"><img src="img/ps/Artboard 5 (851x315)@2x.jpg" alt="Image 5"></div>
+            </div>
+            <button id="nextBtn" class="carousel-btn" onclick="nextSlide()">❯</button>
+        </section>
+
+        <!-- New section for the text box -->
+        <section class="text-box">
+            <p id="slideText">Text for Slide 1</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Avelino J. Cortina IV</p>
+    </footer>
+    <script src="realreal.js"></script>
+</body>
+
+</html>
