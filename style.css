@@ -60,33 +60,14 @@ h3{
     font-weight:lighter;
     text-transform:lowercase;
     line-height: 180%;
+    text-transform: capitalize;
+    text-align: center;
 }
 .footercenter{
    padding-left: 15%;
    padding-right: 15%;
 }
-button{
-    padding: 1%;
-    padding-left:2%;
-    padding-right: 2%;
-    margin-right:2% ;
-    background-color: white;
-    border: black solid 1px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: lighter;
-    font-size: smaller;
-    text-align: center;
-    color: black;
-    border-radius: 0%;
-    border-radius: 0%;
-}
-button:hover{
-    color: red;
-}
 
-a:hover{
-    color: red;
-}
 .password{
     text-align: center;
 align-items: center;
