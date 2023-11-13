@@ -22,67 +22,57 @@
     </header>
 
     <form id="sheetdb-form">
-        <h2>send a message to avelino:</h2>
-        <h4 id="datetime"></h4>
-        <script src="dateandtime.js"></script>
-        <p> 
-            Name: <br>
-            <br>
-            <textarea style="width: 97%; height: 18px;" name="name" placeholder="Enter your name"></textarea>
-            <br>
-            <br>
-            Email: <br><br>
-            <textarea style="width: 97%; height: 18px;" type="email" name="email" placeholder="Enter your email" required></textarea>
-            <br>
-            <br>
-            Message: <br><br>
-            <textarea style="width: 97%; height: 150px;" name="message" placeholder="Enter your message" required></textarea>
+        
+        <p>
+            <strong>Date and Time:</strong> <br>
+            <span id="datetime"></span>
+            <script src="dateandtime.js"></script>
         </p>
-        <br>
-        <button type="button" class="cancelbtn" id="cancelBtn">Cancel</button>
-        <button type="button" class="signupbtn" id="submitButton">Send</button>
+        
+        <p>
+            <strong>Email:</strong> <br>
+            <a href="mailto:avelinocortinaiv@mac.com">avelinocortinaiv@mac.com</a>
+        </p>
+        <p>
+            <strong>Text:</strong> <br>
+            <a href="sms:+1858766829">+1858766829</a>
+        </p>
+        <p>
+            <strong>Phone Call:</strong> <br>
+            <a href="tel:+18587668299">+18587668299</a>
+        </p>
+        <p>
+            <strong></strong> <br>
+            <a href="path/to/your/file.pdf" download="Avelino-Cortina-IV.vcf"><strong>Download Contact (click here) </strong></a>
+
+        </p>
     </form>
+
 <style>
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ p, form p {
+    font-weight: lighter;
+}
+
+header a{
+    font-weight: bold;
+text-transform: capitalize;
+}
+
 footer {
     text-align: right;
     margin-right: .5rem;
     margin-top: 1rem; /* Adjust margin-top as needed */
 }
+
+a {
+    text-transform: lowercase;
+}
 </style>
-    <script>
-        emailjs.init("user_rQB-Hyd7r6vFbW--z");
 
-        var form = document.getElementById('sheetdb-form');
-        var cancelBtn = document.getElementById('cancelBtn');
-        var submitButton = document.getElementById('submitButton');
-
-        cancelBtn.addEventListener('click', function() {
-            var confirmation = confirm("Are you sure you want to cancel? This will delete your message.");
-            if (confirmation) {
-                form.reset();
-            }
-        });
-
-        submitButton.addEventListener("click", function() {
-            form.submit(); // Trigger form submission
-        });
-
-        form.addEventListener("submit", function(e) {
-            e.preventDefault();
-            submitButton.disabled = true; // Disable the submit button
-
-            emailjs.sendForm("service_bjpk6ho", "template_kbtfjmi", form)
-                .then(function(response) {
-                    alert('Message sent successfully!');
-                    form.reset(); // Reset the form after successful submission
-                    submitButton.disabled = false; // Enable the submit button
-                }, function(error) {
-                    console.log("Failed to send email:", error);
-                    alert('Failed to send message. Please try again.'); // Display an error message
-                    submitButton.disabled = false; // Enable the submit button in case of failure
-                });
-        });
-    </script>
 <br> <br>
 <footer>
     <img src="img/code.jpg" width="200rem">
