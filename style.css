@@ -81,11 +81,11 @@ button{
     border-radius: 0%;
 }
 button:hover{
-    color: red;
+    color: blue;
 }
 
 a:hover{
-    color: red;
+    color: blue;
 }
 .password{
     text-align: center;
@@ -98,7 +98,7 @@ input{
     border: 1px black solid;
     font-family: 'Courier New', Courier, monospace;
     padding: 2.25%;
-    color: red;
+    color: blue;
     border-radius: 0%;
 }
 h1{
