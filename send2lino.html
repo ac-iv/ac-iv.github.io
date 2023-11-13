@@ -7,7 +7,14 @@
     <title>Avelino J. Cortina IV - Send2Lino</title>
     <link rel="icon" type="image/png" href="img/4x/Asset 8@4x.png">     <link rel="stylesheet" href="projcss.css">
 </head>
-
+<style>
+    .buttoncenter{
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+   
+</style>
 <body>
     <header>
         <a href="realreal.html">PREVIOUS</a>
@@ -33,14 +40,17 @@
                 while fostering a more intimate and tactile connection with the digital world.            </p>
         </section>
         <section class="carousel-container">
-            <button id="prevBtn" class="carousel-btn" onclick="prevSlide()">❮</button>
+
             <div class="carousel">
                 <div class="slide"><img src="img/love1.png" alt="Image 1"></div>
                 <div class="slide"><img src="img/love2.png" alt="Image 2"></div>
                 <div class="slide"><img src="img/love3.png" alt="Image 3"></div>
             
             </div>
-            <button id="nextBtn" class="carousel-btn" onclick="nextSlide()">❯</button>
+            <div class="buttoncenter">
+                <button id="prevBtn" class="carousel-btn" onclick="prevSlide()">❮</button>
+                <button id="nextBtn" class="carousel-btn" onclick="nextSlide()">❯</button>
+            </div>
         </section>
 
         <!-- New section for the text box -->

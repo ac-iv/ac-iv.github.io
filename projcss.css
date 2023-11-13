@@ -1,26 +1,27 @@
-p,
-h2 {
+p, h2 {
     font-family: 'Courier New', Courier, monospace;
 }
 
 html {
-    padding-left: 12%;
-    padding-right: 12%;
-    padding-top: 4%;
+    box-sizing: border-box;
+    padding: 4% 12% 0;
+}
+
+body {
+    margin: 0;
 }
 
 header {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    align-items: center;
 }
 
 header a {
     color: black;
     text-decoration: none;
     font-weight: bold;
-    padding-inline: 13%;
-    text-align: center;
+    padding: 0 13%;
+    display: inline-block;
 }
 
 a:hover {
@@ -29,17 +30,14 @@ a:hover {
 
 .carousel-container {
     margin: 20px auto;
-    width: 57rem;
+    max-width: 100%;
     overflow: hidden;
-    position: relative;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
 }
 
 .carousel {
     display: flex;
     width: 100%;
+    justify-content: center; /* Center the child elements horizontally */
 }
 
 .slide {
@@ -52,10 +50,9 @@ a:hover {
 }
 
 .project-details {
-    width: 57rem; /* Match the carousel container width */
+    max-width: 100%;
     margin: 20px auto;
-    margin-top: 5%;
-    padding: 20px; /* Adjust padding for consistency */
+    padding: 20px;
     background-color: #f4f4f4;
 }
 
@@ -76,18 +73,14 @@ footer {
     background-color: #ddd;
 }
 
-#prevBtn {
-    justify-self: start;
-    margin-right: 20%;
-}
-
+#prevBtn,
 #nextBtn {
-    justify-self: end;
-    margin-left: 20%;
+    margin: 0 10px; /* Adjust the margin as needed */
 }
 
 button {
-    border: black solid 1px;
+    border: white solid 1px;
+    font-family: 'Courier New', Courier, monospace;
     border-radius: 0%;
 }
 
@@ -99,16 +92,36 @@ button {
 #slideText {
     font-size: 1.2rem;
     color: #333;
-    margin-top: -1%;
-    margin-left: 17%;
-    margin-right: 17%;
-    margin-bottom: 2%;
+    margin: 2% 17%;
     padding: 10px;
-    font-size: medium;
     background-color: #f4f4f4;
-    width: 650px;
+    min-width: 300px;
 }
 
 section .slide {
     height: fit-content;
+}
+
+/* Responsive media query for smaller screens */
+@media (max-width: 768px) {
+    html {
+        padding: 4% 6%;
+    }
+
+    header a {
+        padding: 0 5%;
+    }
+
+    #prevBtn,
+    #nextBtn {
+        margin: 0 5px; /* Adjust the margin as needed */
+    }
+
+    .project-details {
+        padding: 10px;
+    }
+
+    #slideText {
+        margin: 2% 5%;
+    }
 }

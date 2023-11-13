@@ -8,7 +8,14 @@
     <title>Avelino J. Cortina IV - The Feed</title>
     <link rel="icon" type="image/png" href="img/4x/Asset 8@4x.png"> 
 </head>
-
+<style>
+    .buttoncenter{
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+   
+</style>
 <body>
     <header>
         <a href="widget.html">PREVIOUS</a>
@@ -24,7 +31,7 @@
                 In my recent web design project, "The Feed," I crafted a social media platform following a given rubric. This was my very first project in CSS and HTML, so it was a big step for me. The homepage featured a dynamic GIF logo, creating an engaging visual experience. I implemented a friends list feature and integrated links to my favorite websites, adding a personalized touch. The project also included an informational page explaining the platform's features and a splash page to capture users' attention. The central feed page displayed media seamlessly, ensuring a user-friendly experience. This project showcased my ability to balance creativity and functionality, resulting in a polished and professional social media platform.           </p>
         </section>
         <section class="carousel-container">
-            <button id="prevBtn" class="carousel-btn" onclick="prevSlide()">❮</button>
+            
             <div class="carousel">
                 
                 <div class="slide"><img src="img/1.png" alt="Image 1"></div>
@@ -32,7 +39,10 @@
                 <div class="slide"><img src="img/3.png" alt="Image 3"></div>
             
             </div>
-            <button id="nextBtn" class="carousel-btn" onclick="nextSlide()">❯</button>
+            <div class="buttoncenter">
+                <button id="prevBtn" class="carousel-btn" onclick="prevSlide()">❮</button>
+                <button id="nextBtn" class="carousel-btn" onclick="nextSlide()">❯</button>
+            </div>
         </section>
 
         <!-- New section for the text box -->
