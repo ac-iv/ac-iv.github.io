@@ -63,15 +63,14 @@ footer {
 
 .carousel-btn {
     font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
     background-color: #fff;
-    border: 1px solid #ddd;
     padding: 10px;
     cursor: pointer;
 }
 
 .carousel-btn:hover {
-    background-color: #ddd;
-}
+color: blue;}
 
 #prevBtn,
 #nextBtn {
