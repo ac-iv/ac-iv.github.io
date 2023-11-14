@@ -84,11 +84,11 @@ button{
     border-radius: 0%;
 }
 button:hover{
-    color: blue;
+    color: #be0000;
 }
 
 a:hover{
-    color: blue;
+    color: #be0000;
 }
 .password{
     text-align: center;
@@ -141,7 +141,7 @@ a, .capitalize{
     text-transform: capitalize;
 }
 a:hover{
-    color: blue;
+    color: #be0000;
 }
 .icon-container{
     vertical-align: middle;
