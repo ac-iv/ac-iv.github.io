@@ -10,17 +10,31 @@
     <title>Avelino J. Cortina IV - About</title>
     <link rel="icon" type="image/png" href="img/4x/Asset 8@4x.png"> 
     <style>
+        h3 {
+            text-align: left; /* Adjust text alignment as needed */
+        }
+
         h3 img {
             float: left;
             margin-right: 20px;
             padding-right: 1rem;
             margin-top: 1rem;
-            min-width: 2px;
+            width: 45%; /* Set a specific width for larger screens */
+            max-width: 100%; /* Ensure the image doesn't exceed its container */
+            height: auto; /* Maintain aspect ratio */
         }
 
         footer {
             text-align: right;
             margin-top: 1rem; /* Adjust margin-top as needed */
+        }
+        
+        @media only screen and (max-width: 600px) {
+            h3 img {
+                float: none; /* Remove float for better mobile layout */
+                margin: 0; /* Remove margins for better mobile layout */
+                width: 100%; /* Make the image full width on smaller screens */
+            }
         }
     </style>
 </head>
@@ -30,7 +44,6 @@
         <p>
             <a href="index.html">home</a><br><br>
             <a href="work.html">my work</a><br><br>
-           
             <a href="contact.html">contact me</a>
         </p>
     </header>
