@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avelino J. Cortina IV - Send2Lino</title>
+    <link rel="icon" type="image/png" href="img/4x/Asset 8@4x.png">     <link rel="stylesheet" href="projcss.css">
+</head>
+<style>
+    .buttoncenter{
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+   h3{
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: -4%;
+   }
+   a{
+    text-decoration: none;
+    color: red;
+   }
+</style>
+<body>
+    <header>
+        <a href="realreal.html">PREVIOUS</a>
+        <a href="work.html">Work</a>
+        <a href="widget.html">NEXT</a>
+    </header>
+    <main>
+        <section class="project-details">
+            <h2>
+Portfolio V1            </h2>
+            <br>
+            <p>
+                In my initial foray into web development, I embarked on the creation of my first major HTML and CSS project – my very own portfolio website. Overflowing with enthusiasm and fueled by the desire to showcase my burgeoning design skills, I poured my creativity into every element of the site. The result was a visually striking and intricate design that, while a testament to my capabilities at the time, proved to be a bit overwhelming and lacked accessibility. 
+                <br><br>
+                Proud of the accomplishment but recognizing the need for a more user-friendly and minimalistic approach, I eventually decided to embark on a redesign journey. The experience with my first portfolio site served as a valuable learning curve, prompting me to prioritize simplicity and accessibility in my subsequent web design endeavors.        </p>
+        </section>
+        <section class="carousel-container">
+            <div class="carousel">
+                <div class="slide"><img src="img/p1.png" alt="Image 1"></div>
+                <div class="slide"><img src="img/p2.png" alt="Image 2"></div>
+                <div class="slide"><img src="img/p3.png" alt="Image 3"></div>
+                <div class="slide"><img src="img/p4.png" alt="Image 4"></div>
+                <div class="slide"><img src="img/p5.png" alt="Image 5"></div>
+            
+            </div>
+            <div class="buttoncenter">
+                <button id="prevBtn" class="carousel-btn" onclick="prevSlide()">❮</button>
+                <button id="nextBtn" class="carousel-btn" onclick="nextSlide()">❯</button>
+            </div>
+        </section>
+
+        <!-- New section for the text box -->
+        <section class="text-box">
+            <p id="slideText">Text for Slide 1</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Avelino J. Cortina IV</p>
+    </footer>
+    <script src="portfolio.js"></script>
+</body>
+
+</html>
