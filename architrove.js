@@ -21,13 +21,13 @@ function showSlide(n) {
     // Update the text based on the current slide
     switch (currentSlide) {
         case 0:
-            slideText.innerText = "The service welcomes users with a straightforward splash screen, prompting for a password. This step is designed to emphasize the essence of personalization, allowing only individuals to whom I've granted the URL access the ability to send messages to me. The QR code provided is an active link to this page, and I affix this code to my personal stationery, communication cards, and other relevant items.";
+            slideText.innerText = "The service welcomes users with a straightforward splash screen, showing a list of blogs, a link for those who have recieved letters, and hyperlinks to other parts of the website.";
             break;
         case 1:
-            slideText.innerText = "The main screen is a simple layout, styled to decrease the mental presence of technology. By adapting a white and black simple screen, I am able to simulate a pen and paper experience.";
+            slideText.innerText = "The contact page is actually modeled after this website, and features the same straightforward information.";
             break;
         case 2:
-            slideText.innerText = "The last screen is the about screen, offering users a description on the service and why it is important to me.";
+            slideText.innerText = "This is an example of a blog post, my first one completed for a family friends home.";
             break;
         
     }
