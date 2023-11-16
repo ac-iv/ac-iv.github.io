@@ -21,10 +21,10 @@ function showSlide(n) {
     // Update the text based on the current slide
     switch (currentSlide) {
         case 0:
-            slideText.innerText = "Splash page with Custom Logo GIF";
+            slideText.innerText = "Logomark";
             break;
         case 1:
-            slideText.innerText = "My feed, displaying my digital footprint in a feed format similar to social media sites.";
+            slideText.innerText = "Full logo";
             break;
         case 2:
             slideText.innerText = "Fictional background story, along with  more styling.";
