@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avelino J. Cortina IV - Font Posters</title>
+    <link rel="icon" type="image/png" href="img/4x/Asset 8@4x.png"> 
+    <link rel="stylesheet" href="projcss.css">
+</head>
+<style>
+    .buttoncenter {
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+   
+    .carousel img {
+        width: 50%;
+        text-align: center;
+        align-items: center;
+        
+    }
+.carousel{
+
+    text-align: center;
+}
+</style>
+<body>
+    <header>
+        <a href="send2lino.html">PREVIOUS</a>
+        <a href="work.html">Work</a>
+        <a href="feed.html">NEXT</a>
+    </header>
+    <main>
+        <section class="project-details">
+            <h2>Font Posters</h2>
+            <p>
+                <br>In the Typography Course for Fall 2023, I am currently engaged in the creation of a series of three 30 x 40 font posters, focusing on an in-depth exploration of distinct typefaces. Having already completed posters featuring Neue Hass Grotesque and Cooper Black, this ongoing project delves into the intricate details and expressive nuances of these fonts. Through this hands-on endeavor, my goal is to deepen my understanding of typographic design principles, dissecting the anatomy of each font, and exploring their visual impact. This fall, the project unfolds as a visual journey, unraveling the diverse aesthetic and communicative possibilities inherent in fonts and contributing to a broader appreciation of typography.
+            </p>
+        </section>
+        <section class="carousel-container">
+            <div class="carousel">
+                <div class="slide"><img src="img/Neue Hass.png" height="50%" alt="Image 1"></div>
+                <div class="slide"><img src="img/Cooper Black Poster 4.jpg" height="50%" alt="Image 2"></div>
+                <div class="slide"><img src="img/Cooper Black Poster Drafts 2.jpg" height="50%" alt="Image 3"></div>
+            </div>
+            <br>
+            <div class="buttoncenter">
+                <button id="prevBtn" class="carousel-btn" onclick="prevSlide()">❮</button>
+                <button id="nextBtn" class="carousel-btn" onclick="nextSlide()">❯</button>
+            </div>
+        </section>
+        <!-- New section for the text box -->
+        <section class="text-box">
+            <p id="slideText">Text for Slide 1</p>
+        </section>
+    </main>
+    <br>
+    <footer>
+        <p>&copy; 2023 Avelino J. Cortina IV</p>
+    </footer>
+    <script src="font.js"></script>
+</body>
+
+</html>
