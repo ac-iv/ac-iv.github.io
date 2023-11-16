@@ -11,9 +11,51 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
     <style>
-        .buttoncenter {
-            align-items: center;
-            align-content: center;
+        /* Resetting some default styles */
+        body, h1, h2, p, ul, ol, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        /* Global styles */
+        body {
+            padding: 4% 12% 0;
+        }
+
+      
+        header a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            display: inline-block;
+            flex: 1;
+            box-sizing: border-box;
+        }
+
+        a:hover {
+            color: #be0000;
+        }
+
+        /* Section styles */
+        .project-details {
+            max-width: 100%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
             text-align: center;
         }
 
@@ -25,9 +67,10 @@
 
         .flipbook {
             width: 80%;
-            height: 600px;
+            max-width: 800px;
             margin: 0 auto;
             position: relative;
+            height: 60vh; /* Adjust this value to your preference */
         }
 
         .flipbook img {
@@ -39,7 +82,6 @@
         .next-button {
             position: absolute;
             top: 50%;
-            transform: translateY(-50%);
             font-size: 24px;
             background: none;
             border: none;
@@ -54,6 +96,34 @@
         .next-button {
             right: 10px;
         }
+
+        /* Button styles */
+        .buttoncenter {
+            align-items: center;
+            align-content: center;
+            text-align: center;
+        }
+
+        .carousel-btn {
+            font-size: 1.5rem;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #fff;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .carousel-btn:hover {
+            color: #be0000;
+        }
+
+        #prevBtn,
+        #nextBtn {
+            margin: 0 10px;
+            border: white solid 1px;
+            border-radius: 0%;
+        }
+
+        
     </style>
 </head>
 
@@ -68,14 +138,15 @@
             <h2>Busyminded Zine</h2>
             <br>
             <p>
-           
-
-I created this dynamic zine as a personal endeavor and a catalyst for change on a global scale. In the bustling pages of BusyMinded, I embark on a relentless pursuit of equitable education and social awareness. It's more than just a zine; it's my manifesto—an unapologetic call to action.
-<br><br>
-Through powerful storytelling and captivating visuals, I aim to shed light on the pressing social causes and educational disparities affecting communities worldwide. BusyMinded is my way of igniting minds, provoking thoughts, and kindling the flames of empathy and understanding.
-<br><br>
-
-This project isn't just a publication; it's a movement that urges you to be an active participant in shaping a better, more informed world. Join me as we set out to make a difference through BusyMinded. It's not just about words and images; it's about sparking a revolution.
+                I created this dynamic zine as a personal endeavor and a catalyst for change on a global scale. In the
+                bustling pages of BusyMinded, I embark on a relentless pursuit of equitable education and social awareness.
+                It's more than just a zine; it's my manifesto—an unapologetic call to action.
+                <br><br> Through powerful storytelling and captivating visuals, I aim to shed light on the pressing
+                social causes and educational disparities affecting communities worldwide. BusyMinded is my way of
+                igniting minds, provoking thoughts, and kindling the flames of empathy and understanding.
+                <br><br> This project isn't just a publication; it's a movement that urges you to be an active participant
+                in shaping a better, more informed world. Join me as we set out to make a difference through BusyMinded.
+                It's not just about words and images; it's about sparking a revolution.
             </p>
         </section>
         <section class="flipbook-container">
@@ -86,7 +157,6 @@ This project isn't just a publication; it's a movement that urges you to be an a
             <button class="next-button"> &#10095;</button>
         </section>
     </main>
-    <br>
     <footer>
         <p>&copy; 2023 Avelino J. Cortina IV</p>
     </footer>
