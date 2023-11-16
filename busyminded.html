@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avelino J. Cortina IV - Fortune Cookie Business Cards</title>
+    <link rel="icon" type="image/png" href="img/4x/Asset 8@4x.png">
+    <link rel="stylesheet" href="projcss.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
+    <style>
+        .buttoncenter {
+            align-items: center;
+            align-content: center;
+            text-align: center;
+        }
+
+        .flipbook-container {
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .flipbook {
+            width: 80%;
+            height: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .flipbook img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .previous-button,
+        .next-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .previous-button {
+            left: 10px;
+        }
+
+        .next-button {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="architrove.html">PREVIOUS</a>
+        <a href="work.html">Work</a>
+        <a href="realreal.html">NEXT</a>
+    </header>
+    <main>
+        <section class="project-details">
+            <h2>Busyminded Zine</h2>
+            <br>
+            <p>
+           
+
+I created this dynamic zine as a personal endeavor and a catalyst for change on a global scale. In the bustling pages of BusyMinded, I embark on a relentless pursuit of equitable education and social awareness. It's more than just a zine; it's my manifesto—an unapologetic call to action.
+<br><br>
+Through powerful storytelling and captivating visuals, I aim to shed light on the pressing social causes and educational disparities affecting communities worldwide. BusyMinded is my way of igniting minds, provoking thoughts, and kindling the flames of empathy and understanding.
+<br><br>
+
+This project isn't just a publication; it's a movement that urges you to be an active participant in shaping a better, more informed world. Join me as we set out to make a difference through BusyMinded. It's not just about words and images; it's about sparking a revolution.
+            </p>
+        </section>
+        <section class="flipbook-container">
+            <button class="previous-button">&#10094; </button>
+            <div class="flipbook" id="flipbook">
+                <!-- Images will be loaded here dynamically -->
+            </div>
+            <button class="next-button"> &#10095;</button>
+        </section>
+    </main>
+    <br>
+    <footer>
+        <p>&copy; 2023 Avelino J. Cortina IV</p>
+    </footer>
+    <script src="cookie.js"></script>
+    <script>
+        $(document).ready(function () {
+            const totalPages = 8; // Change this to the total number of pages
+
+            // Dynamically load each page into the flipbook
+            for (let pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
+                const imagePath = `img/page${pageNumber}.png`;
+                $('#flipbook').append(`<div><img src="${imagePath}" alt="Page ${pageNumber}"></div>`);
+            }
+
+            // Initialize turn.js on the flipbook
+            $('#flipbook').turn({
+                width: 800,
+                height: 600,
+                autoCenter: true
+            });
+
+            // Add arrow navigation
+            $('#flipbook').bind('start', function (event, page, view) {
+                if (page == 1) {
+                    $('.previous-button').hide();
+                } else {
+                    $('.previous-button').show();
+                }
+
+                if (page == totalPages) {
+                    $('.next-button').hide();
+                } else {
+                    $('.next-button').show();
+                }
+            });
+
+            $('.previous-button').on('click', function () {
+                $('#flipbook').turn('previous');
+            });
+
+            $('.next-button').on('click', function () {
+                $('#flipbook').turn('next');
+            });
+        });
+    </script>
+</body>
+
+</html>
