@@ -24,6 +24,14 @@
 
     text-align: center;
 }
+a{
+    text-decoration: none;
+    color: red;
+    text-align: center;
+}
+.center{
+    text-align: center;
+}
 </style>
 <body>
     <header>
@@ -40,6 +48,10 @@
             <p>
                 In my recent web design project, "The Feed," I crafted a social media platform following a given rubric. This was my very first project in CSS and HTML, so it was a big step for me. The homepage featured a dynamic GIF logo, creating an engaging visual experience. I implemented a friends list feature and integrated links to my favorite websites, adding a personalized touch. The project also included an informational page explaining the platform's features and a splash page to capture users' attention. The central feed page displayed media seamlessly, ensuring a user-friendly experience. This project showcased my ability to balance creativity and functionality, resulting in a polished and professional social media platform.           </p>
         </section>
+    </section>
+    <div class="center">
+        <a href="https://ac-iv.github.io/thefeed/AboutUs.html" target="_blank">Link to The Feed Website</a>
+    </div>
         <section class="carousel-container">
             
             <div class="carousel">
@@ -63,7 +75,51 @@
     <footer>
         <p>&copy; 2023 Avelino J. Cortina IV</p>
     </footer>
-    <script src="feed.js"></script>
+    <script>let currentSlide = 0;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            const slideText = document.getElementById('slideText');
+        
+            if (n >= slides.length) {
+                currentSlide = 0;
+            } else if (n < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = n;
+            }
+        
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+        
+            slides[currentSlide].style.display = 'block';
+        
+            // Update the text based on the current slide
+            switch (currentSlide) {
+                case 0:
+                    slideText.innerText = "Splash page with Custom Logo GIF";
+                    break;
+                case 1:
+                    slideText.innerText = "My feed, displaying my digital footprint in a feed format similar to social media sites.";
+                    break;
+                case 2:
+                    slideText.innerText = "Fictional background story, along with  more styling.";
+                    break;
+                
+            }
+        }
+        
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+        
+        document.addEventListener('DOMContentLoaded', showSlide(currentSlide));
+        </script>
 </body>
 
 </html>

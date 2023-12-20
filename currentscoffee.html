@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avelino J. Cortina IV - Fortune Cookie Business Cards</title>
+    <link rel="icon" type="image/png" href="img/4x/Asset 8@4x.png"> 
+    <link rel="stylesheet" href="projcss.css">
+</head>
+<style>
+    .buttoncenter{
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+    .carousel img {
+        width: 70%;
+        text-align: center;
+        align-items: center;
+        
+    }
+.carousel{
+
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: red;
+    text-align: center;
+}
+.center{
+    text-align: center;
+}
+</style>
+<body>
+    <header>
+        <a href="portfolio.html">PREVIOUS</a>
+        <a href="work.html">Work</a>
+        <a href="charades.html">NEXT</a>
+    </header>
+    <main>
+        <section class="project-details">
+            <h2>
+            Currents and Coffee      
+            </h2>            
+            <br>
+
+            <p>
+             In my Junior Year at USF, our final was to create a fictional multi-day event, to raise awareness for a social cause. Aside from teh conceptualizing, we had to also create a website to compliment the event. 
+            </p>
+        </section>
+        <div class="center">       <a href="https://currentsandcoffee.cargo.site" target="_blank" >Link to Currents and Coffee Website</a>
+        </div>
+        <section class="carousel-container">
+
+            <div class="carousel">
+                <div class="slide"><img src="img/C+CM1.png" alt="Image 1"></div>
+                <div class="slide"><img src="img/C+CM2.png" alt="Image 2"></div>
+                <div class="slide"><img src="img/C+CM4.png" alt="Image 3"></div>
+            
+            </div>
+            <div class="buttoncenter">
+                <button id="prevBtn" class="carousel-btn" onclick="prevSlide()">❮</button>
+                <button id="nextBtn" class="carousel-btn" onclick="nextSlide()">❯</button>
+            </div>
+        </section>
+
+        <!-- New section for the text box -->
+        <section class="text-box">
+            <p id="slideText"></p>
+        </section>
+    <footer>
+        <p>&copy; 2023 Avelino J. Cortina IV</p>
+    </footer>
+</body>
+<script>
+    let currentSlide = 0;
+
+function showSlide(n) {
+    const slides = document.querySelectorAll('.slide');
+    const slideText = document.getElementById('slideText');
+
+    if (n >= slides.length) {
+        currentSlide = 0;
+    } else if (n < 0) {
+        currentSlide = slides.length - 1;
+    } else {
+        currentSlide = n;
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+    }
+
+    slides[currentSlide].style.display = 'block';
+
+    // Update the text based on the current slide
+    switch (currentSlide) {
+        case 0:
+            slideText.innerText = "Welcome Screen";
+            break;
+        case 1:
+            slideText.innerText = "Merch Splash";
+            break;
+       
+            case 2:
+                slideText.innerText = "Cause Supporting";
+                break;
+        // Add more cases if you have more slides
+
+    }
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+document.addEventListener('DOMContentLoaded', showSlide(currentSlide));
+
+</script>
+</html>

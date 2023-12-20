@@ -33,7 +33,9 @@
 
     text-align: center;
 }
-
+.center{
+    text-align: center;
+}
 </style>
 <body>
     <header>
@@ -43,8 +45,8 @@
     </header>
     <main>
         <section class="project-details">
-            <h3><a href="https://ac-iv.github.io/architrove/index.html" target="_blank" class="active-link">Link to Architrove</a></h3>
-<br>
+           
+
             <h2>
                 Architrove Blog
             </h2>
@@ -56,7 +58,8 @@
                 <br>
                 Architrove goes beyond a mere collection of visuals and words; it is an homage to the interplay between personal narratives and the spaces we inhabit, celebrating the nuances of architecture, the echoes of history in every brick, and the dreams resonating in each room. Join me in rediscovering the beauty of architecture, one invitation at a time. </p>
         </section>
-
+        <div class="center">       <a href="https://ac-iv.github.io/architrove/index.html" target="_blank" >Link to Architrove Website</a>
+        </div>
         <section class="carousel-container">
 
             <div class="carousel">
@@ -79,7 +82,51 @@
     <footer>
         <p>&copy; 2023 Avelino J. Cortina IV</p>
     </footer>
-    <script src="architrove.js"></script>
+    <script>let currentSlide = 0;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            const slideText = document.getElementById('slideText');
+        
+            if (n >= slides.length) {
+                currentSlide = 0;
+            } else if (n < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = n;
+            }
+        
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+        
+            slides[currentSlide].style.display = 'block';
+        
+            // Update the text based on the current slide
+            switch (currentSlide) {
+                case 0:
+                    slideText.innerText = "The service welcomes users with a straightforward splash screen, showing a list of blogs, a link for those who have recieved letters, and hyperlinks to other parts of the website.";
+                    break;
+                case 1:
+                    slideText.innerText = "The contact page is actually modeled after this website, and features the same straightforward information.";
+                    break;
+                case 2:
+                    slideText.innerText = "This is an example of a blog post, my first one completed for a family friends home.";
+                    break;
+                
+            }
+        }
+        
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+        
+        document.addEventListener('DOMContentLoaded', showSlide(currentSlide));
+</script>        
 </body>
 
 </html>

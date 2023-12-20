@@ -6,9 +6,10 @@
     <title>Charades Word Generator</title>
     <style>
         body {
-            text-align: center;
-      margin-top: 10%;
-            font-family:'Courier New', Courier, monospace;
+        text-align: center;
+        margin: 0; /* Reset default margin */
+        font-family: 'Courier New', Courier, monospace;
+        margin-bottom: 8%;
         }
 
         button {
@@ -33,13 +34,16 @@ a{
     color: #AD1519;
 }
    footer {
-    position: fixed;
-    bottom: 0;
-    width: 95%;
-    text-align: center;
-    text-decoration: none;
-    
-}
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        padding-bottom: 1%;
+        padding-top: 1%;
+        background-color: gainsboro;
+    }
+
 .teamGraph button {
     border: 0px solid white;
     cursor: pointer;
@@ -80,17 +84,29 @@ a{
 .teamGraph p span.over5 {
     color: green;
 }
-
+header{
+    text-align: right;
+    margin-right: 2%;
+}
+.teamRow {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>Charades Word Generator</h1>
+    <header>
+        <a href="https://ac-iv.github.io/work.html"><h5>back to my work</h5></a> 
+
+    </header>
+    <h1>Simple Charades</h1>
     <button onclick="setDifficulty('easy')" id="easyBtn" class="active">Easy</button>
     <button onclick="setDifficulty('medium')" id="mediumBtn">Medium</button>
     <button onclick="setDifficulty('hard')" id="hardBtn">Hard</button>
     <br>
     <br>
-    <button onclick="generateRandomWord()">Generate Random Word</button>
+    <button onclick="generateRandomWord()">Generate Charades Word</button>
     <br>
     <br>
     <h3 id="randomWord"></h2>
@@ -103,7 +119,6 @@ a{
     <div id="teamSection"></div>
     <footer>
         <button onclick="resetPage()">Reset</button>
-        <a href="https://ac-iv.github.io"><h5>back to my work</h5></a> 
     </footer>
     <script>
         const words = {
@@ -509,6 +524,58 @@ function subtractPoint(teamNumber) {
 function resetPage() {
         location.reload();
     }
+    function createTeamGraphs() {
+            const numTeams = document.getElementById('numTeams').value;
+            const teamSection = document.getElementById('teamSection');
+            const numTeamsInput = document.getElementById('numTeams');
+            const numTeamsLabel = document.querySelector('label[for="numTeams"]');
+            const createTeamsButton = numTeamsInput.nextElementSibling; // Assuming the button is the next sibling
+
+            // Hide the number of teams input, label, and the create teams button
+            numTeamsInput.style.display = 'none';
+            numTeamsLabel.style.display = 'none';
+            createTeamsButton.style.display = 'none';
+
+            // Clear previous teams
+            teamSection.innerHTML = '';
+
+            // Create graphs for each team
+            for (let i = 1; i <= numTeams; i++) {
+                createTeamGraph(i);
+            }
+        }
+
+        function createTeamGraph(teamNumber) {
+            const teamSection = document.getElementById('teamSection');
+
+            // Check if a new row is needed
+            const isNewRow = (teamNumber - 1) % 4 === 0;
+
+            // Create a new row div if needed
+            if (isNewRow) {
+                const row = document.createElement('div');
+                row.className = 'teamRow';
+                teamSection.appendChild(row);
+            }
+
+            // Get the last row
+            const rows = teamSection.getElementsByClassName('teamRow');
+            const lastRow = rows[rows.length - 1];
+
+            // Create a div for the team graph
+            const teamGraph = document.createElement('div');
+            teamGraph.className = 'teamGraph';
+            teamGraph.innerHTML = `
+                <h4>Team ${teamNumber}</h4>
+                <p>Points: <span id="points${teamNumber}">0</span></p>
+                <button class="subtractBtn" onclick="subtractPoint(${teamNumber})">-</button>
+                <button class="addBtn" onclick="addPoint(${teamNumber})">+</button>
+            `;
+
+            // Append the team graph to the last row
+            lastRow.appendChild(teamGraph);
+        }
+
     </script>
 </body>
 </html>
