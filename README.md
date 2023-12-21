@@ -1,2 +1,2 @@
 # Send2Avelino
-hey ya'll love you!!
+thank you for checking out my page. love you!!
