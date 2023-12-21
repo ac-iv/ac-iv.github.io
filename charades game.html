@@ -547,9 +547,13 @@ function resetPage() {
 
         function createTeamGraph(teamNumber) {
             const teamSection = document.getElementById('teamSection');
+            const screenWidth = window.innerWidth;
+
+            // Determine the number of columns based on screen width
+            const numColumns = screenWidth < 600 ? 2 : 4;
 
             // Check if a new row is needed
-            const isNewRow = (teamNumber - 1) % 4 === 0;
+            const isNewRow = (teamNumber - 1) % numColumns === 0;
 
             // Create a new row div if needed
             if (isNewRow) {
