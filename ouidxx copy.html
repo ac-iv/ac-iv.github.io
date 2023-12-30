@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avelino J. Cortina IV - Sinful Harvest Cannabis Packaging</title>
+    <link rel="stylesheet" href="projcss.css">
+    <link rel="icon" type="image/png" href="img/4x/Asset 8@4x.png">
+    <style>
+        /* Your existing styles... */
+
+        .viewport-carousel {
+            display: flex;
+            overflow: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .viewport-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .viewport-link {
+            width: 100%;
+            flex: 0 0 auto;
+            box-sizing: border-box;
+        }
+
+        .buttoncenter {
+            align-items: center;
+            align-content: center;
+            text-align: center;
+        
+        }
+        text{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="architrove.html">PREVIOUS</a>
+        <a href="work.html">Work</a>
+        <a href="font.html">NEXT</a>
+    </header>
+
+    <main>
+        <section class="project-details">
+            <h2>Sinful Harvest Cannabis Packaging: A Rainbow of Tempting Indulgences</h2>
+            <br>
+            <p>
+                Creating the Sinful Harvest cannabis packaging was a passionate venture, with each strain embodying one of the seven deadly sins, presented in a captivating array of colors. Designed to allure and entice, every box is a visual journey through the spectrum of the rainbow, reflecting the diverse nature of our strains. This endeavor is more than just packaging; it's an exploration of indulgence. Each sin-inspired shade is carefully chosen to enhance the experience, offering a tempting array that elevates every cannabis session with Sinful Harvest into a uniquely enticing affair.
+            </p>
+        </section>
+
+
+        <!-- Updated section for the carousel -->
+        <section class="carousel-container">
+            <div class="viewport-carousel">
+                <div class="viewport-container">
+                    <iframe title="" allowfullscreen src="https://www.pacdora.com/share?filter_url=psb774rdit&source=code" class="viewport-link" height="350rem"></iframe>
+                    <iframe title="" allowfullscreen src="https://www.pacdora.com/share?filter_url=pskia2pa76&source=code" class="viewport-link" height="350rem"></iframe>
+                    <iframe title="" allowfullscreen src="https://www.pacdora.com/share?filter_url=ps2jnihr07&source=code" class="viewport-link" height="350rem"></iframe>
+                    <iframe title="" allowfullscreen src="https://www.pacdora.com/share?filter_url=pss536k89p&source=code" class="viewport-link" height="350rem"></iframe>
+                    <iframe title="" allowfullscreen src="https://www.pacdora.com/share?filter_url=psoo745553&source=code" class="viewport-link" height="350rem"></iframe>
+                    <iframe title="" allowfullscreen src="https://www.pacdora.com/share?filter_url=psm45ilq3g&source=code" class="viewport-link" height="350rem"></iframe>
+                    <iframe title="" allowfullscreen src="https://www.pacdora.com/share?filter_url=ps6ajuspbn&source=code" class="viewport-link" height="350rem"></iframe>
+                </div>
+            </div>
+            <br>
+            <div class="buttoncenter">
+                <button id="prevBtn" class="carousel-btn" onclick="prevSlide()">❮</button>
+                <button id="nextBtn" class="carousel-btn" onclick="nextSlide()">❯</button>
+            </div>
+        </section>
+
+        <!-- New section for the text box -->
+        <section class="text-box">
+            <p id="slideText">Interactive Mockup</p>
+        </section>
+    </main>
+
+    <!-- Your existing footer... -->
+
+    <script>
+        let currentSlide = 0;
+        const viewportContainer = document.querySelector('.viewport-container');
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.viewport-link');
+            const slideText = document.getElementById('slideText');
+
+            if (n >= slides.length) {
+                currentSlide = 0;
+            } else if (n < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = n;
+            }
+
+            const offset = -currentSlide * 100 + '%';
+            viewportContainer.style.transform = 'translateX(' + offset + ')';
+
+            // Update the text based on the current slide
+            switch (currentSlide) {
+    case 0:
+        slideText.innerText = "Greed: Gold\nHybrid (Indica-dominant)\nBalanced and Mellow\nMix of Northern Lights and Sour Diesel";
+        break;
+    case 1:
+        slideText.innerText = "Pride: Orange\nSativa\nHappy and Uplifted\nDescendant of Super Silver Haze and Pineapple Express";
+        break;
+    case 2:
+        slideText.innerText = "Lust: Red\nSativa\nEnergetic and Uplifting\nCross between Amnesia Haze and Strawberry Cough";
+        break;
+    case 3:
+        slideText.innerText = "Envy: Green\nHybrid (Sativa-dominant)\nUplifting and Social\nCross between Green Crack and Blue Dream";
+        break;
+    case 4:
+        slideText.innerText = "Gluttony: Blue\nIndica\nRelaxing and Sedating\nBlend of Granddaddy Purple and Bubba Kush";
+        break;
+    case 5:
+        slideText.innerText = "Wrath: Purple\nSativa\nEuphoric and Creative\nCombination of Trainwreck and Jack Herer";
+        break;
+    case 6:
+        slideText.innerText = "Sloth: Indigo\nIndica\nCalming and Sleepy\nDescendant of Afghan Kush and Blueberry";
+        break;
+    // Add more cases if you have more slides
+}
+
+
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        document.addEventListener('DOMContentLoaded', showSlide(currentSlide));
+    </script>
+</body>
+
+</html>
