@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Login Form</title>
+</head>
+
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm" action="#" method="post">
+      <br>
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <br>
+      <br>
+      <button type="button" onclick="checkPassword()">Login</button>
+    </form>
+  </div>
+
+  <script>
+    function checkPassword() {
+      var enteredPassword = document.getElementById("password").value;
+      if (enteredPassword === "111201") {
+        // Redirect to secretmenu.html
+        window.location.href = "secretmenu.html";
+      } else {
+        alert("Incorrect password. Try again.");
+      }
+    }
+  </script>
+</body>
+
+<style>
+  label, input {
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  html {
+    text-align: center;
+  }
+</style>
+
+</html>
