@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avelino J. Cortina IV - Font Posters</title>
+    <link rel="icon" type="image/png" href="img/4x/Asset 8@4x.png"> 
+    <link rel="stylesheet" href="projcss.css">
+    <style>
+        .buttoncenter {
+            text-align: center;
+        }
+        
+        .carousel video {
+            width: 80%; /* Adjust as needed */
+            display: block;
+            margin: 0 auto; /* Center the video horizontally */
+            border: 1px solid black;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 24px; /* Adjust as needed */
+        }
+
+        header p {
+            font-size: 14px; /* Adjust as needed */
+        }
+
+        .project-details {
+            margin: 20px; /* Add some margin to give it space */
+        }
+
+        .project-details h2 {
+            font-size: 20px; /* Adjust as needed */
+        }
+
+        .project-details p {
+            font-size: 16px; /* Adjust as needed */
+        }
+        
+        .video-container {
+            position: relative;
+            width: 80%; /* Adjust width as needed */
+            margin: 0 auto; /* Center the video horizontally */
+            padding-top: 56.25%; /* Aspect ratio (9:16) */
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <a href="architrove.html">PREVIOUS</a>
+        <a href="work.html">Work</a>
+        <a href="tea.html">NEXT</a>
+    </header>
+    <main>
+        <section class="project-details">
+            <h2>Mac-to-Mac Data Migration</h2>
+            <br>
+            <p>
+                This project involves the migration of data from one Mac system to another, utilizing Premiere Pro for the first time. It marks my initial foray into video editing and serves as a learning experience in managing and transferring data seamlessly between Mac devices. As my premiere Premiere project, it represents a significant milestone in my journey toward mastering video editing tools and techniques.
+            </p>
+        </section>
+        <div id="border" class="video-container">
+            <iframe src="https://player.vimeo.com/video/911460088?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="withmusic"></iframe>
+        </div>
+        <!-- New section for the text box -->
+        <section class="text-box">
+        </section>
+    </main>
+    <br>
+    <footer>
+        <p>&copy; 2023 Avelino J. Cortina IV</p>
+    </footer>
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            const slideText = document.getElementById('slideText');
+
+            if (n >= slides.length) {
+                currentSlide = 0;
+            } else if (n < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = n;
+            }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+
+            slides[currentSlide].style.display = 'block';
+
+            
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        document.addEventListener('DOMContentLoaded', showSlide(currentSlide));
+    </script>
+</body>
+</html>
