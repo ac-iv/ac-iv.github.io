@@ -8,8 +8,8 @@
     url("https://db.onlinewebfonts.com/t/c385150224fb181d73545d7513a68528.svg#Maison Mono Regular")format("svg");
 }
 body {
-font-family: 'Courier New', Courier, monospace;            
-margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
     padding: 0;
     background-color: white;
     min-height: fit-content;
@@ -19,6 +19,7 @@ margin: 0;
 
 
 }
+
 main {
     padding-left: 12%;
     padding-right: 12%;
@@ -41,7 +42,6 @@ footer {
     text-decoration: none;
     color: black;
     text-transform: capitalize;
-   padding-left: 5%;
 }
 
 .project a:hover {
@@ -130,8 +130,12 @@ nav a:hover{
 .right-content a {
 padding-left: 2%; 
 padding-right: 2%; 
-}
 
+}
+.right-content a:hover{
+    filter: invert(50%);
+
+}
 .btn-container {
     display: flex;
     align-items: center;
@@ -144,7 +148,6 @@ padding-right: 2%;
     background-color: transparent;
     color: #333333;
     text-decoration: none;
-    transition: all 0.3s ease;
     margin-left: 20px;
 }
 
@@ -181,4 +184,48 @@ padding-right: 2%;
 
 .icon-container a {
     padding: 2%;
+}
+.icon-container a:hover{
+    opacity: 50%;
+}
+
+.tiles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.tile {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the text */
+    transition: background-color 0.3s; /* Add transition for hover effect */
+    cursor: pointer; /* Add cursor pointer */
+    width: 200px; /* Set a fixed width */
+    height: 60px; /* Set a fixed height */
+    display: flex; /* Add flex display to center content vertically */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    vertical-align: middle;
+}
+
+.tile a {
+    color: #333;
+    text-decoration: none;
+}
+
+.tile a:hover {
+    color: white;
+}
+
+.tile:hover {
+    background-color: firebrick; /* Brick red hover effect */
+}
+
+.tiles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
 }
