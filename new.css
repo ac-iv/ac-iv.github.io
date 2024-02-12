@@ -11,7 +11,7 @@ body {
 }
 
 main {
-    padding-left: 12%;
+    padding-left: 15%;
     padding-right: 12%;
     text-transform: lowercase;
 }
@@ -186,19 +186,33 @@ nav a:hover {
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
     vertical-align: middle;
+    border: 1px solid #ccc; /* Add a 1px solid border */
+    padding: 10px; /* Add some padding */
+    margin: 5px; /* Add some margin for spacing */
+    transition: border-color 0.3s ease; /* Add transition effect for hover */
 }
 
 .tile a {
     color: #333;
     text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 110%;
 }
 
-.tile a:hover {
-    color: white;
-}
+
 
 .tile:hover {
     background-color: firebrick; /* Brick red hover effect */
+    color: #f9f9f9;
+}
+
+.tile:hover a {
+    color: #f9f9f9; /* Change text color to white on hover */
+} 
+
+
+.tile{
+    border-color: #333; /* Change border color on hover */
 }
 @media (max-width: 480px) {
     body {
