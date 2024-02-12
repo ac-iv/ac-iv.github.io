@@ -1,15 +1,4 @@
-/* Font Definitions */
-@font-face {
-    font-family: "Maison Mono Regular";
-    src: url("https://db.onlinewebfonts.com/t/c385150224fb181d73545d7513a68528.eot");
-    src: url("https://db.onlinewebfonts.com/t/c385150224fb181d73545d7513a68528.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/c385150224fb181d73545d7513a68528.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/c385150224fb181d73545d7513a68528.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/c385150224fb181d73545d7513a68528.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/c385150224fb181d73545d7513a68528.svg#Maison Mono Regular")format("svg");
-}
 
-/* General Styles */
 body {
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
