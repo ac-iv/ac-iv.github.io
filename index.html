@@ -10,17 +10,17 @@
             font-family: monospace;
             margin: 0;
             padding: 0;
-            background-color: #f2f2f2;
+            background-color: white;
+            min-height: fit-content;
         }
 
         footer {
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        text-align: right;
-        background-color: #ffffff;
-        
-}
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: right;
+            background-color: #ffffff;
+        }
 
         header {
             background-color: #ffffff;
@@ -30,7 +30,7 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             display: flex;
             justify-content: space-between;
-            align-items: center
+            align-items: center;
         }
 
         .logo {
@@ -41,7 +41,6 @@
         nav {
             display: flex;
             align-items: flex-start; /* Align items at the top */
-            
         }
 
         nav a {
@@ -56,9 +55,12 @@
 
         .container {
             background-color: #ffffff;
-            padding: 5%;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 3%;
+
             margin: 0 auto;
-            min-height: 100vh;
+            /* min-height: 100vh; */ /* Remove this line */
             display: flex;
             align-items: flex-start; /* Align items at the top */
             justify-content: space-between;
@@ -86,12 +88,12 @@
 
         .right-content {
             width: 50%;
-            text-align: right;
+            text-align: center; /* Changed to center */
         }
-.right-content {
-            width: 50%;
-            text-align: center;
-        }
+        .right-content a {
+padding-left: 2%; 
+padding-right: 2%; 
+}
         .dark-section {
             background-color: #333333;
             color: #ffffff;
@@ -125,29 +127,30 @@
         }
 
         @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
+            .container {
+                flex-direction: column;
+            }
 
-    .left-content,
-    .right-content {
-        width: 100%;
-    }
+            .left-content,
+            .right-content {
+                width: 100%;
+            }
 
-    #animatedGif {
-        order: -1; /* This will make the GIF appear above the text */
-        margin-bottom: 20px; /* Add some margin to create space between the GIF and the text */
-    }
-}
+            #animatedGif {
+                order: -1; /* This will make the GIF appear above the text */
+                margin-bottom: 20px; /* Add some margin to create space between the GIF and the text */
+            }
+        }
 
-        .icon-container{
-    vertical-align: middle;
-    align-items: center;
-    text-align: center;
-}
-.icon-container a{
-    padding: 2%;
-}
+        .icon-container {
+            vertical-align: middle;
+            align-items: center;
+            text-align: center;
+        }
+
+        .icon-container a {
+            padding: 2%;
+        }
     </style>
 </head>
 <body>
@@ -192,8 +195,9 @@
         <a href="https://www.instagram.com/avelinolovesyou/" target="_blank"><img src="img/in.png" alt="Icon 1" width="4%"></a>
         <a href="https://www.linkedin.com/in/aciv/" target="_blank"><img src="img/LI.png" alt="Icon 2" width="4%"></a>
         <a href="mailto:avelinocortinaiv@aol.com" target="_blank"><img src="img/em.png" alt="Icon 3" width="4%"></a>
-    
+    </div>
 </div>
+
 
 <script>
     // JavaScript to loop the GIF
