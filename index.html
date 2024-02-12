@@ -1,72 +1,206 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="home.css">
-        <title>Avelino J. Cortina IV - Welcome</title>
-        <link rel="icon" type="image/png" href="img/4x/Asset 8@4x.png"> 
-        
-    </head>
-    <body>
-              <h2><img src="img/4x/Asset 2@4x.png" width=""></h2>
-        <h3>        <img src="img/lino.JPG" width="30%">
-        </h3>
-        <header>
-          
-            <!-- Add three buttons with a common class -->
-            <div class="centered-buttons">
-                
-                    <p>
-                        <a href="work.html">my work</a><br><br>
-                        <a href="contact.html">contact me</a> <br> <br>
-                        <a href="about.html">about me</a><br><br>
-                        <a href="resume.html"> resume</a><br>
-                    </p>
-                
-            </div>
-        </header>
-        <br>
-        <br>
-        <br>
-         <footer>
-        <div class="icon-container">
-            <a href="https://www.instagram.com/avelinolovesyou/" target="_blank"><img src="img/in.png" alt="Icon 1" width="4%"></a>
-<a href="https://www.linkedin.com/in/aciv/" target="_blank"><img src="img/LI.png" alt="Icon 2" width="4%"></a>
-<a href="mailto:avelinocortinaiv@aol.com" target="_blank"><img src="img/em.png" alt="Icon 3" width="4%"></a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    
+    <style>
+        body {
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
 
-        </div>
-    </footer>
-    </body>
+        footer {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: right;
+        background-color: #ffffff;
+        
+}
+
+        header {
+            background-color: #ffffff;
+            padding-left: 30px;
+            padding-top: 30px;
+            padding-right: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .logo {
+            width: 100px; /* Adjust according to your logo size */
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            align-items: flex-start; /* Align items at the top */
+            
+        }
+
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #333333;
+        }
+
+        nav a:hover{
+            color: firebrick;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 5%;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start; /* Align items at the top */
+            justify-content: space-between;
+            text-align: left;
+            flex-wrap: wrap; /* Allow content to wrap if needed */
+        }
+
+        .left-content {
+            width: 40%;
+            margin-bottom: 20px; /* Add margin to create space between the content */
+        }
+
+        .left-content h2 {
+            margin-bottom: 10px;
+            font-weight: 100;
+            font-size: 48px;
+        }
+
+        .left-content h6 {
+            font-size: large;
+            font-weight: 100;
+            line-height: 150%;
+            word-wrap: break-word;
+        }
+
+        .right-content {
+            width: 50%;
+            text-align: right;
+        }
+.right-content {
+            width: 50%;
+            text-align: center;
+        }
+        .dark-section {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .btn-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: 2px solid #333333;
+            border-radius: 5px;
+            background-color: transparent;
+            color: #333333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-left: 20px;
+        }
+
+        .btn:last-child {
+            margin-left: 0;
+        }
+
+        .btn:hover {
+            background-color: firebrick;
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-content,
+    .right-content {
+        width: 100%;
+    }
+
+    #animatedGif {
+        order: -1; /* This will make the GIF appear above the text */
+        margin-bottom: 20px; /* Add some margin to create space between the GIF and the text */
+    }
+}
+
+        .icon-container{
+    vertical-align: middle;
+    align-items: center;
+    text-align: center;
+}
+.icon-container a{
+    padding: 2%;
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <!-- Your logo image goes here -->
+        <img src="img/newlogo.png" width="40%" alt="Your Logo">
+    </div>
+    <nav>
+        <b><a href="index.html">Home</a></b>
+        <a href="about.html">About Me</a>
+        <a href="work.html">Work</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="btn-container">
+        <a href=mailto:avelinocortinaiv@aol.com class="btn">Work with Me</a>
+    </div>
+</header>
+
+<div class="container">
+    <div class="left-content">
+        <h2>I'm Avelino Cortina</h2>
+        <h6>
+            A design student deeply immersed in <span style="color:firebrick;"><strong>architecture</strong></span> and diverse <span style="color:firebrick;"><strong>design disciplines</strong></span>. My academic journey sharpens my ability to harmonize <span style="color:firebrick;"><strong>form</strong></span> and <span style="color:firebrick;"><strong>function</strong></span>.
+            <br>
+            <br>
+
+            Specializing in <span style="color:firebrick;"><strong>usability</strong></span> and <span style="color:firebrick;"><strong>aesthetics</strong></span>, I navigate effortlessly across <span style="color:firebrick;"><strong>UX/UI</strong></span>, <span style="color:firebrick;"><strong>product</strong></span>, and <span style="color:firebrick;"><strong>software design</strong></span>. My <span style="color:firebrick;"><strong>portfolio</strong></span> showcases seamless transitions between <span style="color:firebrick;"><strong>architectural projects</strong></span>, <span style="color:firebrick;"><strong>graphic design</strong></span>, and <span style="color:#b22222;"><strong>intuitive interfaces</strong></span>. Each project embodies meticulous detail and a commitment to <span style="color:firebrick;"><strong>purpose-driven design</strong></span>.
+            <br>
+            <br>
+            Let's redefine design, where every creation resonates profoundly and enriches lives.
+        
+        </h6>
+        <a href="work.html" class="btn">See my work</a> 
+
+    </div>
+    <div class="right-content">
+        <img id="animatedGif" src="img/animations/IntroAnimation.gif" style="width: 100%;">
+        <br>
+        <br>
+        <a href="https://www.instagram.com/avelinolovesyou/" target="_blank"><img src="img/in.png" alt="Icon 1" width="4%"></a>
+        <a href="https://www.linkedin.com/in/aciv/" target="_blank"><img src="img/LI.png" alt="Icon 2" width="4%"></a>
+        <a href="mailto:avelinocortinaiv@aol.com" target="_blank"><img src="img/em.png" alt="Icon 3" width="4%"></a>
+    
+</div>
+
+<script>
+    // JavaScript to loop the GIF
+    document.getElementById('animatedGif').addEventListener('load', function() {
+        this.setAttribute('loop', 'true');
+    });
+</script>
+
+</body>
 </html>
-<style>
-    h3{
-        font-size: 175%;
-    }
-    a{
-        text-transform: capitalize;
-    }
-    footer{
-        background-color: white;
-        padding: 2%;
-        padding-top: 3%;
-        margin-right: 1%;
-        margin-bottom: 1%;
-        margin-top: 1%;
-    }
-    
-    h2 img{
-        width: 22rem;
-    }
-    h2{
-        padding-top: 3%;
-        text-align: center;
-    }
-    
-</style>
