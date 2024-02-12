@@ -1,3 +1,4 @@
+/* Existing CSS Styles */
 
 body {
     font-family: 'Courier New', Courier, monospace;
@@ -12,7 +13,7 @@ body {
 
 main {
     padding-left: 15%;
-    padding-right: 12%;
+    padding-right: 15%;
     text-transform: lowercase;
 }
 
@@ -199,8 +200,6 @@ nav a:hover {
     font-size: 110%;
 }
 
-
-
 .tile:hover {
     background-color: firebrick; /* Brick red hover effect */
     color: #f9f9f9;
@@ -210,10 +209,10 @@ nav a:hover {
     color: #f9f9f9; /* Change text color to white on hover */
 } 
 
-
-.tile{
+.tile {
     border-color: #333; /* Change border color on hover */
 }
+
 @media (max-width: 480px) {
     body {
         margin-left: 0;
@@ -255,5 +254,34 @@ nav a:hover {
     footer {
         padding: 10px 0;
         margin-bottom: 2%;
+    }
+}
+
+/* New Navigation Styles */
+nav {
+    position: fixed;
+    top: 20;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center; /* Change to center */
+    justify-content: center; /* Change to center */
+    width: 100%;
+    z-index: 999; /* Ensure it's above other content */
+}
+
+nav a {
+    margin: 0 20px; /* Adjust margin */
+}
+
+/* Media Query for Responsive Layout */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 10px 0;
     }
 }
