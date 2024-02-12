@@ -7,132 +7,32 @@
     <link rel="icon" type="image/png" href="img/4x/Asset 8@4x.png"> 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <style>
-        body {
-            font-family: monospace;
-            margin: 0;
-            padding: 0;
-            background-color: white;
-            min-height: fit-content;
-            margin-left: 3%;           
-            margin-right: 3%;
-            margin-top: 2%;
-        }
-
-        footer {
-            margin-bottom: 2%;            
-            width: 100%;
-            text-align: right;
-            background-color: #ffffff;
-            border-top: 1px black solid;
-            font-weight: 200; /* Match font weight */
-        }
-
-        header {
-            background-color: #ffffff;
-            padding-left: 2%;
-            padding-right: 2%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            width: 100px; /* Adjust according to your logo size */
-            height: auto;
-        }
-
-        nav {
-            display: flex;
-            align-items: flex-start; /* Align items at the top */
-        }
-
-        nav a {
-            margin: 20px;
-            text-decoration: none;
-            color: #333333;
-            font-weight: bold; /* Match font weight */
-        }
-
-        nav a:hover {
-            color: firebrick;
-        }
-
-        .btn-container {
-            display: flex;
-            align-items: center;
-        }
-
-        .btn {
-            padding: 10px 20px;
-            border: 2px solid #333333;
-            border-radius: 5px;
-            background-color: transparent;
-            color: #333333;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            margin-left: 20px;
-            font-weight: bold; /* Match font weight */
-        }
-
-        .btn:last-child {
-            margin-left: 0;
-        }
-
-        .btn:hover {
-            background-color: firebrick;
-            color: #ffffff;
-        }
-
-        main {
-            padding-left: 12%;
-            padding-right: 12%;
-            text-transform: lowercase;
-        }
-
-        h2 {
-            font-size: larger;
-            font-family: monospace; /* Match font family */
-        }
-
-        .capitalize {
-            text-transform: capitalize;
-        }
-
-        footer {
-            text-align: right;
-        }
-
-        .project a {
-            text-decoration: none;
-            color: black;
-            text-transform: capitalize;
-            font-family: monospace; /* Match font family */
-        }
-
-        .project a:hover {
-            color: #be0000;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    button{
+        border: 0px ;
+        font-weight: bolder;
+    }
+    footer{
+        border-top: 1px black solid;
+    
+    }
+    footer p{
+        font-weight: 200;
+    }
+ 
+</style>
 <body>
     <header>
-        <div class="logo">
-            <!-- Your logo image goes here -->
-            <img src="img/newlogo.png" width="40%" alt="Your Logo">
-        </div>
-        <nav>
-            <a href="index.html"><span style="color:firebrick;"><strong>Home</strong></span></a>
-            <a href="about.html">About Me</a>
-            <a href="work.html">Work</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <div class="btn-container">
-            <a href=mailto:avelinocortinaiv@aol.com class="btn">Work with Me</a>
-        </div>
+        <p>
+            <a href="index.html">home</a><br>
+            <br>
+            <a href="about.html">about me</a><br>
+            <br>
+            <a href="contact.html">contact me</a>
+        </p>
     </header>
-<main>
     <h2>
         <div class="capitalize">📝 Projects:</div>
     </h2>
@@ -149,9 +49,10 @@
             <option value="product">Product</option>
             <option value="software">Software</option>
             <option value="printed">Printed</option>
+
         </select>
     </div>
-
+<br>
     <!-- Projects -->
     <div id="projects">
         <p class="project graphic favorite">
@@ -199,41 +100,43 @@
         <p class="project">
             <a href="charades.html" title="Charades "> > Simple Charades </a>
         </p>
+    </div>
+    
+    <!-- In progress section -->
+    <h2>
+    </h2>
         <p class="intheworks project">
             <a href="aitherapy.html" title="Screenless AI Therapy "> > Screenless A.I. Therapy</a>
         </p>
         <p class="project intheworks">
             <a href="busyminded.html" title="Font Posters"> > BusyMinded Zine </a>
         </p>
-        <p class="intheworks project">
+        <p class="intheworks">
             <a href="construction.html" title="Thermal Printer Instant Camera "> > Thermal Printer Instant Camera </a>
         </p>
-    </div>
-    
-</main>
+<br>
+    <footer>
+        <p>&copy; 2023 Avelino J. Cortina IV</p>
+    </footer>
 
-<footer>
-    <p>&copy; 2023 Avelino J. Cortina IV</p>
-</footer>
-
-<!-- JavaScript for filtering -->
-<script>
-    function filterSelection(category) {
-        var projects = document.getElementsByClassName("project");
-        if (category === 'all') {
-            for (var i = 0; i < projects.length; i++) {
-                projects[i].style.display = "block";
-            }
-        } else {
-            for (var i = 0; i < projects.length; i++) {
-                if (projects[i].classList.contains(category)) {
+    <!-- JavaScript for filtering -->
+    <script>
+        function filterSelection(category) {
+            var projects = document.getElementsByClassName("project");
+            if (category === 'all') {
+                for (var i = 0; i < projects.length; i++) {
                     projects[i].style.display = "block";
-                } else {
-                    projects[i].style.display = "none";
+                }
+            } else {
+                for (var i = 0; i < projects.length; i++) {
+                    if (projects[i].classList.contains(category)) {
+                        projects[i].style.display = "block";
+                    } else {
+                        projects[i].style.display = "none";
+                    }
                 }
             }
         }
-    }
-</script>
+    </script>
 </body>
 </html>
