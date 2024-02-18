@@ -77,10 +77,6 @@ nav a:hover {
     flex-wrap: wrap; /* Allow content to wrap if needed */
 }
 
-.left-content {
-    width: 40%;
-    margin-bottom: 20px; /* Add margin to create space between the content */
-}
 
 .left-content h2 {
     margin-bottom: 10px;
