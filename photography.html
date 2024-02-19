@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projcss.css">
+    <title>Avelino J. Cortina IV - Personal Logo</title>
+    <link rel="icon" type="image/png" href="img/4x/Asset 8@4x.png"> 
+</head>
+<style>
+    .buttoncenter{
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+    .carousel img {
+        width: 80%;
+        text-align: center;
+        align-items: center;
+        
+    }
+.carousel{
+
+    text-align: center;
+}
+</style>
+<body>
+    <header>
+       
+        <a href="work.html">Back</a>
+      
+    </header>
+    <main>
+        <section class="project-details">
+            <h2>
+                Photo Portfolio 
+            </h2>            <br>
+
+            <p>
+                Photography has always been a passion of mine. Here, I have compiled some of my favorite photo pieces I have shot. From landscapes to portraits, these images represent the moments and stories I hold dear. Take a journey through my lens and discover the world as I see it.                <section class="carousel-container">
+            
+            
+                </main>
+        </section>
+
+        <!-- New section for the text box -->
+        
+    <div class="carousel">
+                
+        <img src="img/photo portfolio/Photo-01.png" class="slide">
+        <img src="img/photo portfolio/Photo-02.png" class="slide">
+        <img src="img/photo portfolio/Photo-03.png" class="slide">
+        <img src="img/photo portfolio/Photo-04.png" class="slide">
+        <img src="img/photo portfolio/Photo-05.png" class="slide">
+        <img src="img/photo portfolio/Photo-06.png" class="slide">
+        <img src="img/photo portfolio/Photo-07.png" class="slide">
+        <img src="img/photo portfolio/Photo-08.png" class="slide">
+        <img src="img/photo portfolio/Photo-09.png" class="slide">
+        <img src="img/photo portfolio/Photo-10.png" class="slide">
+
+
+       
+        <!-- Add more images as needed -->
+    
+    </div>
+    <div class="buttoncenter">
+        <button id="prevBtn" class="carousel-btn" onclick="prevSlide()">❮</button>
+        <button id="nextBtn" class="carousel-btn" onclick="nextSlide()">❯</button>
+    </div>
+    <br>
+    <footer>
+        <p>&copy; 2023 Avelino J. Cortina IV</p>
+    </footer>
+    <script>let currentSlide = 0;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            const slideText = document.getElementById('slideText');
+        
+            if (n >= slides.length) {
+                currentSlide = 0;
+            } else if (n < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = n;
+            }
+        
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+        
+            slides[currentSlide].style.display = 'block';
+        
+            // Update the text based on the current slide
+            
+        }
+        
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+        
+        document.addEventListener('DOMContentLoaded', showSlide(currentSlide));
+        </script>
+</body>
+
+</html>
