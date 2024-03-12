@@ -60,7 +60,7 @@ nav a {
 }
 
 nav a:hover {
-    color: firebrick;
+    color: blue;
 }
 
 /* Container Styles */
@@ -125,7 +125,7 @@ nav a:hover {
 }
 
 .btn:hover {
-    background-color: firebrick;
+    color: blue;
     color: #ffffff;
 }
 
@@ -198,7 +198,7 @@ nav a:hover {
 
 
 .tile:hover {
-    background-color: firebrick; /* Brick red hover effect */
+    color: blue;
     color: #f9f9f9;
 }
 

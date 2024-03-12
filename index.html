@@ -1,72 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
-    <link rel="stylesheet" href="new.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Avelino J. Cortina IV - Welcome</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" type="image/png" href="img/4x/Asset 8@4x.png">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            background-image: url('your-image-url.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
+        img {
+            background-color: rgba(255, 255, 255, 0.712);
+            padding: 10%;
+            border-radius: 20px;
+        }
 
+        img:hover {
+            opacity: 0.5; /* Corrected for proper CSS syntax */
+            transform: scale(1.1); /* Corrected property for changing size */
+        }
+
+        a {
+            text-transform: capitalize;
+        }
+
+        h2 {
+            text-align: center;
+            padding-top: 3%;
+        }
+
+        h2 img {
+            width: 22rem;
+        }
+
+        h3 {
+            font-size: 175%;
+        }
+
+        footer {
+            background-color: white;
+            padding: 2% 1% 1%;
+            margin: 1% 1% 0 0;
+        }
+    </style>
 </head>
-<style>
-    .frontcontainer{
-        align-items: center;
-        text-align: center;
-    }
-</style>
 <body>
-
-    <header>
-        <div class="logo">
-            <!-- Your logo image goes here -->
-            <img src="img/newlogo.png" width="40%" alt="Your Logo">
-        </div>
-        <nav>
-            <div class="homehead">
-                <a href="index.html"><span style="color:firebrick;"><strong>Home</strong></span></a>
-                <a href="about.html">About Me</a>
-                <a href="work.html">Work</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </nav>
-        <div class="btn-container">
-            <a href="tel:+18587668299" class="btn">+1(858)766-8299</a>
-        </div>
-    </header>
-<div class="frontcontainer">
-        <img id="animatedGif" src="img/animations/IntroAnimation.gif" style="width: 40%;">
-        </div>
-        <div class="left-content">
-            <h2>I'm Avelino Cortina</h2>
-            <h6>
-                A design student deeply immersed in <span style="color:firebrick;"><strong>architecture</strong></span> and diverse <span style="color:firebrick;"><strong>design disciplines</strong></span>. My academic journey sharpens my ability to harmonize <span style="color:firebrick;"><strong>form</strong></span> and <span style="color:firebrick;"><strong>function</strong></span>.
-                <br>
-                <br>
-
-                Specializing in <span style="color:firebrick;"><strong>usability</strong></span> and <span style="color:firebrick;"><strong>aesthetics</strong></span>, I navigate effortlessly across <span style="color:firebrick;"><strong>UX/UI</strong></span>, <span style="color:firebrick;"><strong>product</strong></span>, and <span style="color:firebrick;"><strong>software design</strong></span>. My <span style="color:firebrick;"><strong>portfolio</strong></span> showcases seamless transitions between <span style="color:firebrick;"><strong>architectural projects</strong></span>, <span style="color:firebrick;"><strong>graphic design</strong></span>, and <span style="color:#b22222;"><strong>intuitive interfaces</strong></span>. Each project embodies meticulous detail and a commitment to <span style="color:firebrick;"><strong>purpose-driven design</strong></span>.
-                <br>
-                <br>
-                Let's redefine design, where every creation resonates profoundly and enriches lives.
-
-            </h6>
-            <a href="work.html" class="btn">See my work →</a>
-
-        </div>
-    </div>
-    <br>
-    <br>
-    <footer>
-        <p>&copy; 2023 Avelino J. Cortina IV</p>
-    </footer>
-
-    <script>
-        // JavaScript to loop the GIF
-        document.getElementById('animatedGif').addEventListener('load', function() {
-            this.setAttribute('loop', 'true');
-        });
-    </script>
-
+    <a href="work.html"><img src="img/Asset 2.svg" width="200rem"></a>
 </body>
-
 </html>

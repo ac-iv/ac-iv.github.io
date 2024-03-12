@@ -81,11 +81,11 @@ button{
     border-radius: 0%;
 }
 button:hover{
-    color: #be0000;
+    color: blue;
 }
 
 a:hover{
-    color: #be0000;
+    color: blue;
 }
 .password{
     text-align: center;
@@ -139,7 +139,7 @@ a, .capitalize{
     text-transform: capitalize;
 }
 a:hover{
-    color: #be0000;
+    color: blue;
 }
 footer{
     text-align: right;
