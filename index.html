@@ -16,24 +16,34 @@
             background-size: cover; 
             background-position: center; 
         }
-        <style>
-  @import url('https://fonts.cdnfonts.com/css/chocolate-smoothies');
-</style>
+        @import url('https://fonts.cdnfonts.com/css/chocolate-smoothies');
+
         body {
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        img {
+        .img-wrapper {
             background-color: rgba(255, 255, 255, 0.712);
             padding: 10%;
-            border-radius: 20px;
+            border-radius: 10000px;
+            transition: 0.5s;
+            display: inline-block; /* To contain the img size */
         }
 
-        img:hover {
-            opacity: 0.5; /* Corrected for proper CSS syntax */
-            transform: scale(1.1); /* Corrected property for changing size */
+        .img-wrapper:hover {
+            background-color: red; /* Red background on hover */
+        }
+
+        .img-wrapper img {
+            width: 22rem;
+            transition: transform 0.5s, filter 0.5s; /* Smooth transition for scale and filter */
+        }
+
+        .img-wrapper:hover img {
+            filter: invert(100%); /* Invert colors on hover */
+            transform: scale(1.1); /* Enlarge on hover */
         }
 
         a {
@@ -61,6 +71,6 @@
     </style>
 </head>
 <body>
-    <a href="work.html"><img src="img/Asset 2.svg" width="200rem"></a>
+    <a href="work.html" class="img-wrapper"><img src="img/Asset 2.svg"></a>
 </body>
 </html>
