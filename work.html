@@ -1,579 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Avelino J. Cortina IV - My Work</title>
-    <link rel="icon" type="image/png" href="img/4x/Asset 8@4x.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-      body {
-    font-family: 'Courier New', Courier, monospace;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    min-height: fit-content;
-    margin-left: 3%;
-    margin-right: 3%;
-    margin-top: 2%;
-    
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<link rel="stylesheet" href="new.css">
 
-main {
-    padding-left: 15%;
-    padding-right: 15%;
-    text-transform: lowercase;
-}
+<style>
 
-h2 {
-    font-size: larger;
-}
-
-.capitalize {
-    text-transform: capitalize;
-}
-
-/* Footer Styles */
-footer {
-    margin-bottom: 2%;
-    width: 100%;
-    text-align: right;
-    background-color: #ffffff;
-    border-top: 1px black solid;
-}
-
-/* Header Styles */
-header {
-    background-color: #ffffff;
-    padding-left: 2%;
-    padding-right: 2%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    width: 100px; /* Adjust according to your logo size */
-    height: auto;
-}
-
-nav {
-    display: flex;
-    align-items: flex-start; /* Align items at the top */
-}
-
-nav a {
-    margin: 20px;
-    text-decoration: none;
-    color: #333333;
-}
-
-nav a:hover {
-    color: blue;
-}
-
-/* Container Styles */
-.container {
-    background-color: #ffffff;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-top: 3%;
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-start; /* Align items at the top */
-    justify-content: space-between;
-    text-align: left;
-    flex-wrap: wrap; /* Allow content to wrap if needed */
-}
-
-
-.left-content h2 {
-    margin-bottom: 10px;
-    font-weight: 100;
-    font-size: 48px;
-}
-
-.left-content h6 {
-    font-size: large;
-    font-weight: 100;
-    line-height: 150%;
-    word-wrap: break-word;
-}
-
-.right-content {
-    width: 50%;
-    text-align: center; /* Changed to center */
-}
-
-.right-content a {
-    padding-left: 2%;
-    padding-right: 2%;
-}
-
-.right-content a:hover {
-    filter: invert(50%);
-}
-
-.btn-container {
-    display: flex;
-    align-items: center;
-}
-#color-key{
-    text-align: center;
-    align-items: center;
-}
-.key-item{
-    padding: .5%;
-}
-.btn {
-    padding: 10px 20px;
-    border: 2px solid #333333;
-    border-radius: 5px;
-    background-color: transparent;
-    color: #333333;
-    text-decoration: none;
-    margin-left: 20px;
-}
-
-.btn:last-child {
-    margin-left: 0;
-}
-
-.btn:hover {
-    background-color: #f9f9f9;
-    color: #333333;
-}
-
-/* Media Query for Responsive Layout */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .left-content,
-    .right-content {
-        width: 100%;
-    }
-
-    #animatedGif {
-        order: -1; /* This will make the GIF appear above the text */
-        margin-bottom: 20px; /* Add some margin to create space between the GIF and the text */
-    }
-}
-
-/* Icon Styles */
-.icon-container {
-    vertical-align: middle;
-    align-items: center;
-    text-align: center;
-}
-
-.icon-container a {
-    padding: 2%;
-}
-
-.icon-container a:hover {
-    opacity: 50%;
-}
-
-/* Tiles Styles */
-.tiles-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.tile {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center the text */
-    transition: background-color 0.3s; /* Add transition for hover effect */
-    cursor: pointer; /* Add cursor pointer */
-    width: 200px; /* Set a fixed width */
-    height: 60px; /* Set a fixed height */
-    display: flex; /* Add flex display to center content vertically */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    vertical-align: middle;
-    border: 1px solid #ccc; /* Add a 1px solid border */
-    padding: 10px; /* Add some padding */
-    margin: 5px; /* Add some margin for spacing */
-    transition: border-color 0.3s ease; /* Add transition effect for hover */
-}
-
-.tile a {
-    color: #333;
-    text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 110%;
-}
-
-.tile:hover {
-    background-color: #f9f9f9; /* Brick red hover effect */
-    color: #333;
-}
-
-.tile:hover a {
-    color: #333; /* Change text color to white on hover */
-} 
-
-.tile{
-    border-color: #333; /* Change border color on hover */
-}
-
-@media (max-width: 480px) {
-    body {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    main {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    header {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    .container {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    .left-content {
-        width: 100%;
-    }
-
-    .right-content {
-        width: 100%;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        margin: 10px 0;
-    }
-
-    footer {
-        padding: 10px 0;
-        margin-bottom: 2%;
-    }
-}
- /* Navigation Styles */
-nav {
-    display: flex;
-    align-items: center; /* Change to center */
-    justify-content: center; /* Change to center */
-}
-
-nav a {
-    margin: 0 20px; /* Adjust margin */
-}
-
-/* Media Query for Responsive Layout */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        margin: 10px 0;
-    }
-}
-.homehead nav{
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center; /* Change to center */
-    justify-content: center; /* Change to center */
-    width: 100%;
-    background-color: #ffffff; /* Add a background color */
-    z-index: 999; /* Ensure it's above other content */
-}
-
-.project {
-    display: none;
-}
-
-.favorite {
-    background-color: #98FB98;
-}
-
-.intheworks {
-    background-color: #FFE4B5;
-}
-
-.graphic {
-    background-color: #B4E7E8;
-}
-
-.motion {
-    background-color: #FFCCCB;
-}
-
-.branding {
-    background-color: #D0B1F4;
-}
-
-.product {
-    background-color: #D0F4E9;
-}
-
-.software {
-    background-color: #FFD700;
-}
-
-.printed {
-    background-color: #FFA07A;
-}
-
-.project.favorite {
-    background-color: #98FB98;
-}
-
-.project.intheworks {
-    background-color: #FFE4B5;
-}
-
-.tile {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: background-color 0.3s, color 0.3s; /* Add transition for hover effect */
-    cursor: pointer;
-    width: 200px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 5px;
-}
-
-.tile a {
-    color: #333;
-    text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 110%;
-}
-
-.tile:hover {
-    background-color: #333;
-    color: #f9f9f9;
-}
-
-.tile:hover a {
-    color: #f9f9f9;
-} 
-
-.tile{
-    border-color: #333; /* Change border color on hover */
-}
-
-@media (max-width: 480px) {
-    body {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    main {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    header {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    .container {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    .left-content {
-        width: 100%;
-    }
-
-    .right-content {
-        width: 100%;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        margin: 10px 0;
-    }
-
-    footer {
-        padding: 10px 0;
-        margin-bottom: 2%;
-    }
-}
-
-    </style>
+</style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <!-- Your logo image goes here -->
-            <a href="https://ac-iv.github.io" target="_blank">
-                <img src="img/Asset 1.svg" width="40%" alt="Your Logo">
-            </a>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Me</a>
-            <a href="work.html"><span style="color:blue;"><strong>Work</strong></span></a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <h2>
-            <div class="capitalize">📝 Projects:</div>
-        </h2>
 
-        <!-- Filtering options -->
-        <div id="filter">
-            <select id="filterSelect" onchange="filterSelection(this.value)">
-                <option value="all">All Project Types</option>
-                <option value="favorite">Favorites</option>
-                <option value="intheworks">In The Works</option>
-                <option value="graphic">Graphic</option>
-                <option value="motion">Motion</option>
-                <option value="branding">Branding</option>
-                <option value="product">Product</option>
-                <option value="software">Web Design</option>
-                <option value="printed">Printed</option>
-            </select>
-        <br>
-        <br>
-        <!-- Projects -->
-        <div class="tiles-container">
-            <button class="tile project graphic favorite">
-                <a href="widget.html" title="Widget Wakeup">Widget Wakeup</a>
-            </button>
-            <button class="favorite tile project motion">
-                <a href="mac.html" title="Mac Setup">Mac-To-Mac Transfer Guide</a>
-            </button>
-            <button class="tile project software intheworks favorite">
-                <a href="mba.html" title="Widget Wakeup">Mission Bay Shuttle App Redesign</a>
-            </button>
-            <button class="tile project software favorite graphic">
-                <a href="architrove.html" title="Architrove Blog">Architrove Blog</a>
-            </button>
-            <button class="tile project favorite">
-                <a href="photography.html" title="Photography Portfolio">Photography Portfolio</a>
-            </button>
-            <button class="tile project favorite printed branding">
-                <a href="tea.html" title="Mighty Leaf Tea Package Redesign">Mighty Leaf Package Redesign</a>
-            </button>
-            <button class="tile graphic project">
-                <a href="font.html" title="Busyminded Zine">Font Posters</a>
-            </button>
-            <button class="tile project graphic branding">
-                <a href="realreal.html" title="The RealReal Web Banners">The RealReal Web Banners</a>
-            </button>
-            <button class="tile project favorite software">
-                <a href="send2lino.html" title="Send2Lino I.M.">Send2Lino I.M.</a>
-            </button>
-            <button class="tile project web software">
-                <a href="feed.html" title="The Feed">The Feed</a>
-            </button>
-            <button class="tile project graphic branding">
-                <a href="logo.html" title="Personal Logo Design">Personal Logo Design</a>
-            </button>
-            <button class="tile project product">
-                <a href="grocerybag.html" title="Environmentally Aware Grocery Bags">Environmentally Aware Grocery Bags</a>
-            </button>
-            <button class="tile project branding">
-                <a href="cookie.html" title="Fortune Cookie Business Cards">Fortune Cookie Business Cards</a>
-            </button>
-            <button class="tile software project">
-                <a href="portfolio.html" title="Portfolio V1">Portfolio V1</a>
-            </button>
-            <button class="tile project product">
-                <a href="currentscoffee.html" title="Currents and Coffee">Currents and Coffee Website</a>
-            </button>
-            <button class="tile software project">
-                <a href="charades.html" title="Charades">Simple Charades</a>
-            </button>
-            <button class="tile project graphic">
-                <a href="dooley.html" title="Dooley Wedding">Dooley Wedding</a>
-            </button>
-            <button class="tile project software intheworks favorite">
-                <a href="applemusic.html" title="Apple Music Redesign">Apple Music IOS UI Redesign</a>
-            </button>
-            <button class="tile project intheworks">
-                <a href="aitherapy.html" title="Screenless AI Therapy">Screenless A.I. Therapy</a>
-            </button>
-            <button class="tile project intheworks">
-                <a href="busyminded.html" title="Font Posters">BusyMinded Zine</a>
-            </button>
-            <button class="tile project intheworks">
-                <a href="construction.html" title="Thermal Printer Instant Camera">Thermal Printer Instant Camera</a>
-            </button>
-        </div>
-<br>
-<br>
-    </main>
-    <div id="color-key">
-        <span class="key-item graphic">Graphic</span>
-        <span class="key-item motion">Motion</span>
-        <span class="key-item branding">Branding</span>
-        <span class="key-item product">Product</span>
-        <span class="key-item software">Web Design</span>
-        <span class="key-item printed">Printed</span>
-        <span class="key-item favorite">Favorite</span>
-        <span class="key-item intheworks">In the Works</span>
+<div class="sidebar">
+  
+  <nav>
+    <div class="logo">
+      <img src="img/Asset 1.svg" alt="Logo" style="max-width: 40%;">
     </div>
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="work.html"><strong>Work</strong></a>
+      <div class="dropdown-content">
+        <a href="construction.html">App/Web Design</a>
+        <a href="construction.html">Graphic Design</a>
+        <a href="construction.html">Typography</a>
+        <a href="construction.html">Branding/Identity</a>
+      </div>
+    </div>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  
+</div>
+
+<div class="portfolio">
+  <div class="portfolio-grid">
     <br>
-    <footer>
-        <p>&copy; 2023 Avelino J. Cortina IV</p>
-    </footer>
+    <h2>Recent Work</h2>
 
-    <!-- JavaScript for filtering -->
-    <script>
-        function filterSelection(category) {
-            var projects = document.getElementsByClassName("project");
-            var buttons = document.getElementsByClassName("filter-btn");
 
-            // Remove 'active' class from all buttons
-            for (var i = 0; i < buttons.length; i++) {
-                buttons[i].classList.remove("active");
-            }
+    <a href="mba.html">
+      <div class="grid-item featured">
+        <img src="Videos/MBS.mp4" alt="Work 1">
+        <div class="overlay">
+          <div class="overlay-text">Mission Bay App Redesign</div>
+        </div>
+      </div>
+    </a>
 
-            // Add 'active' class to the clicked button
-            event.target.classList.add("active");
+    <a href="mac.html">
+      <div class="grid-item featured">
+        <img src="Videos/Mac_To_Mac-No_Audio.mp4" alt="Work 1">
+        <div class="overlay">
+          <div class="overlay-text">Mac-to-Mac Transfer Guide</div>
+        </div>
+      </div>
+    </a>
 
-            if (category === "all") {
-                for (var i = 0; i < projects.length; i++) {
-                    projects[i].style.display = "block";
-                }
-            } else {
-                for (var i = 0; i < projects.length; i++) {
-                    if (projects[i].classList.contains(category)) {
-                        projects[i].style.display = "block";
-                    } else {
-                        projects[i].style.display = "none";
-                    }
-                }
-            }
-        }
-    </script>
+    <a href="widget.html">
+      <div class="grid-item featured">
+        <img src="img/ww2.png" alt="Work 2">
+        <div class="overlay">
+          <div class="overlay-text">Widget Wakeup</div>
+        </div>
+      </div>
+    </a>
+
+
+    <a href="currentscoffee.html">
+      <div class="grid-item featured">
+        <img src="img/C+CM1.png" alt="Work 3">
+        <div class="overlay">
+          <div class="overlay-text">Currents and Coffee</div>
+        </div>
+      </div>
+    </a>
+
+<br>
+<br>
+<br>
+
+
+  </div>
+  <footer>
+    <p>&copy; 2023 Avelino J. Cortina IV</p>
+</footer>
+</div>
+
 </body>
+
 </html>
