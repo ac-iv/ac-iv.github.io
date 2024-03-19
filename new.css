@@ -30,7 +30,8 @@
   }
   nav a {
     text-decoration: none;
-    color: #333;
+font-size: larger;    
+color: #333;
     padding: 10px 0;
     padding-left: 20%;
   }
@@ -55,19 +56,20 @@
   
   .grid-item {
     position: relative;
-    overflow: hidden;
     margin: 10%;
+    overflow: auto;
     text-align: center;
-  
     cursor: pointer; 
   }
   
   .grid-item img {
-    width: 100%;
     border-radius: 20px;
     height: auto;
     transition: transform 0.5s ease;
-    max-width: 800px;
+    max-width: 550px;
+    width: 100%;
+    min-width: none;
+
   }
   
   .grid-item:hover img {
