@@ -2,92 +2,119 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avelino J. Cortina IV - Welcome</title>
-    <link rel="icon" type="image/png" href="img/4x/Asset 8@4x.png">
+    <title>Avelino's Portfolio</title>
+    <link rel="stylesheet" href="new.css">
+
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            background-image: url('your-image-url.jpg');
-            background-size: cover;
-            background-position: center;
-            font-family: 'Chocolate Smoothies', sans-serif;
-            overflow: hidden; /* Prevent scrolling */
-        }
+       body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.right-column img {
+    width: 80%; /* Adjusted width for better alignment */
+}
+.right-column {
+    text-align: center;
+    margin-top: 10px;
+}
+.typed-text {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.portfolio-buttons a {
+    margin: 0 10px;
+    padding: 10px;
+    background-color: #e6e6e6;
+    color: rgb(60, 60, 60);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transitions for transform, background-color, and color */
+    transform: scale(1); /* Initial scale */
+}
+.portfolio-buttons {
+    margin-bottom: 20px;
+}
+.portfolio-buttons a:hover {
+    transform: scale(1.2); /* Enlarges the button to 120% of its size */
+    color: #ffffff; /* Changes text color on hover */
+    background-color:#c0621b; 
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transitions for transform, background-color, and color */
+    transform: scale(1); /* Initial scale */
+}
+footer {
+    margin-top: 20px;
+}
 
-        .fixed-type {
-            position: fixed;
-            top: 25%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-        .fixed-image {
-            position: fixed;
-            top: 60%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-        
-        .img-wrapper {
-            background-color: rgba(255, 255, 255, 0.712);
-            padding: 25%;
-            border-radius: 10000px;
-            transition: 0.5s;
-            display: inline-block; /* To contain the img size */
-        }
-
-        .img-wrapper:hover {
-            background-color: red; /* Red background on hover */
-        }
-
-        .img-wrapper img {
-            width: 10rem;
-            transition: transform 0.5s, filter 0.5s; /* Smooth transition for scale and filter */
-        }
-
-        .img-wrapper:hover img {
-            filter: invert(100%); /* Invert colors on hover */
-            transform: scale(1.1); /* Enlarge on hover */
-        }
-
-
-        .typing-effect {
-            color: rgb(0, 0, 0);
-            font-size: 24px;
-            font-family: 'Courier New', Courier, monospace;
-        }
     </style>
 </head>
 <body>
-    <div class="fixed-type"> 
-        <div class="typing-effect"></div>
-    </div>
+    <div class="right-column">
+        <h1>
+            <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+        </h1>
         <br>
-        <div class="fixed-image">
-            <a href="work.html" class="img-wrapper"><img src="img/Asset 1.svg"></a>
+        <br>
+        <br>
+        <img src="img/mainme.png" alt="Avelino's Work" class="main-image">
+        <div class="portfolio-buttons">
+            <a href="work.html">Work</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+           <hide> <a href="resume.html">Resume</a></hide>
         </div>
     </div>
-    <script>
-        const text = "To enter my portfolio website, click on my face below - Avelino";
-        const typingContainer = document.querySelector('.typing-effect');
-        let index = 0;
 
-        function typeText() {
-            if (index < text.length) {
-                typingContainer.innerHTML += text.charAt(index);
-                index++;
-                setTimeout(typeText, 125); // Adjust typing speed here
+    <footer>
+        <p>&copy; 2023 Avelino J. Cortina IV</p>
+    </footer>
+
+    <script>
+        const typedTextSpan = document.querySelector(".typed-text");
+        const cursorSpan = document.querySelector(".cursor");
+
+        const textArray = ["Welcome to my Portfolio ", "-Avelino"]; // Adjusted text array
+        const typingDelay = 200;
+        const erasingDelay = 100;
+        const newTextDelay = 2000; // Delay between current and next text
+        let textArrayIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < textArray[textArrayIndex].length) {
+                if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+                typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingDelay);
+            } 
+            else {
+                cursorSpan.classList.remove("typing");
+                setTimeout(erase, newTextDelay);
             }
         }
 
-        window.onload = function() {
-            typeText();
-        };
+        function erase() {
+            if (charIndex > 0) {
+                if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+                typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+                charIndex--;
+                setTimeout(erase, erasingDelay);
+            } 
+            else {
+                cursorSpan.classList.remove("typing");
+                textArrayIndex++;
+                if(textArrayIndex>=textArray.length) textArrayIndex=0;
+                setTimeout(type, typingDelay + 1100);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+            if(textArray.length) setTimeout(type, newTextDelay + 250);
+        });
     </script>
+    
 </body>
 </html>
