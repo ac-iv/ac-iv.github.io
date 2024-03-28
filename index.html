@@ -56,7 +56,9 @@
 				</div>
 
 				<div class="left-column">
-					<img id="profile_pic" src="img/memoji.png">
+					<div id="profile_picture">
+                        <img id="profile_pic" src="img/memoji.png">
+                    </div>
 					<h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
 
 					<div id="theme-options-wrapper">
@@ -403,7 +405,16 @@ document.addEventListener("DOMContentLoaded", function() {
     // Initial filter to apply when page loads
     filterProjects();
 });
-// Script to handle theme changing omitted for brevity
+
+let profilePic = document.getElementById("profile_pic");
+
+profilePic.addEventListener("click", function() {
+    if (profilePic.src.includes("memoji.png")) {
+        profilePic.src = "img/headshot.jpeg";
+    } else {
+        profilePic.src = "img/memoji.png";
+    }
+});
 
 document.addEventListener("DOMContentLoaded", function() {
     // Your existing code for filtering projects and theme management

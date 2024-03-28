@@ -71,6 +71,18 @@ h6 { font-size: 16px;}
 }
 
 
+#profile_picture {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#profile_picture:hover{
+    transform: scale(1.05);
+}
+
+#profile_pic {
+    cursor: pointer;
+}
 
 
 .main-container{
