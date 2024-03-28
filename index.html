@@ -18,8 +18,9 @@
 	<section class="s1">
 		<div class="main-container">
 			<div class="greeting-wrapper">
-				<h1>Hi, I'm Avelino J. Cortina IV</h1>
-			</div>
+                <h1 id="typing-effect"></h1>
+            </div>
+            
 
 
 			<div class="intro-wrapper">
@@ -450,6 +451,21 @@ document.addEventListener("DOMContentLoaded", function() {
             closeModal();
         }
     });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const text = "Hi, I'm Avelino J. Cortina IV";
+    const typingElement = document.getElementById('typing-effect');
+    let index = 0;
+
+    function typeCharacter() {
+        if (index < text.length) {
+            typingElement.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeCharacter, 150); // Adjust typing speed
+        }
+    }
+
+    typeCharacter(); // Start typing effect
 });
 
 </script>
