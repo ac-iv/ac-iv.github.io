@@ -1,123 +1,435 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avelino's Portfolio</title>
-    <link rel="stylesheet" href="new.css">
+	<title>Avelino J. Cortina IV</title>
 
-    <style>
-       body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.right-column img {
-    width: 60%; }
 
-    .right-column img:hover{
-        opacity: 75%;
-    }    
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
-.right-column {
-    text-align: center;
-    margin-top: 10px;
-}
-.typed-text {
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-.portfolio-buttons a {
-    margin: 0 10px;
-    padding: 10px;
-    background-color: #e6e6e6;
-    color: rgb(60, 60, 60);
-    text-decoration: none;
-    border-radius: 5px;
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transitions for transform, background-color, and color */
-    transform: scale(1); /* Initial scale */
-}
-.portfolio-buttons {
-    margin-bottom: 20px;
-}
-.portfolio-buttons a:hover {
-    transform: scale(1.2); /* Enlarges the button to 120% of its size */
-    color: #ffffff; /* Changes text color on hover */
-    background-color:#c0621b; 
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transitions for transform, background-color, and color */
-    transform: scale(1); /* Initial scale */
-}
-footer {
-    margin-top: 20px;
-}
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 
-    </style>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="default.css">
+	<link id="theme-style" rel="stylesheet" type="text/css" href="">
 </head>
 <body>
-    <div class="right-column">
-        <h1>
-            <span class="typed-text"></span><span class="cursor">&nbsp;</span>
-        </h1>
+
+	<section class="s1">
+		<div class="main-container">
+			<div class="greeting-wrapper">
+				<h1>Hi, I'm Avelino J. Cortina IV</h1>
+			</div>
+
+
+			<div class="intro-wrapper">
+				<div class="nav-wrapper">
+
+					<!-- Link around dots-wrapper added after tutorial video -->
+					<a href="index.html">
+						<div class="dots-wrapper">
+							<div id="dot-1" class="browser-dot"></div>
+							<div id="dot-2" class="browser-dot"></div>
+							<div id="dot-3" class="browser-dot"></div>
+						</div>
+					</a>
+					
+
+					<ul id="navigation">
+                        <li><a href="#" id="contactLink">Contact</a></li>
+                    </ul>
+                    
+                    <!-- Pop-up Modal -->
+                    <div id="contactModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">							<div id="dot-1" class="browser-dot"></div>
+                            </span>
+                            <h2>Contact Information</h2>
+                            <p>Here's how you can reach me:</p>
+                            <p>Email: avelinocortinaiv@aol.com</p>
+                            <p>Phone: 858-766-8299</p>
+                        </div>
+                    </div>
+                    
+				</div>
+
+				<div class="left-column">
+					<img id="profile_pic" src="img/memoji.png">
+					<h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
+
+					<div id="theme-options-wrapper">
+						<div data-mode="light" id="light-mode" class="theme-dot"></div>
+						<div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+						<div data-mode="green" id="green-mode" class="theme-dot"></div>
+						<div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+					</div>
+
+					<p id="settings-note">*Theme settings will be saved for<br>your next vist</p>
+				</div>
+
+				<div class="right-column">
+
+					<div id="preview-shadow">
+						<div id="preview">
+							<div id="corner-tl" class="corner"></div>
+							<div id="corner-tr" class="corner"></div>
+							<h3>What I Do</h3>
+							<p>I'm a Design and Architecture student at the University of San Francisco, working as a Specialist at Apple and a Design Intern at Criminal.</p>
+							<div id="corner-br" class="corner"></div>
+							<div id="corner-bl" class="corner"></div>
+                    
+						</div>
+					</div>
+				</div>
+                <br>
+			</div>
+            
+		</div>
         <br>
-        <br>
-        <br>
-      <a href="work.html">  <img src="img/mainme.png" alt="Avelino's Work" class="main-image"> </a>
-        <div class="portfolio-buttons">
-            <a href="work.html">Work</a>
-            <a href="contact.html">Contact</a>
-            <a href="about.html">About</a>
-           <hide> <a href="resume.html">Resume</a></hide>
-        </div>
+	</section>
+
+	<section class="s2">
+		<div class="main-container">
+
+			<div class="about-wrapper">
+				<div class="about-me">
+					<h4>More about me</h4>
+
+					<p>
+                        I'm a design student passionate about architecture and various design disciplines. My education has sharpened my skills in balancing form and function, focusing on the integration of usability and aesthetics in user experience, UI/UX, product, and software design.
+                    </p>
+                    
+                    <p>
+                        I believe in purposeful design that subtly enhances daily life, aiming to create meaningful experiences and spaces that improve users' quality of life.
+                    </p>
+                    
+                    <p>
+                        Join me in exploring design where functionality meets elegance, adding value to our lives.
+                    </p>
+                    
+
+					<hr>
+
+					<h4>TOP EXPERTISE</h4>
+
+					<p>I am a proficient designer and developer, specializing in prototyping and web design. My expertise lies at the intersection of technology and art, enabling me to create innovative and aesthetically pleasing digital experiences. For a comprehensive overview of my skills and projects, please <a href="RESUME2024.pdf" target="_blank">download my resume</a>.</p>
+
+					<div id="skills">
+						<ul>
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>JavaScript</li>
+							<li>Figma</li>
+                            <li>Publication</li>
+						</ul>
+
+						<ul>
+							<li>Premire Pro</li>
+							<li>Illustraitor</li>
+							<li>Mac OS</li>
+							<li>InDesign</li>
+                            <li>Typography</li>
+						</ul>
+
+					</div>
+
+				</div>
+
+				
+				<div class="social-links">
+            
+					<img id="social_img" src="img/bookpages.jpg">
+					<h3>Find me on Socials</h3>
+					<p>
+                        <img src="img/LI.png" width="40px">
+                        <img src="img/LI.png" width="40px">
+                        <img src="img/LI.png" width="40px">
+                        <img src="img/LI.png" width="40px">
+                    </p>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="s1">
+		<div class="main-container">
+			<h3 style="text-align: center;">Some of my past projects</h3>
+            <!-- Filter Section -->
+<div class="filter-section">
+    <br>
+    <div class="filter-options">
+      <!-- Existing checkboxes -->
+      <label><input type="checkbox" name="filter" value="app-web-design"> App/Web Design</label>
+      <label><input type="checkbox" name="filter" value="graphic-design"> Graphic Design</label>
+      <label><input type="checkbox" name="filter" value="typography"> Typography</label>
+      <label><input type="checkbox" name="filter" value="branding-identity"> Branding/Identity</label>
+      <!-- Dropdown menu, hidden by default -->
+      <select id="filter-dropdown" style="display: none;">
+        <option value="all">All</option>
+        <option value="app-web-design">App/Web Design</option>
+        <option value="graphic-design">Graphic Design</option>
+        <option value="typography">Typography</option>
+        <option value="branding-identity">Branding/Identity</option>
+      </select>
     </div>
+  </div>
+  <br>
+  <div class="post-wrapper">
+    <!-- Mission Bay App Redesign -->
+    <a href="mba.html">
+        <div class="post app-web-design graphic-design branding-identity">
+            <img src="Videos/MBS.mp4" alt="Mission Bay App Redesign">
+            <div class="overlay">
+                <div class="text">Mission Bay App Redesign</div>
+            </div>
+        </div>
+    </a>
 
-    <footer>
-        <p>&copy; 2023 Avelino J. Cortina IV</p>
-    </footer>
+    <!-- Don't worry dear, I am Immortal. -->
+    <a href="immortal.html">
+        <div class="post typography graphic-design">
+            <img src="img/immortalbook.jpg" alt="Don't worry dear, I am Immortal." width="600">
+            <div class="overlay">
+                <div class="text">Don't worry dear, I am Immortal.</div>
+            </div>
+        </div>
+    </a>
 
-    <script>
-        const typedTextSpan = document.querySelector(".typed-text");
-        const cursorSpan = document.querySelector(".cursor");
+    <!-- Mac-to-Mac Transfer Guide -->
+    <a href="mac.html">
+        <div class="post branding-identity graphic-design">
+            <img src="Videos/Mac_To_Mac-No_Audio 2.mp4" alt="Mac-to-Mac Transfer Guide">
+            <div class="overlay">
+                <div class="text">Mac-to-Mac Transfer Guide</div>
+            </div>
+        </div>
+    </a>
 
-        const textArray = ["Welcome to my Portfolio ", "-Avelino"]; // Adjusted text array
-        const typingDelay = 200;
-        const erasingDelay = 100;
-        const newTextDelay = 2000; // Delay between current and next text
-        let textArrayIndex = 0;
-        let charIndex = 0;
+    <!-- Widget Wakeup -->
+    <a href="widget.html">
+        <div class="post app-web-design graphic-design">
+            <img src="img/ww2.png" alt="Widget Wakeup">
+            <div class="overlay">
+                <div class="text">Widget Wakeup</div>
+            </div>
+        </div>
+    </a>
 
-        function type() {
-            if (charIndex < textArray[textArrayIndex].length) {
-                if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-                typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-                charIndex++;
-                setTimeout(type, typingDelay);
-            } 
-            else {
-                cursorSpan.classList.remove("typing");
-                setTimeout(erase, newTextDelay);
-            }
-        }
+    <!-- The RealReal Web Banners Project -->
+    <a href="realreal.html">
+        <div class="post branding-identity">
+            <img src="img/realreal.png" alt="The RealReal Web Banners Project">
+            <div class="overlay">
+                <div class="text">The RealReal Web Banners Project</div>
+            </div>
+        </div>
+    </a>
 
-        function erase() {
-            if (charIndex > 0) {
-                if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-                typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-                charIndex--;
-                setTimeout(erase, erasingDelay);
-            } 
-            else {
-                cursorSpan.classList.remove("typing");
-                textArrayIndex++;
-                if(textArrayIndex>=textArray.length) textArrayIndex=0;
-                setTimeout(type, typingDelay + 1100);
-            }
-        }
+    <!-- Environmentally Aware Grocery Bags -->
+    <a href="grocerybag.html">
+        <div class="post branding-identity graphic-design">
+            <img src="img/whitebag.png" alt="Environmentally Aware Grocery Bags">
+            <div class="overlay">
+                <div class="text">Environmentally Aware Grocery Bags</div>
+            </div>
+        </div>
+    </a>
 
-        document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-            if(textArray.length) setTimeout(type, newTextDelay + 250);
-        });
-    </script>
-    
+    <!-- Mighty Leaf Tea Redesign -->
+    <a href="tea.html">
+        <div class="post branding-identity graphic-design">
+            <img src="img/mlwhole.png" alt="Mighty Leaf Tea Redesign">
+            <div class="overlay">
+                <div class="text">Mighty Leaf Tea Redesign</div>
+            </div>
+        </div>
+    </a>
+
+    <!-- Font Poster Design -->
+    <a href="font.html">
+        <div class="post typography graphic-design">
+            <img src="img/posters.png" alt="Font Poster Design">
+            <div class="overlay">
+                <div class="text">Font Poster Design</div>
+            </div>
+        </div>
+    </a>
+
+    <!-- Busyminded Zine -->
+    <a href="busyminded.html">
+        <div class="post typography graphic-design">
+            <img src="img/busymindedmockup.png" alt="Busyminded Zine">
+            <div class="overlay">
+                <div class="text">Busyminded Zine</div>
+            </div>
+        </div>
+    </a>
+
+    <!-- Currents and Coffee -->
+    <a href="currentscoffee.html">
+        <div class="post app-web-design">
+            <img src="img/currentcoffee.png" alt="Currents and Coffee">
+            <div class="overlay">
+                <div class="text">Currents and Coffee</div>
+            </div>
+        </div>
+    </a>
+</div>
+
+            </div>
+            
+            </div>
+            
+		</div>
+	</section>
+
+	<section class="s2">
+		<div class="main-container">
+			<a href=""></a>
+			<h3 style="text-align: center;">Get In Touch</h3>
+
+			<form id="contact-form">
+				<a name="contact"></a>
+
+				<label>Name</label>
+				<input class="input-field" type="text" name="name">
+
+				<label>Subject</label>
+				<input class="input-field" type="text" name="subject">
+
+				<label>Email</label>
+				<input class="input-field" type="text" name="email">
+
+				<label>Message</label>
+				<textarea class="input-field" name="message"></textarea>
+
+				<input id="submit-btn" type="submit" value="Send">
+			</form>
+		</div>
+	</section> 
+
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
+
+<script>
+    console.log('Its working')
+
+let theme = localStorage.getItem('theme')
+
+if(theme == null){
+	setTheme('light')
+}else{
+	setTheme(theme)
+}
+
+let themeDots = document.getElementsByClassName('theme-dot')
+
+
+for (var i=0; themeDots.length > i; i++){
+	themeDots[i].addEventListener('click', function(){
+		let mode = this.dataset.mode
+		console.log('Option clicked:', mode)
+		setTheme(mode)
+	})
+}
+
+function setTheme(mode){
+	if(mode == 'light'){
+		document.getElementById('theme-style').href = 'default.css'
+	}
+
+	if(mode == 'blue'){
+		document.getElementById('theme-style').href = 'blue.css'
+	}
+
+	if(mode == 'green'){
+		document.getElementById('theme-style').href = 'green.css'
+	}
+
+	if(mode == 'purple'){
+		document.getElementById('theme-style').href = 'purple.css'
+	}
+
+	localStorage.setItem('theme', mode)
+}
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to filter projects
+    function filterProjects() {
+        // Get all checkboxes
+        const checkboxes = document.querySelectorAll('.filter-options input[type="checkbox"]');
+        // Get all project divs
+        const allProjects = document.querySelectorAll('.post');
+
+        // Collect all checked values
+        let checkedValues = [];
+        checkboxes.forEach(function(checkbox) {
+            if (checkbox.checked) checkedValues.push(checkbox.value);
+        });
+
+        // If no checkbox is checked, show all projects
+        if (checkedValues.length === 0) {
+            allProjects.forEach(function(project) {
+                project.style.display = '';
+            });
+        } else {
+            // Loop through all project divs
+            allProjects.forEach(function(project) {
+                // Get project classes as an array
+                const projectClasses = project.className.split(/\s+/);
+                // Check if project has any of the checked class values
+                const match = checkedValues.some(value => projectClasses.includes(value));
+                // Show or hide the project based on if a match was found
+                project.style.display = match ? '' : 'none';
+            });
+        }
+    }
+
+    // Add change event listener to checkboxes
+    document.querySelectorAll('.filter-options input[type="checkbox"]').forEach(function(checkbox) {
+        checkbox.addEventListener('change', filterProjects);
+    });
+
+    // Initial filter to apply when page loads
+    filterProjects();
+});
+// Script to handle theme changing omitted for brevity
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Your existing code for filtering projects and theme management
+
+    // Grab the modal elements
+    var modal = document.getElementById('contactModal');
+    var closeBtn = document.querySelector('.close');
+
+    // Function to open modal
+    function openModal() {
+        modal.style.display = "block";
+    }
+
+    // Function to close modal
+    function closeModal() {
+        modal.style.display = "none";
+    }
+
+    // Event listener for the contact link
+    document.getElementById('contactLink').addEventListener('click', function(event){
+        event.preventDefault(); // Prevent default anchor behavior
+        openModal();
+    });
+
+    // Event listener for the close button
+    closeBtn.addEventListener('click', function(){
+        closeModal();
+    });
+
+    // Event listener to close modal if outside click
+    window.addEventListener('click', function(event){
+        if (event.target == modal) {
+            closeModal();
+        }
+    });
+});
+
+</script>
