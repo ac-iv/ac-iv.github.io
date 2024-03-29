@@ -21,7 +21,11 @@ html {
 body {
     padding: 4% 12% 0;
 }
-
+.image-section p{
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 1%;
+}
 header {
     text-align: center;
     display: flex;
@@ -66,11 +70,15 @@ a:hover {
 
 .slide {
     flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slide img {
-    width: 100%;
-    height: auto;
+    max-width: 100%; /* Makes image max width of its container */
+    height: auto; /* Maintains aspect ratio */
+    max-height: 400px; /* Optional: sets a maximum height for the image */
 }
 
 .text-box {
@@ -107,8 +115,7 @@ a:hover {
     color: #be0000;
 }
 
-#prevBtn,
-#nextBtn {
+#prevBtn, #nextBtn {
     margin: 0 10px;
     border: white solid 1px;
     border-radius: 0%;
@@ -120,4 +127,9 @@ footer {
     margin-top: 6%;
     padding: 2%;
     margin-bottom: 3%;
+}
+
+
+.image-section img{
+    width: 100%
 }
