@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NoInk Instant Camera Case Study</title>
+<style>
+    body {
+    display: flex;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    color: #333;
+  }
+  
+  .sidebar {
+    background-color: #f8f9fa;
+    width: 200px;
+    position: fixed;
+    height: 100vh;
+    overflow: auto;
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar nav ul li a {
+    display: block;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .sidebar nav ul li a:hover {
+    background-color: #eee;
+  }
+  
+  .content {
+    margin-left: 200px;
+    padding: 20px;
+  }
+  
+  img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  h2 {
+    color: #ffffff;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background: #fff;
+      min-height: 100%; /* Set minimum height to fill the screen */
+      position: relative; /* Set position to relative */
+    }
+    h1{
+        font-size: 200%;
+    }
+    .sidebar {
+      background-color: #ff0000;
+      color: white;
+      font-weight: 600;
+      padding: 20px;
+      padding-top: 30px;
+      width: 250px;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+      top: 0;
+      left: 0;
+    }
+    figcaption {
+text-align: center; 
+padding-top: 5px;   
+}
+    .sidebar img{
+        position: fixed;
+        width: 100px; /* Adjusted image size */
+        bottom: 60px;
+        left: 20px;
+        filter: invert(100%);
+        border: 0px;
+        border-radius: 20px;
+        padding: 3px;
+    }
+    .sidebar img:hover{
+        background-color: #ffffff44;
+      
+    }
+    .content {
+      margin-left: 300px; /* Increased margin to prevent overlap */
+      padding: 40px;
+      padding-top: 30px;
+      padding-bottom: 60px; /* Add padding bottom for footer */
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      font-size: 20px;
+    }
+    nav ul li a:hover {
+      background-color: #730000;
+    }
+    h1{
+        text-align: right;
+    }
+    h2 {
+      color: #ff0000;
+      font-size: 28px;
+    }
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+    img {
+      width: 80%; /* Reduced image size */
+      height: auto; /* Maintain aspect ratio */
+      border: 5px solid #ff0000;
+      display: block; /* Center the image */
+      margin: 0 auto; /* Center the image */
+      max-width: 600px
+    }
+    iframe {
+      width: 80%; /* Reduced image size */
+      height: 500px; /* Maintain aspect ratio */
+      display: block; /* Center the image */
+      margin: 0 auto; /* Center the image */
+      max-width: 600px;
+      border: 5px solid #ff0000;
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      right: 20px;
+      width: 100%;
+      background-color: #ffffff;
+      color: rgb(255, 0, 0);
+      text-align: right;
+      padding: 10px 0;
+    }
+    @media screen and (max-width: 600px) {
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+      .content {
+        margin-left: 0;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="sidebar">
+  <nav>
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#problem">Problem Definition</a></li>
+      <li><a href="#audience">Audience</a></li>
+      <li><a href="#team">Team and Role</a></li>
+      <li><a href="#constraints">Constraints</a></li>
+      <li><a href="#process">Design Process</a></li>
+      <li><a href="#retrospective">Retrospective</a></li>
+    </ul>
+  </nav>
+  <a href="index.html"><img src="img/Asset 2.svg"></a>
+
+  
+</div>
+<div class="content">
+    <h1>Google Design Sprint Case Study: NoINK Camera</h1>
+
+    <section id="overview">
+        <h2>Overview</h2>
+        <article>
+            <h3>Introduction</h3>
+            <p>The NoInk Instant Camera represents a fusion of nostalgia and innovation, offering an affordable and creative solution for instant photography enthusiasts. With its unique receipt printer feature, this camera allows users to capture and share memories instantly, redefining the traditional instant photography experience. Its sleek design and user-friendly interface position it as a game-changer in the market.</p>
+            <figure>
+                <img src="img/camera.png" alt="Overview of NoInk Camera">
+                <figcaption>Rough Rendering of NoINK Concept 
+                    <br>(Dall-e 2 and Post-Modifications)</figcaption>
+            </figure>
+        </article>
+    </section>
+    
+    <section id="problem">
+        <h2>Problem Definition</h2>
+        <article>
+            <h3>Financial Barriers</h3>
+            <p>Traditional instant cameras often come with a hefty price tag, limiting access to enthusiasts on a budget. Most modern instant cameras, such as Polaroids, charge between 20 and 30 dollars for one pack of film, complete with 8 exposures. </p>
+            <h3>Practical Limitations</h3>
+            <p>The inconvenience of purchasing film cartridges  pose practical challenges for users. Polaroid film is sold in limited store types, and usually e=more expensive in the store. So if you're on a backpacking trip, or having a night with friends, Polaroid film may be hard to come by.</p>
+            <figure>
+                <img src="img/cost-ex.png" alt="Problem Image">
+                <figcaption>Screenshot from Google Shopping <br> highlighting current film pricing</figcaption>
+            </figure>
+            <h3>NoInk's Solution</h3>
+            <p><strong>NoInk</strong> revolutionizes instant photography through its innovative use of <strong>thermal printing technology</strong>. This technology allows for printing without the need for traditional ink cartridges. Instead, images are produced by selectively heating coated thermochromic paper, commonly known as receipt paper. When this paper passes over the thermal print head, the desired areas heat up and create an image or text.</p>
+
+            <p>The ability to use <strong>any standard receipt printer paper</strong> is a significant advantage, making the NoInk camera not only <strong>versatile</strong> but also <strong>cost-effective</strong>. Users can easily replace the paper at a fraction of the cost of traditional film cartridges used in other instant cameras. Furthermore, NoInk supports <strong>300 dpi (dots per inch) printing resolution</strong>, which ensures that each photo is crisp and detailed, rivaling the quality of traditional photographs but at a much lower operational cost.</p>
+            
+            <p>This approach not only simplifies maintenance but also significantly reduces the environmental impact by eliminating the need for ink-based cartridges, aligning with modern sustainability standards. The <strong>simplicity and accessibility</strong> of this technology make it ideal for a wide range of users, from students and hobbyists to professional photographers looking for a convenient, eco-friendly alternative.</p>
+            
+
+<p>The camera combines the nostalgic joy of having a physical photo in hand moments after taking a picture with the convenience and sustainability of modern printing technologies. The 'NoInk' aspect of the camera refers to its use of thermal printing, which eliminates the need for ink cartridges. This technology not only cuts down on ongoing expenses but also simplifies the maintenance of the device. By integrating a minimalistic design with user-friendly features, NoInk caters to both photography enthusiasts and casual users, making it an ideal choice for capturing moments in a fun and economical way.</p>
+
+        
+        </article>
+    </section>
+    
+    <section id="audience">
+        <h2>Audience</h2>
+        <article>
+            <h3>Target Demographics</h3>
+            <ul>
+                <li>Students: Seeking an affordable means of capturing memories during their academic journey.</li>
+                <li>Hobbyists: Enthusiastic about exploring instant photography as a hobby without breaking the bank.</li>
+                <li>Travelers: Looking for a compact and convenient way to document their adventures on the go.</li>
+                <li>Tech Enthusiasts: Attracted to the innovative features and modern design of the NoInk Instant Camera.</li>
+            </ul>
+            <h3>Accessibility</h3>
+            <p>NoInk's intuitive design and budget-friendly price point make it accessible to users of all ages and backgrounds, democratizing instant photography.</p>
+            <figure>
+                <img src="img/persona.png" alt="Audience Image">
+                <figcaption>Our top four User Stories</figcaption>
+            </figure>
+        </article>
+    </section>
+    
+    <section id="team">
+        <h2>Team and Role</h2>
+        <article>
+            <h3>Collaborative Effort</h3>
+            <p>The development of the NoInk Instant Camera was a collaborative endeavor, with team members bringing diverse expertise to the table.</p>
+            <h3>Roles</h3>
+            <ul>
+                <li>Designers: Responsible for crafting the camera's aesthetic and user interface.</li>
+                <li>Engineers: Developed the technical infrastructure, including the receipt printing functionality.</li>
+                <li>User Experience Specialists: Ensured that the camera's design prioritized user satisfaction and ease of use.</li>
+            </ul>
+        </article>
+    </section>
+    
+    <section id="constraints">
+        <h2>Constraints</h2>
+        <article>
+            <h3>Academic Schedule</h3>
+            <p>The team faced constraints imposed by academic commitments, necessitating efficient time management and prioritization of tasks.</p>
+            <h3>Limited Resources</h3>
+            <p>Resource constraints compelled the team to adopt innovative approaches and make strategic decisions to optimize the development process.</p>
+        </article>
+    </section>
+    
+    <section id="process">
+        <h2>Design Process</h2>
+        <article>
+            <h3>Iterative Development</h3>
+            <p>The design process involved iterative cycles of prototyping, testing, and refinement based on user feedback.</p>
+            <h3>User-Centric Approach</h3>
+            <p>By prioritizing user experience and continuously iterating based on user feedback, the team ensured that the NoInk Instant Camera met the diverse needs of its target audience.</p>
+            <figure>
+                <img src="img/concepts.png" alt="Design Process Image">
+                <figcaption>Three Systems to conduct Usability Testing with.</figcaption>
+            </figure>
+        </article>
+    </section>
+    
+    <section id="retrospective">
+        <h2>Retrospective</h2>
+        <article>
+            <h3>Lessons Learned</h3>
+            <p>The project provided valuable insights into the intersection of design, technology, and user experience, serving as a learning experience for all team members.</p>
+            <h3>Future Development Opportunities</h3>
+            <p>Areas for future development include enhancing accessibility and expanding the product's reach through targeted marketing strategies.</p>
+        </article>
+    </section>
+</div>
+
+<footer>
+  &copy; Avelino Cortina IV 2024
+</footer>
+
+<script>
+    // Add smooth scrolling to all links in the sidebar
+document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+  
+  // Highlight active section in sidebar
+  window.addEventListener('scroll', () => {
+    let scrollPosition = window.scrollY;
+    document.querySelectorAll('.content section').forEach(sec => {
+      if (sec.offsetTop <= scrollPosition && (sec.offsetTop + sec.offsetHeight) > scrollPosition) {
+        document.querySelectorAll('.sidebar a').forEach(a => {
+          a.classList.remove('active');
+          if (document.querySelector(a.getAttribute('href')) === sec) {
+            a.classList.add('active');
+          }
+        });
+      }
+    });
+  });
+  
+</script>
+</body>
+</html>
