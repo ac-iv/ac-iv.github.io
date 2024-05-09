@@ -379,6 +379,8 @@ input {
     background-color: white;
 }
 
+
+
 #special {
 	width: 75%;
 }
@@ -532,6 +534,10 @@ input {
 		justify-content: center;
 	}
 
+	#special {
+		width: 60%;
+	}
+
 }
 
 @media screen and (max-width: 400px){
@@ -545,6 +551,10 @@ input {
 	#preview{
 		width: 280px;
 
+	}
+	
+	#special {
+		width: 60%;
 	}
 
 }
