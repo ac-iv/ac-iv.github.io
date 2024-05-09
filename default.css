@@ -379,6 +379,10 @@ input {
     background-color: white;
 }
 
+#special {
+	width: 75%;
+}
+
 .modal {
     display: none;
     position: fixed;
