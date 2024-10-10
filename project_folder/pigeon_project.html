@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pigeon Roosting Mitigation - Berkeley</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/x-icon" href="/img/SketchLogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Pixelify Sans", system-ui;
+        }
+
+        .header-image {
+            width: 100%;
+            margin-top: 2%;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        .nav-bar {
+            padding-top: 2%;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .nav-bar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar ul li {
+            font-family: Arial, Helvetica, sans-serif;
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: #95a6b4;
+            font-weight: 100;
+            font-size: 13px;
+            font-variant-caps: small-caps;
+        }
+
+        .nav-bar ul li a:hover {
+            color: #b49595;
+            font-weight: bold;
+        }
+
+        .carousel {
+            padding-top: 5%;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            width: 40vh;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            transition: opacity 1s;
+            position: relative;
+            margin-bottom: -7%;
+        }
+
+        .slide img {
+            width: 80%;
+            padding: 10%;
+            display: block;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .prev, .next {
+            background-color: rgb(255, 255, 255);
+            margin-top: 15%;
+            color: rgb(0, 0, 0);
+            font-size: 14pt;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .text {
+            margin-top: 2%;
+            color: #000000;
+            font-size: 15px;
+            padding: 10px;
+            font-family: "Neue Haas Grotesk", sans-serif;
+            font-weight: 200;
+            padding-left: 3%;
+            padding-right: 3%;
+            text-align: justify;
+        }
+
+        h5 {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #95a6b4;
+            text-align: center;
+            font-family: "Pixelify Sans", sans-serif;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 10pt;
+            font-weight: 200;
+            padding: 2%;
+            font-family: "Neue Haas Grotesk", sans-serif;
+            text-transform: none; /* Ensure regular capitalization */
+        }
+
+        .download-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .download-link a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #95a6b4;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 12pt;
+            font-weight: bold;
+        }
+
+        .download-link a:hover {
+            background-color: #b49595;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Image Section -->
+    <div class="header-image">
+        <a href="../index.html"><img src="../img/SketchLogo.png" alt="Logo" width="15%"></a>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-bar">
+        <ul>
+            <li><a href="../bio.html">bio</a></li>
+            <li><a href="../work.html">design work</a></li>
+            <li><a href="../exhibitions.html">exhibitions</a></li>
+            <li><a href="../resume.html">resume</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Image Carousel -->
+    <div class="carousel">
+        <div class="slides">
+            <div class="slide">
+                <img src="../img/pigeon_front.jpeg" alt="Pigeon Roosting Mitigation Image 1">
+            </div>
+            <div class="slide">
+                <img src="../img/pigeon2.jpg" alt="Pigeon Roosting Mitigation Image 2">
+            </div>
+            <div class="slide">
+                <img src="../img/pigeon3.jpg" alt="Pigeon Roosting Mitigation Image 3">
+            </div>
+        </div>
+
+        <div class="carousel-controls">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Description -->
+    <div class="text">
+        <h5>Pigeon Roosting Mitigation - Telegraph-Channing Garage, Berkeley</h5>
+        <p>The pigeon roosting mitigation project at the Telegraph-Channing Garage in Berkeley is a comprehensive effort to address the challenges posed by pigeon roosting in urban infrastructure. This ongoing project, developed in collaboration with the City of Berkeley's Public Works Department, focuses on creating effective, humane, and sustainable solutions to reduce pigeon roosting and its associated impacts on the facility.</p>
+
+        <p>The project addresses a range of issues caused by pigeon activity, from structural damage to cleanliness and maintenance costs. Our approach includes evaluating existing methods, such as spikes, netting, and sticky solutions, while exploring innovative alternatives that align with both community values and operational needs. One of the project's key objectives is to reduce the annual $20,000 maintenance cost associated with cleaning and upkeep, aiming for a significant reduction in these expenses.</p>
+
+        <p>Through a combination of design thinking and strategic planning, we are working to transform the Telegraph-Channing Garage into a model of how urban spaces can balance functionality with humane wildlife management. By implementing solutions that deter pigeons without causing harm, we aim to create a space that is both aesthetically pleasing and operationally efficient, setting a new standard for urban design and pest control in public infrastructure.</p>
+    </div>
+
+    <!-- PDF Download Link -->
+    <div class="download-link">
+        <a href="../pdfs/Site_Visit(PDF).pdf" download>Download Site Visit</a>
+    </div>
+    <br>
+    <div class="download-link">
+        <a href="../pdfs/ARCH 400 - Pigeon Report-2.pdf" download>Download Findings Report</a>
+    </div>
+    <br>
+    <br>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            const offset = -currentSlide * 100;
+            document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Initialize the carousel by showing the first slide
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>

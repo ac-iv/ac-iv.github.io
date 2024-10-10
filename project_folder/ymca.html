@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YMCA Trophy Case Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/x-icon" href="/img/SketchLogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Pixelify Sans", system-ui;
+        }
+
+        .header-image {
+            width: 100%;
+            margin-top: 2%;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        .nav-bar {
+            padding-top: 2%;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .nav-bar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar ul li {
+            font-family: Arial, Helvetica, sans-serif;
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: #95a6b4;
+            font-weight: 100;
+            font-size: 13px;
+            font-variant-caps: small-caps;
+        }
+
+        .nav-bar ul li a:hover {
+            color: #b49595;
+            font-weight: bold;
+        }
+
+        .carousel {
+            padding-top: 5%;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            width: 60vh;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            transition: opacity 1s;
+            position: relative;
+            margin-bottom: -7%;
+        }
+
+        .slide img {
+            width: 80%;
+            padding: 10%;
+            display: block;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .prev, .next {
+            background-color: rgb(255, 255, 255);
+            margin-top: 15%;
+            color: rgb(0, 0, 0);
+            font-size: 14pt;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .text {
+            margin-top: 2%;
+            color: #000000;
+            font-size: 15px;
+            padding: 10px;
+            font-family: "Neue Haas Grotesk", sans-serif;
+            font-weight: 200;
+            padding-left: 3%;
+            padding-right: 3%;
+            text-align: justify;
+        }
+
+        h5 {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #95a6b4;
+            text-align: center;
+            font-family: "Pixelify Sans", sans-serif;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 10pt;
+            font-weight: 200;
+            padding: 2%;
+            font-family: "Neue Haas Grotesk", sans-serif;
+        }
+
+        .download-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .download-link a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #95a6b4;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 12pt;
+            font-weight: bold;
+        }
+
+        .download-link a:hover {
+            background-color: #b49595;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Image Section -->
+    <div class="header-image">
+        <a href="../index.html"><img src="../img/SketchLogo.png" alt="Logo" width="15%"></a>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-bar">
+        <ul>
+            <li><a href="../bio.html">bio</a></li>
+            <li><a href="../work.html">design work</a></li>
+            <li><a href="../exhibitions.html">exhibitions</a></li>
+            <li><a href="../resume.html">resume</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Image Carousel -->
+    <div class="carousel">
+        <div class="slides">
+            <div class="slide">
+                <img src="../img/trophycase1.png" alt="YMCA Trophy Case Design Image 1">
+            </div>
+            <div class="slide">
+                <img src="../img/ymca1.png" alt="YMCA Trophy Case Design Image 2">
+            </div>
+            <div class="slide">
+                <img src="../img/ymca2.png" alt="YMCA Trophy Case Design Image 3">
+            </div>
+          
+         
+            
+        </div>
+
+        <div class="carousel-controls">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Description -->
+    <div class="text">
+        <h5>YMCA Trophy Case Design</h5>
+        <p>The YMCA Trophy Case Design project focuses on creating a visually compelling and functional display to showcase the achievements and legacy of the YMCA community. This design aims to highlight the organization's values, history, and the accomplishments of its members through a modern and elegant presentation.</p>
+
+        <p>My approach to the design of the trophy case emphasizes clean lines, durable materials, and a versatile layout that can adapt to different types of awards and memorabilia. The design not only serves as a place to celebrate achievements but also acts as a central piece that enhances the visual appeal of the YMCA facility.</p>
+
+        <p>Through thoughtful consideration of both aesthetic and practical elements, the trophy case design ensures that the accomplishments of the YMCA community are displayed with pride and respect. It aims to create a sense of unity and inspiration among members, encouraging future generations to strive for excellence and contribute to the organization's enduring legacy.</p>
+        <div class="download-link">
+            <a href="../pdfs/YMCA Presentation.pdf" download="YMCA_TitleBlock">Download Title Block</a>
+        </div>
+    <br>
+    </div>
+    
+<br>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            const offset = -currentSlide * 100;
+            document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Initialize the carousel by showing the first slide
+        showSlide(currentSlide);
+    </script>
+
+    <!-- Download Title Block Section -->
+   
+</body>
+</html>
+

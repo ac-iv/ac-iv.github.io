@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/x-icon" href="/img/SketchLogo.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="projectstyle.css">
+<style>
+     .carousel {
+            padding-top: 5%;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            width: 30vh;
+        }
+
+</style>
+</head>
+<body>
+
+    <!-- Top Image Section -->
+    <div class="header-image">
+        <a href="../index.html"><img src="../img/SketchLogo.png" alt="Logo" width="15%"></a>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-bar">
+        <ul>
+            <li><a href="../bio.html">bio</a></li>
+            <li><a href="../work.html">design work</a></li>
+            <li><a href="../exhibitions.html">exhibitions</a></li>
+            <li><a href="../resume.html">resume</a></li>
+        </ul>
+    </div>
+    <!-- Main Content Image Carousel -->
+    <div class="carousel">
+        <div class="slides">
+            <!-- Add more slides as needed -->
+            <div class="slide">
+                <img src="../img/k1.jpeg" alt="Ketchup App Interface">
+            </div>
+            <div class="slide">
+                <img src="../img/k2.jpeg" alt="Ketchup App Interface">
+            </div>
+            <div class="slide">
+                <img src="../img/k3.jpeg" alt="Ketchup App Interface">
+            </div>
+            <div class="slide">
+                <img src="../img/k4.jpeg" alt="Ketchup App Interface">
+            </div>
+            <div class="slide">
+                <img src="../img/k5.jpeg" alt="Ketchup App Interface">
+            </div>
+            <div class="slide">
+                <img src="../img/k6.jpeg" alt="Ketchup App Interface">
+            </div>
+            
+        </div>
+
+        <div class="carousel-controls">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Description -->
+    <div class="text">
+        <h5>Overview of Ketchup</h5>
+        <p><em>Ketchup</em> is a food-focused social media app that brings people together through shared culinary experiences. It allows users to discover and review restaurants, share photos, and engage with food trends, all in one elegant, user-friendly platform. Ketchup was designed to foster a community where food lovers can connect, recommend their favorite spots, and create visual stories around their dining experiences.</p>
+
+        <h5>Details and Development</h5>
+        <p>The app's clean and intuitive design ensures easy navigation, featuring a minimalist interface that highlights user-generated content without overwhelming visuals. Key development highlights include:</p>
+        <ul>
+            <li><strong>Responsive Design:</strong> Ensuring a seamless experience across all devices, whether on mobile or desktop.</li>
+            <li><strong>Foodie Community:</strong> Building a space for food enthusiasts to share real-time reviews, photos, and stories with others who appreciate great food.</li>
+            <li><strong>Custom App Icon:</strong> Developed a simple, clean icon that reflects the essence of food and community without cartoonish elements, enhancing the app's professional yet approachable brand identity.</li>
+        </ul>
+
+        <p><a href="URL_TO_FULL_CASE_STUDY">Explore the full case study and process here.</a></p>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            const offset = -currentSlide * 100;
+            document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Initialize the carousel by showing the first slide
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>

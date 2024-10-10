@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font POster Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/x-icon" href="/img/SketchLogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Pixelify Sans", system-ui;
+        }
+
+        .header-image {
+            width: 100%;
+            margin-top: 2%;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        .nav-bar {
+            padding-top: 2%;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .nav-bar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar ul li {
+            font-family: Arial, Helvetica, sans-serif;
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: #95a6b4;
+            font-weight: 100;
+            font-size: 13px;
+            font-variant-caps: small-caps;
+        }
+
+        .nav-bar ul li a:hover {
+            color: #b49595;
+            font-weight: bold;
+        }
+
+        .carousel {
+            padding-top: 5%;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            width: 40vh;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            transition: opacity 1s;
+            position: relative;
+            margin-bottom: -7%;
+        }
+
+        .slide img {
+            width: 80%;
+            padding: 10%;
+            display: block;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .prev, .next {
+            background-color: rgb(255, 255, 255);
+            margin-top: 15%;
+            color: rgb(0, 0, 0);
+            font-size: 14pt;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .text {
+            margin-top: 2%;
+            color: #000000;
+            font-size: 15px;
+            padding: 10px;
+            font-weight: 100;
+            padding-left: 3%;
+            padding-right: 3%;
+            text-align: justify;
+        }
+
+        h5 {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #95a6b4;
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 10pt;
+            font-weight: 100;
+            padding: 2%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Image Section -->
+    <div class="header-image">
+        <a href="../index.html"><img src="../img/SketchLogo.png" alt="Logo" width="15%"></a>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-bar">
+        <ul>
+            <li><a href="../bio.html">bio</a></li>
+            <li><a href="../work.html">design work</a></li>
+            <li><a href="../exhibitions.html">exhibitions</a></li>
+            <li><a href="../resume.html">resume</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Image Carousel -->
+    <div class="carousel">
+        <div class="slides">
+            <!-- Add more slides for Widget Wakeup project images -->
+            <div class="slide">
+                <img src="../img/Coooper.jpg" alt="Widget Wakeup Mockup 1">
+            </div>
+            <div class="slide">
+                <img src="../img/Neue.jpg" alt="Widget Wakeup Mockup 2">
+            </div>
+            <div class="slide">
+                <img src="../img/Memphis.jpg" alt="Widget Wakeup Mockup 3">
+            </div>
+        </div>
+
+        <div class="carousel-controls">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
+
+    <!-- Description -->
+    <div class="text">
+        <h5>Font Poster Design</h5>
+        <p>this series of font posters is a celebration of typography, exploring the versatility and personality of each typeface. each poster was designed to highlight the unique characteristics of the font, using dynamic compositions that draw attention to its form and structure. by playing with scale, color, and layout, these posters showcase the expressive potential of type as both a visual and communicative element.</p>
+
+        <p>the designs reflect a minimalist approach, focusing on clarity and impact. they aim to inspire viewers to appreciate the subtle details and craftsmanship involved in creating each letterform. these posters aren't just about typography—they're about the dialogue between design and message, where every element works in harmony to create a compelling visual statement.</p>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            const offset = -currentSlide * 100;
+            document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Initialize the carousel by showing the first slide
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>

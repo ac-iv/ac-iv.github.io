@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Font Showcase - NeueLino & PixeLino</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/x-icon" href="/img/SketchLogo.png">
+    <link rel="stylesheet" href="projectstyle.css">
+    
+    <style>
+        /* Importing fonts */
+        @font-face {
+            font-family: 'PixeLino';
+            src: url('../fonts/PixeLino-Regular.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'NeueLino';
+            src: url('../fonts/NeueLino.otf') format('opentype');
+        }
+
+        body {
+            font-family: 'Pixelify Sans', sans-serif;
+            text-align: center;
+        }
+
+        h5 {
+            margin-bottom: 30px;
+            font-size: 24px;
+            padding-left: 5%;
+            padding-right: 5%;
+
+        }
+
+        .font-display-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin: 40px 0;
+        }
+
+        .font-display {
+            width: 30%;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .font-sample {
+            margin: 20px 0;
+            font-size: 108px;
+        }
+
+        .font-sample.uppercase {
+            font-size: 108px;
+        }
+
+        .font-label {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .font-description {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #777;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Top Image Section -->
+    <div class="header-image">
+        <a href="../index.html"><img src="../img/SketchLogo.png" alt="Logo" width="15%"></a>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-bar">
+        <ul>
+            <li><a href="../bio.html">bio</a></li>
+            <li><a href="../work.html">design work</a></li>
+            <li><a href="../exhibitions.html">exhibitions</a></li>
+            <li><a href="../resume.html">resume</a></li>
+        </ul>
+    </div>
+
+    <!-- Interactive Font Display Section -->
+    <h5>Type any letter to see it in NeueLino and PixeLino (Upper & Lowercase)</h5>
+
+    <div class="font-display-container">
+
+        <!-- NeueLino Font -->
+        <div class="font-display">
+            <p class="font-sample uppercase" id="neuelino-uppercase" style="font-family: 'NeueLino';">A</p>
+            <p class="font-sample" id="neuelino-lowercase" style="font-family: 'NeueLino';">a</p>
+            <p class="font-label">NeueLino</p>
+            <p class="font-description">NeueLino is a clean and modern sans-serif typeface, designed for readability and professional use. Its simplicity makes it versatile for a wide range of projects.</p>
+        </div>
+
+        <!-- PixeLino Font -->
+        <div class="font-display">
+            <p class="font-sample uppercase" id="pixelino-uppercase" style="font-family: 'PixeLino';">A</p>
+            <p class="font-sample" id="pixelino-lowercase" style="font-family: 'PixeLino';">a</p>
+            <p class="font-label">PixeLino</p>
+            <p class="font-description">PixeLino combines a playful pixelated style with modern design principles. Perfect for digital projects that want a fun and retro vibe.</p>
+        </div>
+        
+    </div>
+
+    <script>
+        // Interactive Font Typing
+        document.addEventListener('keydown', function (event) {
+            const key = event.key;
+            const uppercase = key.toUpperCase();
+            const lowercase = key.toLowerCase();
+
+            if (uppercase.match(/[A-Z0-9]/i)) {
+                // Update NeueLino font display
+                document.getElementById('neuelino-uppercase').textContent = uppercase;
+                document.getElementById('neuelino-lowercase').textContent = lowercase;
+
+                // Update PixeLino font display
+                document.getElementById('pixelino-uppercase').textContent = uppercase;
+                document.getElementById('pixelino-lowercase').textContent = lowercase;
+            }
+        });
+    </script>
+
+</body>
+</html>

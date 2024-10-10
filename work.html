@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/img/SketchLogo.png">
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header-image {
+            width: 100%;
+            margin-top: 2%;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            position: relative;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: -3%;
+            color: #95a6b4;
+                    font-variant-caps: small-caps;
+        }
+        .header-image img {
+            width: 15%;
+            transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+        }
+        hr{
+            color: #95a6b4;
+            margin-left: 5%;
+            margin-right: 5%;
+
+        }
+
+        .header-image:hover img {
+            content: url('img/GreenLogo.png'); /* Change the image on hover */
+        }
+
+        .nav-bar {
+            padding-top: 2%;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .nav-bar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: #95a6b4;
+            font-weight: 100;
+            font-size: 13px;
+            font-variant-caps: small-caps;
+        }
+
+        .nav-bar ul li a:hover {
+            color: #b49595;
+            font-weight: bold;
+        }
+
+        /* Grid layout for portfolio work */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            padding: 50px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .image-container {
+            width: 100%;
+            position: relative;
+            padding-top: 133.33%; /* 3:4 aspect ratio */
+            overflow: hidden;
+        }
+
+        .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the container */
+            filter: grayscale(1);
+        }
+
+        .image-container img:hover {
+            filter: grayscale(0);
+            transition: 0.4s;
+            opacity: 50%;
+        }
+
+        .portfolio-text {
+            font-size: 18px;
+            color: #606a73;
+            margin-top: 10px;
+            font-variant-caps: small-caps;
+            font-weight: 100;
+        }
+        .portfolio-subtext {
+            font-size: 12px;
+            color: #95a6b4;
+            font-variant-caps: small-caps;
+            font-weight: 100;
+         }
+
+        .portfolio-item:hover .portfolio-text {
+            color: #b49595; /* Change text color on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Image Section -->
+    <div class="header-image">
+        <a href="index.html">
+            <img src="img/SketchLogo.png" alt="Logo">
+        </a>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-bar">
+        <ul>
+            <li><a href="bio.html">bio</a></li>
+            <li><a href="work.html">design work</a></li>
+            <li><a href="exhibitions.html">exhibitions</a></li>
+            <li><a href="resume.html">resume</a></li>
+        </ul>
+    </div>
+<br>
+    <h1>in the works</h1>
+    <br>
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <div class="image-container">
+                <a href="project_folder/tent_city.html">
+                    <img src="img/tents.png" alt="Project 3">
+                </a>
+            </div>
+            <div class="portfolio-text">richmond homeless encampment</div>
+            <div class="portfolio-subtext">community, architecture</div>
+    
+        </div>
+        
+        <div class="portfolio-item">
+            <div class="image-container">
+                <a href="project_folder/pigeon_project.html">
+                    <img src="img/pigeon_front.jpeg" alt="Project 2">
+                </a>
+            </div>
+            <div class="portfolio-text">berkeley pidgeon dilemma</div>
+            <div class="portfolio-subtext">community, architecture</div>
+    
+        </div>
+        <div class="portfolio-item">
+            <div class="image-container">
+                
+                <a href="project_folder/ymca.html">
+                    <img src="img/trophycase1.png" alt="Project 1">
+                </a>
+            </div>
+            <div class="portfolio-text">ymca trophy case design</div>
+            <div class="portfolio-subtext">community, architecture</div>
+    
+        </div>
+     
+    </div>
+    <hr>
+    <h1>past projects</h1>
+
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <div class="image-container">
+                <a href="project_folder/mirrored_confessional.html">
+                    <img src="img/confessional/1.jpeg" alt="Project 1">
+                </a>
+            </div>
+            <div class="portfolio-text">the mirrored confessional</div>
+            <div class="portfolio-subtext">experience design, experimental design, audio mixing, book making, publication design</div>
+
+        </div>
+        <div class="portfolio-item">
+            <div class="image-container">
+                <a href="project_folder/ketchup_app.html">
+                    <img src="img/ketchup-poster.jpg" alt="Project 2">
+                </a>
+            </div>
+            <div class="portfolio-text">ketchup app startup</div>
+            <div class="portfolio-subtext">ui ux design, graphic design, branding</div>
+
+        </div>
+        <div class="portfolio-item">
+            <div class="image-container">
+                <a href="project_folder/mbs.html">
+                    <img src="img/mbs_mockup.jpg" alt="Project 3">
+                </a>
+            </div>
+            <div class="portfolio-text">mission bay shuttle app design</div>
+            <div class="portfolio-subtext">ui ux design, graphic design, branding</div>
+
+        </div>
+        <div class="portfolio-item">
+            <div class="image-container">
+                <a href="project_folder/font_design.html">
+                    <img src="img/pixelino_book.jpeg" alt="Project 4">
+                </a>
+            </div>
+            <div class="portfolio-text">font design</div>
+            <div class="portfolio-subtext">book making, typography, publication design</div>
+
+        </div>
+        <div class="portfolio-item">
+            <div class="image-container">
+                <a href="project_folder/wakeup.html">
+                    <img src="img/wakeup.jpg" alt="Project 5">
+                </a>
+            </div>
+            <div class="portfolio-text">widget wakeup</div>
+            <div class="portfolio-subtext">ui ux design, graphic design, branding</div>
+
+        </div>
+        <div class="portfolio-item">
+            <div class="image-container">
+                <a href="project_folder/mighty_leaf.html">
+                    <img src="img/leaf.png" alt="Project 6">
+                </a>
+            </div>
+            <div class="portfolio-text">mighty leaf package redesign</div>
+            <div class="portfolio-subtext">packaging, branding, graphic design</div>
+
+        </div>
+        <div class="portfolio-item">
+            <div class="image-container">
+                <a href="project_folder/font_poster.html">
+                    <img src="img/neue-mockup.jpeg" alt="Project 7">
+                </a>
+            </div>
+            <div class="portfolio-text">font posters</div>
+            <div class="portfolio-subtext"> graphic design. typography, publication</div>
+
+        </div>
+        <div class="portfolio-item">
+            <div class="image-container">
+                <a href="project_folder/i_am_immortal_book.html">
+                    <img src="img/bookpages.jpg" alt="Project 7">
+                </a>
+            </div>
+            <div class="portfolio-text">i am immortal</div>
+            <div class="portfolio-subtext"> graphic design. typography, publication</div>
+
+        </div>
+</div>
+
+
+</body>
+</html>

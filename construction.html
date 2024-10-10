@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avelino J. Cortina IV</title>
+    <link rel="icon" type="image/x-icon" href="/img/SketchLogo.png">
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #000000;
+        }
+
+        .header-image {
+            width: 100%;
+            margin-top: 2%;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            filter: invert(1);
+        }
+
+        .header-image .logo {
+            transition: opacity 0.3s ease; /* Smooth transition for opacity change */
+        }
+
+        .header-image .logo:hover {
+            content: url('img/OrangeLogo.png'); /* Change the image on hover */
+            filter: invert(1);
+
+        }
+
+        .nav-bar {
+            padding-top: 2%;
+            background-color: #000000;
+
+            text-align: center;
+        }
+
+        .nav-bar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: #fff200;
+            font-weight: 100;
+            font-size: 13px;
+            font-variant-caps: small-caps;
+        }
+
+        .nav-bar ul li a:hover {
+            color: #b49595;
+            font-weight: bold;
+        }
+
+        .carousel {
+            padding-top: 5%;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            width: 50vh;
+        }
+
+       
+
+
+        /* Footer Style */
+        .footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 12px; /* Smaller font size */
+            margin-top: auto; /* Stick to the bottom */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 1s; /* Smooth transition */
+        }
+
+        .footer.visible {
+            opacity: 1; /* Visible after class is added */
+        }
+
+        .footer a {
+            font-variant-caps: small-caps;
+
+            color: #95a6b4;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+h2{
+    color: #fff200;
+    text-align: center;
+}
+        .footer a:hover {
+            color: #b49595;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Image Section -->
+    <div class="header-image">
+        <a href="index.html"><img src="img/SketchLogo.png" alt="Logo" width="15%"></a>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-bar">
+        <ul>
+            <li><a href="bio.html">bio</a></li>
+            <li><a href="work.html">design work</a></li>
+            <li><a href="exhibitions.html">exhibitions</a></li>
+            <li><a href="resume.html">resume</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Image Carousel -->
+    <div class="carousel">
+        <div class="slides">
+            <!-- Add more slides as needed -->
+            <div class="slide">
+                <img src="img/construction.gif" alt="Project 1">
+            </div>
+            <h2> Page Under Construction</h2>
+
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    
+
+   
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Simple Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/x-icon" href="/img/SketchLogo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="projectstyle.css">
+</head>
+<body>
+
+    <!-- Top Image Section -->
+    <div class="header-image">
+        <a href="../index.html"><img src="../img/SketchLogo.png" alt="Logo" width="15%"></a>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-bar">
+        <ul>
+            <li><a href="../bio.html">bio</a></li>
+            <li><a href="../work.html">design work</a></li>
+            <li><a href="../exhibitions.html">exhibitions</a></li>
+            <li><a href="../resume.html">resume</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Image Carousel -->
+    <div class="carousel">
+        <div class="slides">
+            <!-- Embedding Figma Prototype -->
+            <div class="slide">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="90%" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FKrmwvbENspD5JgrbS9uBaE%2FMission-Bay-Shuttle-App%3Fnode-id%3D360-45%26starting-point-node-id%3D360%253A45%26t%3DN8CpF3flaBdHHCq5-1" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Description -->
+    <div class="text">
+        <h5>Overview of Mission Bay Shuttle App Redesign</h5>
+        <p>The <em>Mission Bay Shuttle App</em> redesign project aimed to enhance the user experience (UX) by addressing issues such as difficult navigation, inconsistent design, and poor accessibility. The goal was to create a seamless, intuitive, and enjoyable experience for the users of the shuttle service, allowing them to easily access schedules, routes, and other important information.</p>
+
+        <h5>Details and Development</h5>
+        <p>This project followed a structured design process involving research, wireframing, prototyping, and user testing. By analyzing user feedback and identifying pain points, the team worked to streamline navigation and create a cohesive design language throughout the app.</p>
+        <p>Key development highlights include:</p>
+        <ul>
+            <li><strong>User-Centered Design:</strong> Emphasis on improving usability and accessibility for a wide range of users.</li>
+            <li><strong>Consistent Visual Language:</strong> A unified design system to ensure visual consistency and easy navigation.</li>
+            <li><strong>Improved Navigation:</strong> Simplified routes and schedules, making key information easily accessible to users.</li>
+        </ul>
+
+        <p><a href="URL_TO_FULL_CASE_STUDY">Explore the full case study and process here.</a></p>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            const offset = -currentSlide * 100;
+            document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Initialize the carousel by showing the first slide
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>

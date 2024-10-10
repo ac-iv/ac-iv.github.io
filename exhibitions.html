@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibitions</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/img/SketchLogo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Pixelify Sans", system-ui;
+        }
+        
+        .header-image:hover img {
+            content: url('img/BlueLogo.png'); /* Change the image on hover */
+        }
+        .header-image {
+            width: 100%;
+            margin-top: 2%;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        .nav-bar {
+            padding-top: 2%;
+            background-color: #fff;
+            text-align: center;
+
+            font-family: Arial, sans-serif;
+
+        }
+
+        .nav-bar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: #95a6b4;
+            font-weight: 100;
+            font-size: 13px;
+            font-variant-caps: small-caps;
+        }
+
+        .nav-bar ul li a:hover {
+            color: #b49595;
+            font-weight: bold;
+        }
+
+        /* Minimal exhibition layout */
+        .exhibition-list {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .exhibition-item {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .exhibition-item h2 {
+            font-size: 24px;
+            color: #333;
+            font-weight: bold;
+            margin: 0;
+            font-family: "Pixelify Sans", system-ui;
+
+        }
+
+        .exhibition-item p {
+            font-size: 16px;
+            color: #666;
+            margin: 5px 0 10px;
+            font-family: "Pixelify Sans", system-ui;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;   
+        }
+
+        .exhibition-item a {
+            color: #95a6b4;
+            text-decoration: none;
+            font-variant-caps: small-caps;
+            font-weight: bold;
+            font-family: "Pixelify Sans", system-ui;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;   
+        }
+
+        .exhibition-item a:hover {
+            color: #b49595;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Top Image Section -->
+    <div class="header-image">
+        <a href="index.html"><img src="img/SketchLogo.png" alt="Logo" width="15%"></a>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-bar">
+        <ul>
+            <li><a href="bio.html" target="_blank">bio</a></li>
+            <li><a href="work.html">design work</a></li>
+            <li><a href="exhibitions.html">exhibitions</a></li>
+            <li><a href="resume.html">resume</a></li>
+        </ul>
+    </div>
+
+    <!-- Minimal Exhibition List Section -->
+    <div class="exhibition-list">
+        <div class="exhibition-item">
+            <h2>Asterisk</h2>
+            <p>An exhibition of BA thesis projects from students in the Design + Fine Arts program.</p>
+            <a href="https://usfca.design/2024/exhibition/" target="_blank">View Exhibition</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
