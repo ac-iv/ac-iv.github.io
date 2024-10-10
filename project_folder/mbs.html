@@ -2,13 +2,108 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Simple Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>Mission Bay Shuttle App Redesign</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" type="image/x-icon" href="/img/SketchLogo.png">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="projectstyle.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Pixelify Sans", system-ui;
+        }
+
+        .header-image {
+            width: 100%;
+            margin-top: 2%;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        .nav-bar {
+            padding-top: 2%;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .nav-bar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar ul li {
+            font-family: Arial, Helvetica, sans-serif;
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: #95a6b4;
+            font-weight: 100;
+            font-size: 13px;
+            font-variant-caps: small-caps;
+        }
+
+        .nav-bar ul li a:hover {
+            color: #b49595;
+            font-weight: bold;
+        }
+
+        .carousel {
+            padding-top: 5%;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            width: 90%;
+        }
+
+        .slides {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            transition: opacity 1s;
+            position: relative;
+            margin-bottom: -7%;
+        }
+
+        .text {
+            margin-top: 2%;
+            color: #000000;
+            font-size: 15px;
+            padding: 10px;
+            font-family: "Neue Haas Grotesk", sans-serif;
+            font-weight: 200;
+            padding-left: 3%;
+            padding-right: 3%;
+            text-align: justify;
+        }
+
+        h5 {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #95a6b4;
+            text-align: center;
+            font-family: "Pixelify Sans", sans-serif;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 10pt;
+            font-weight: 200;
+            padding: 2%;
+            font-family: "Neue Haas Grotesk", sans-serif;
+        }
+    </style>
 </head>
 <body>
 
