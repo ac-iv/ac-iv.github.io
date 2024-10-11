@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Biography</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Bio</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="icon" type="image/x-icon" href="/img/SketchLogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@200&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Neue+Haas+Grotesk:wght@200..700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            font-family: "Pixelify Sans", system-ui;
+            font-family: "Neue Haas Grotesk", Arial, sans-serif;
+            background-color: #fff;
         }
 
         .header-image {
             width: 100%;
-            margin-top: 2%;
+            margin-top: 1%;
             background-size: cover;
             background-position: center;
             text-align: center;
@@ -30,7 +29,7 @@
         }
 
         .nav-bar {
-            padding-top: 2%;
+            padding-top: 1.5%;
             background-color: #fff;
             text-align: center;
             font-family: Arial, sans-serif;
@@ -62,141 +61,85 @@
 
         .container {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: 30px auto;
             padding: 20px;
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+            text-align: center;
         }
 
-        .text {
-            flex: 1;
-            max-width: 600px;
-            padding: 20px;
-            color: #000;
-            font-family: "Neue Haas Grotesk", sans-serif;
-            font-weight: 200;
+        .bio-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .bio-image img {
+            width: 100%;
+            height: auto;
         }
 
         .text h2 {
-            font-size: 28px;
+            font-size: 24px;
             margin-bottom: 15px;
             color: #95a6b4;
-            font-family: "Pixelify Sans", sans-serif;
+            font-family: "Pixelify Sans", system-ui;
         }
 
         .text p {
             font-size: 16px;
             line-height: 1.6;
             color: #333;
+            font-weight: 100;
             font-family: "Neue Haas Grotesk", sans-serif;
-        }
-
-        /* Carousel Section */
-        .carousel {
-            flex: 1;
-            position: relative;
-            width: 100%;
-            max-width: 300px; /* Limit width on large screens */
-            padding-top: 75%; /* 4:3 aspect ratio */
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-
-        .carousel img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .carousel img.active {
-            opacity: 1;
-        }
-
-        .header-image:hover img {
-            content: url('img/YellowLogo.png');
-        }
-
-        .contact {
-            text-align: center;
-            font-family: "Neue Haas Grotesk", sans-serif;
-        }
-
-        .contact h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #95a6b4;
-            font-family: "Pixelify Sans", sans-serif;
-        }
-
-        .contact p {
-            font-size: 16px;
             margin: 0;
         }
 
-        .contact a {
-            color: #b49595;
+        .social-buttons {
+            margin-top: 30px;
         }
 
-        .contact a:hover {
-            filter: invert(1);
+        .social-buttons a {
+            display: inline-block;
+            margin: 10px;
+            width: 40px;
+            height: 40px;
+            background-size: cover;
+            transition: transform 0.3s, background-color 0.3s;
         }
 
-        /* Responsive Design */
-        @media (max-width: 400px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .carousel {
-                max-width: 100%; /* Full width on smaller screens */
-                padding-top: 75%;
-            }
-
-            .text {
-                padding: 15px;
-            }
-
-            .text h2 {
-                font-size: 24px;
-            }
+        /* Icon Styling */
+        .instagram-icon {
+            background-image: url('img/instagram-black.png');
         }
 
-        @media (max-width: 768px) {
-            .carousel {
-                max-width: 100%;
-                padding-top: 75%; /* Maintain 4:3 aspect ratio */
-            }
-
-            .text {
-                padding: 10px;
-            }
-
-            .text h2 {
-                font-size: 22px;
-            }
-
-            .text p {
-                font-size: 14px;
-            }
+        .linkedin-icon {
+            background-image: url('img/linkedin-black.png');
         }
 
-        @media (max-width: 480px) {
-            .text h2 {
-                font-size: 20px;
-            }
+        .github-icon {
+            background-image: url('img/github-black.png');
+        }
 
-            .text p {
-                font-size: 12px;
-            }
+        /* Hover Effect */
+        .social-buttons a:hover {
+            transform: scale(1.2);
+            background-image: url('img/linkedin-blue.png'); /* Replace with the appropriate icon paths */
+        }
+
+        .social-buttons a.instagram-icon:hover {
+            background-image: url('img/instagram-blue.png');
+        }
+
+        .social-buttons a.linkedin-icon:hover {
+            background-image: url('img/linkedin-blue.png');
+        }
+
+        .social-buttons a.github-icon:hover {
+            background-image: url('img/github-blue.png');
         }
     </style>
 </head>
@@ -217,50 +160,35 @@
         </ul>
     </div>
 
-    <!-- Container to hold bio and carousel side by side -->
+    <!-- Bio Content Section -->
     <div class="container">
-        <!-- Bio Section -->
+        <div class="bio-image">
+            <img src="img/headshot.jpeg.png" alt="Avelino J. Cortina IV Headshot">
+        </div>
         <div class="text">
-            <h2>About Me</h2>
+            <h2>Avelino J. Cortina IV</h2>
             <p>
-                I am a creative designer with a passion for UI/UX and architecture. 
-                With a background in diverse projects ranging from tech startups to architectural endeavors, 
-                I bring a unique perspective to each project, focusing on both form and function. 
-                My work spans various industries, including technology, art, and community-driven 
-                initiatives, always emphasizing innovation and inclusivity. 
+                Avelino J. Cortina IV is a creative designer with a passion for UI/UX and architecture. 
+                Their approach to design focuses on blending innovative thinking with practical solutions, 
+                creating experiences that engage and inspire. From tech startups to community-driven projects, 
+                Avelino's work embodies a commitment to form, function, and a human-centered approach.
+            </p>
+            <p>
+                Based in San Francisco, Avelino combines a diverse background in design with a love for technology, 
+                constantly exploring new ways to push the boundaries of digital and physical spaces. Whether working 
+                on product designs, interactive experiences, or architectural concepts, they aim to make a meaningful 
+                impact through thoughtful, inclusive design.
             </p>
         </div>
 
-        <!-- Carousel Section -->
-        <div class="carousel">
-            <img src="img/lino.png" alt="Photo 1" class="active">
-            <img src="img/headshot.png" alt="Photo 2">
-            <img src="img/lino2.jpeg" alt="Photo 3">
-            <img src="img/lino3.jpeg" alt="Photo 4">
+        <!-- Social Media Icons -->
+        <div class="social-buttons">
+            <a href="https://github.com/yourusername" class="email-icon" target="_blank"><img src="img/em.png" style="width: 100%;"></a>
+            <a href="https://instagram.com/avelinolovesyou" class="instagram-icon" target="_blank"><img src="img/in.png" style="width: 100%;"></a>
+            <a href="https://linkedin.com/in/aciv/" class="linkedin-icon" target="_blank"><img src="img/LI.png" style="width: 100%;"></a>
+
         </div>
     </div>
-
-    <!-- Contact Section -->
-    <div class="contact">
-        <h3>Contact Me</h3>
-        <p>Email: <a href="mailto:avelinocortinaiv@mac.com">avelinocortinaiv@mac.com</a></p>
-    </div>
-<br><br>
-<br>
-
-    <script>
-        let currentIndex = 0;
-        const images = document.querySelectorAll('.carousel img');
-        const totalImages = images.length;
-
-        function showNextImage() {
-            images[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % totalImages;
-            images[currentIndex].classList.add('active');
-        }
-
-        setInterval(showNextImage, 3000); // Change image every 3 seconds
-    </script>
 
 </body>
 </html>
