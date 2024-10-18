@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortfoliOS Case Study</title>
+    <link rel="icon" type="image/x-icon" href="/img/SketchLogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Pixelify Sans", system-ui;
+        }
+
+        .header-image {
+            width: 100%;
+            margin-top: 2%;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        .header-image .logo:hover {
+            content: url('img/PinkLogo.png'); /* Change the image on hover */
+        }
+
+        .nav-bar {
+            padding-top: 2%;
+            background-color: #fff;
+            text-align: center;
+            padding-bottom: 2%;
+        }
+
+        .nav-bar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar ul li {
+            font-family: Arial, Helvetica, sans-serif;
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: #95a6b4;
+            font-weight: 100;
+            font-size: 13px;
+            font-variant-caps: small-caps;
+        }
+
+        .nav-bar ul li a:hover {
+            color: #b49595;
+            font-weight: bold;
+        }
+
+        .iframe-container {
+            position: relative;
+            width: 75%;
+            margin: 0 auto; /* Centers the iframe */
+            padding-bottom: 42.25%; /* Keeps aspect ratio */
+            margin-top: 20px;
+            overflow: hidden;
+            margin-left: 20%;   
+            margin-right: 50%;
+             }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 125%;
+            height: 150%;
+            transform: scale(0.6); /* Scales down the content inside iframe to 60% */
+            transform-origin: top left; /* Ensures scaling starts from top left */
+            border: none;
+        }
+
+        .text {
+            margin-top: -3%;
+            color: #000000;
+            font-size: 15px;
+            padding: 10px;
+            font-family: "Neue Haas Grotesk", sans-serif;
+            font-weight: 200;
+            padding-left: 3%;
+            padding-right: 3%;
+            text-align: justify;
+        }
+
+        h5 {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #95a6b4;
+            text-align: center;
+            font-family: "Pixelify Sans", sans-serif;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 10pt;
+            font-weight: 200;
+            padding: 2%;
+            font-family: "Neue Haas Grotesk", sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Image Section -->
+    <div class="header-image">
+        <a href="../index.html"><img src="../img/SketchLogo.png" alt="Logo" width="15%"></a>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-bar">
+        <ul>
+            <li><a href="../bio.html">bio</a></li>
+            <li><a href="../work.html">design work</a></li>
+            <li><a href="../exhibitions.html">exhibitions</a></li>
+            <li><a href="../resume.html">resume</a></li>
+        </ul>
+    </div>
+
+    <!-- Embedded Interactive PortfoliOS -->
+    <div class="iframe-container">
+        <iframe src="https://ac-iv.github.io/portfoliOS/" title="PortfoliOS Interactive"></iframe>
+    </div>
+
+    <!-- Description -->
+    <div class="text">
+        <h5>PortfoliOS - A MacOS Inspired Portfolio</h5>
+        <p>The PortfoliOS project is a nostalgic nod to classic MacOS interfaces, reimagined as an interactive digital portfolio. It showcases my approach to blending functionality with playfulness in a design system. You can interact with the elements in the embedded version below to explore my body of work in a unique, vintage style.</p>
+    </div>
+
+</body>
+</html>
