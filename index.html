@@ -3,111 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exponential Logo Animation</title>
+    <title>Avelino J. Cortina IV</title>
+    <link rel="icon" type="image/x-icon" href="/img/SketchLogo.png">
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <style>
         body {
             margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #fff;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        .logo-container {
-            width: 400px;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .logo-container img {
+        .header-image {
             width: 100%;
-            height: auto;
-            animation: logoCycle 2s forwards;
+            margin-top: 2%;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
         }
 
-        /* Keyframes with the specified percentage values */
-        @keyframes logoCycle {
-            0% { content: url('img/BlueLogo.png'); }
-            9.70% { content: url('img/GreenLogo.png'); }
-            18.46% { content: url('img/OrangeLogo.png'); }
-            26.37% { content: url('img/PinkLogo.png'); }
-            33.51% { content: url('img/YellowLogo.png'); }
-            39.96% { content: url('img/BlueLogo.png'); }
-            45.79% { content: url('img/GreenLogo.png'); }
-            51.05% { content: url('img/OrangeLogo.png'); }
-            55.79% { content: url('img/PinkLogo.png'); }
-            60.08% { content: url('img/YellowLogo.png'); }
-            63.96% { content: url('img/BlueLogo.png'); }
-            67.45% { content: url('img/GreenLogo.png'); }
-            70.61% { content: url('img/OrangeLogo.png'); }
-            73.46% { content: url('img/PinkLogo.png'); }
-            76.03% { content: url('img/YellowLogo.png'); }
-            78.36% { content: url('img/BlueLogo.png'); }
-            80.46% { content: url('img/GreenLogo.png'); }
-            82.35% { content: url('img/OrangeLogo.png'); }
-            84.07% { content: url('img/PinkLogo.png'); }
-            85.61% { content: url('img/YellowLogo.png'); }
-            87.01% { content: url('img/BlueLogo.png'); }
-            88.27% { content: url('img/GreenLogo.png'); }
-            89.41% { content: url('img/OrangeLogo.png'); }
-            90.43% { content: url('img/PinkLogo.png'); }
-            91.36% { content: url('img/YellowLogo.png'); }
-            92.20% { content: url('img/BlueLogo.png'); }
-            92.96% { content: url('img/GreenLogo.png'); }
-            93.64% { content: url('img/OrangeLogo.png'); }
-            94.26% { content: url('img/PinkLogo.png'); }
-            94.81% { content: url('img/YellowLogo.png'); }
-            95.32% { content: url('img/BlueLogo.png'); }
-            95.77% { content: url('img/GreenLogo.png'); }
-            96.18% { content: url('img/OrangeLogo.png'); }
-            96.55% { content: url('img/PinkLogo.png'); }
-            96.89% { content: url('img/YellowLogo.png'); }
-            97.19% { content: url('img/BlueLogo.png'); }
-            97.46% { content: url('img/GreenLogo.png'); }
-            97.71% { content: url('img/OrangeLogo.png'); }
-            97.93% { content: url('img/PinkLogo.png'); }
-            98.13% { content: url('img/YellowLogo.png'); }
-            98.31% { content: url('img/BlueLogo.png'); }
-            98.48% { content: url('img/GreenLogo.png'); }
-            98.62% { content: url('img/OrangeLogo.png'); }
-            98.76% { content: url('img/PinkLogo.png'); }
-            98.88% { content: url('img/YellowLogo.png'); }
-            98.99% { content: url('img/BlueLogo.png'); }
-            99.08% { content: url('img/GreenLogo.png'); }
-            99.17% { content: url('img/OrangeLogo.png'); }
-            99.90% { content: url('img/PinkLogo.png'); }
-            100% { content: url('img/YellowLogo.png'); }
+        .header-image .logo {
+            transition: opacity 0.3s ease; /* Smooth transition for opacity change */
+        }
+
+        .header-image .logo:hover {
+            content: url('img/PinkLogo.png'); /* Change the image on hover */
+        }
+
+        .nav-bar {
+            padding-top: 2%;
+            background-color: #fff;
+            text-align: center;
+            margin-bottom: -3%;
+        }
+
+        .nav-bar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: #95a6b4;
+            font-weight: 100;
+            font-size: 13px;
+            font-variant-caps: small-caps;
+        }
+
+        .nav-bar ul li a:hover {
+            color: #b49595;
+            font-weight: bold;
+        }
+
+        .carousel {
+            padding-top: 5%;
+            
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            width: 50vh;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            margin-top: -8%;
+            transition: opacity 1s;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            display: block;
+        }
+
+        .text {
+            margin-top: 2%;
+            color: #000000;
+            font-size: 24px;
+            padding: 10px;
+            text-decoration: none;
+            color: #95a6b4;
+            font-weight: bold;
+            font-variant-caps: small-caps;
+            text-align: center;
+        }
+
+        /* Footer Style */
+        .footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 12px; /* Smaller font size */
+            color: #333;
+            margin-top: auto; /* Stick to the bottom */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 1s; /* Smooth transition */
+        }
+
+        .footer.visible {
+            opacity: 1; /* Visible after class is added */
+        }
+
+        .footer a {
+            font-variant-caps: small-caps;
+
+            color: #95a6b4;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .footer a:hover {
+            color: #b49595;
         }
     </style>
-
-    <script>
-        // Function to randomly choose between index1.html and index2.html
-        function randomRedirect() {
-            const pages = ['index1.html', 'index2.html'];
-            const randomIndex = Math.floor(Math.random() * pages.length); // Use correct length calculation
-            const randomPage = pages[randomIndex]; // Randomly select index1 or index2
-            // Redirect after 2 seconds (when animation finishes)
-            setTimeout(function() {
-                window.location.href = randomPage;
-            }, 2000); // 2000 ms = 2 seconds
-        }
-
-        // Start the redirect process when the page loads
-        window.onload = function() {
-            randomRedirect();
-        };
-    </script>
 </head>
 <body>
 
-    <!-- Logo Animation Container -->
-    <div class="logo-container">
-        <img src="img/BlueLogo.png" alt="Logo Animation">
+    <!-- Top Image Section -->
+    <div class="header-image">
+        <img src="img/SketchLogo.png" width="15%" class="logo">
     </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-bar">
+        <ul>
+            <li><a href="bio.html">bio</a></li>
+            <li><a href="work.html">design work</a></li>
+            <li><a href="exhibitions.html">exhibitions</a></li>
+            <li><a href="resume.html">resume</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Image Carousel -->
+    <div class="carousel">
+        <div class="slides">
+            <!-- Add more slides as needed -->
+            <div class="slide">
+                <img src="img/confessional/1.jpeg" alt="Project 1">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <a href="https://www.linkedin.com/in/your-profile" target="_blank">linkedin</a> 
+        <a href="https://github.com/your-profile" target="_blank">github</a> 
+        <a href="https://www.instagram.com/your-profile" target="_blank">instagram</a>
+    </div>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        let currentSlide = 0;
+        const numberOfSlides = slides.children.length;
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % numberOfSlides;
+            slides.style.transform = 'translateX(-' + currentSlide * 100 + '%)';
+        }
+
+        setInterval(nextSlide, 3000); // Change slide every 3000 ms (3 seconds)
+
+        // Show the footer after 5 seconds
+        setTimeout(() => {
+            document.querySelector('.footer').classList.add('visible');
+        }, 5000); // 5000 milliseconds = 5 seconds
+    </script>
 
 </body>
 </html>
