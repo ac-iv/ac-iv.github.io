@@ -3,135 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PortfoliOS Case Study</title>
-    <link rel="icon" type="image/x-icon" href="/img/SketchLogo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@200&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <title>Exponential Logo Animation</title>
     <style>
         body {
             margin: 0;
-            font-family: "Pixelify Sans", system-ui;
-        }
-
-        .header-image {
-            width: 100%;
-            margin-top: 2%;
-            background-size: cover;
-            background-position: center;
-            text-align: center;
-        }
-
-        .header-image .logo:hover {
-            content: url('img/PinkLogo.png'); /* Change the image on hover */
-        }
-
-        .nav-bar {
-            padding-top: 2%;
-            background-color: #fff;
-            text-align: center;
-            padding-bottom: 2%;
-        }
-
-        .nav-bar ul {
-            list-style: none;
-            margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fff;
         }
 
-        .nav-bar ul li {
-            font-family: Arial, Helvetica, sans-serif;
-            display: inline-block;
-            margin: 0 20px;
+        .logo-container {
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .nav-bar ul li a {
-            text-decoration: none;
-            color: #95a6b4;
-            font-weight: 100;
-            font-size: 13px;
-            font-variant-caps: small-caps;
+        .logo-container img {
+            width: 100%;
+            height: auto;
+            animation: logoCycle 2s forwards;
         }
 
-        .nav-bar ul li a:hover {
-            color: #b49595;
-            font-weight: bold;
-        }
-
-        .iframe-container {
-            position: relative;
-            width: 75%;
-            margin: 0 auto; /* Centers the iframe */
-            padding-bottom: 42.25%; /* Keeps aspect ratio */
-            margin-top: 20px;
-            overflow: hidden;
-            margin-left: 20%;   
-            margin-right: 50%;
-             }
-
-        .iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 125%;
-            height: 150%;
-            transform: scale(0.6); /* Scales down the content inside iframe to 60% */
-            transform-origin: top left; /* Ensures scaling starts from top left */
-            border: none;
-        }
-
-        .text {
-            margin-top: -3%;
-            color: #000000;
-            font-size: 15px;
-            padding: 10px;
-            font-family: "Neue Haas Grotesk", sans-serif;
-            font-weight: 200;
-            padding-left: 3%;
-            padding-right: 3%;
-            text-align: justify;
-        }
-
-        h5 {
-            font-size: 12pt;
-            font-weight: bold;
-            color: #95a6b4;
-            text-align: center;
-            font-family: "Pixelify Sans", sans-serif;
-        }
-
-        p {
-            text-align: justify;
-            font-size: 10pt;
-            font-weight: 200;
-            padding: 2%;
-            font-family: "Neue Haas Grotesk", sans-serif;
+        /* Keyframes with the specified percentage values */
+        @keyframes logoCycle {
+            0% { content: url('img/BlueLogo.png'); }
+            9.70% { content: url('img/GreenLogo.png'); }
+            18.46% { content: url('img/OrangeLogo.png'); }
+            26.37% { content: url('img/PinkLogo.png'); }
+            33.51% { content: url('img/YellowLogo.png'); }
+            39.96% { content: url('img/BlueLogo.png'); }
+            45.79% { content: url('img/GreenLogo.png'); }
+            51.05% { content: url('img/OrangeLogo.png'); }
+            55.79% { content: url('img/PinkLogo.png'); }
+            60.08% { content: url('img/YellowLogo.png'); }
+            63.96% { content: url('img/BlueLogo.png'); }
+            67.45% { content: url('img/GreenLogo.png'); }
+            70.61% { content: url('img/OrangeLogo.png'); }
+            73.46% { content: url('img/PinkLogo.png'); }
+            76.03% { content: url('img/YellowLogo.png'); }
+            78.36% { content: url('img/BlueLogo.png'); }
+            80.46% { content: url('img/GreenLogo.png'); }
+            82.35% { content: url('img/OrangeLogo.png'); }
+            84.07% { content: url('img/PinkLogo.png'); }
+            85.61% { content: url('img/YellowLogo.png'); }
+            87.01% { content: url('img/BlueLogo.png'); }
+            88.27% { content: url('img/GreenLogo.png'); }
+            89.41% { content: url('img/OrangeLogo.png'); }
+            90.43% { content: url('img/PinkLogo.png'); }
+            91.36% { content: url('img/YellowLogo.png'); }
+            92.20% { content: url('img/BlueLogo.png'); }
+            92.96% { content: url('img/GreenLogo.png'); }
+            93.64% { content: url('img/OrangeLogo.png'); }
+            94.26% { content: url('img/PinkLogo.png'); }
+            94.81% { content: url('img/YellowLogo.png'); }
+            95.32% { content: url('img/BlueLogo.png'); }
+            95.77% { content: url('img/GreenLogo.png'); }
+            96.18% { content: url('img/OrangeLogo.png'); }
+            96.55% { content: url('img/PinkLogo.png'); }
+            96.89% { content: url('img/YellowLogo.png'); }
+            97.19% { content: url('img/BlueLogo.png'); }
+            97.46% { content: url('img/GreenLogo.png'); }
+            97.71% { content: url('img/OrangeLogo.png'); }
+            97.93% { content: url('img/PinkLogo.png'); }
+            98.13% { content: url('img/YellowLogo.png'); }
+            98.31% { content: url('img/BlueLogo.png'); }
+            98.48% { content: url('img/GreenLogo.png'); }
+            98.62% { content: url('img/OrangeLogo.png'); }
+            98.76% { content: url('img/PinkLogo.png'); }
+            98.88% { content: url('img/YellowLogo.png'); }
+            98.99% { content: url('img/BlueLogo.png'); }
+            99.08% { content: url('img/GreenLogo.png'); }
+            99.17% { content: url('img/OrangeLogo.png'); }
+            99.90% { content: url('img/PinkLogo.png'); }
+            100% { content: url('img/YellowLogo.png'); }
         }
     </style>
+
+    <script>
+        // Function to randomly choose between index1.html and index2.html
+        function randomRedirect() {
+            const pages = ['index1.html', 'index2.html'];
+            const randomIndex = Math.floor(Math.random() * pages.length); // Use correct length calculation
+            const randomPage = pages[randomIndex]; // Randomly select index1 or index2
+            // Redirect after 2 seconds (when animation finishes)
+            setTimeout(function() {
+                window.location.href = randomPage;
+            }, 2000); // 2000 ms = 2 seconds
+        }
+
+        // Start the redirect process when the page loads
+        window.onload = function() {
+            randomRedirect();
+        };
+    </script>
 </head>
 <body>
 
-    <!-- Top Image Section -->
-    <div class="header-image">
-        <a href="../index.html"><img src="../img/SketchLogo.png" alt="Logo" width="15%"></a>
+    <!-- Logo Animation Container -->
+    <div class="logo-container">
+        <img src="img/BlueLogo.png" alt="Logo Animation">
     </div>
-
-    <!-- Navigation Menu -->
-    <div class="nav-bar">
-        <ul>
-            <li><a href="../bio.html">bio</a></li>
-            <li><a href="../work.html">design work</a></li>
-            <li><a href="../exhibitions.html">exhibitions</a></li>
-            <li><a href="../resume.html">resume</a></li>
-        </ul>
-    </div>
-
-    <!-- Embedded Interactive PortfoliOS -->
-    <div class="iframe-container">
-        <iframe src="https://ac-iv.github.io/portfoliOS/" title="PortfoliOS Interactive"></iframe>
-    </div>
-
-    <!-- Description -->
-    
 
 </body>
 </html>
