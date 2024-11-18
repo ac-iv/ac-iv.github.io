@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoneFax</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/x-icon" href="/img/SketchLogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: "Pixelify Sans", system-ui;
+        }
+
+        h5 {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #95a6b4;
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 10pt;
+            padding: 2%;
+            font-family: "Neue Haas Grotesk", sans-serif;
+        }
+
+        .header-image {
+            width: 100%;
+            margin-top: 2%;
+            text-align: center;
+        }
+
+        .nav-bar {
+            padding-top: 2%;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .nav-bar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: #95a6b4;
+            font-size: 13px;
+            font-variant-caps: small-caps;
+        }
+
+        .nav-bar ul li a:hover {
+            color: #b49595;
+            font-weight: bold;
+        }
+
+        /* Marquee Styles */
+        .marquee-container {
+            overflow: hidden;
+            position: relative;
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        .marquee-images {
+            display: flex;
+            animation: marquee 20s linear infinite;
+        }
+
+        .marquee-images img {
+            width: 250px;
+            margin-right: 20px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .marquee-images img:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .text {
+            color: #000000;
+            padding: 20px;
+            font-family: "Neue Haas Grotesk", sans-serif;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header-image">
+        <a href="../index.html"><img src="../img/SketchLogo.png" alt="Sketch Logo" width="15%"></a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-bar">
+        <ul>
+            <li><a href="../bio.html">bio</a></li>
+            <li><a href="../work.html">design work</a></li>
+            <li><a href="../exhibitions.html">exhibitions</a></li>
+            <li><a href="../resume.html">resume</a></li>
+        </ul>
+    </div>
+
+    <!-- Image Marquee -->
+    <div class="marquee-container">
+        <div class="marquee-images">
+            <img src="../img/fonefax1.png" alt="FoneFax Image 1">
+            <img src="../img/fonefax2.png" alt="FoneFax Image 2">
+            <img src="../img/fonefax3.png" alt="FoneFax Image 3">
+            <img src="../img/fonefax4.png" alt="FoneFax Image 4">
+            <img src="../img/fonefax1.png" alt="FoneFax Image 1">
+            <img src="../img/fonefax2.png" alt="FoneFax Image 2">
+            <img src="../img/fonefax3.png" alt="FoneFax Image 3">
+            <img src="../img/fonefax4.png" alt="FoneFax Image 4">
+        </div>
+    </div>
+
+    <!-- Description -->
+    <div class="text" style="line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto;">
+        <h5 style="font-size: 1.5em; color: #2b2b2b; margin-bottom: 15px;">FoneFax: A Speculative Approach to Digital Communication</h5>
+        <p style="font-size: 1em; margin-bottom: 20px;">
+            The <strong style="color: #d9534f;">FoneFax</strong> project reimagines digital communication by merging retro fax technology with contemporary smartphone interactions. The aim is to rekindle the tactile and personal connection that has been eroded in the digital age. By converting digital messages into tangible, physical outputs, the project offers a harmonious blend of material dependability and modern convenience.
+        </p>
+        <div class="highlight" style="background-color: #f9f9f9; padding: 15px; border-left: 4px solid #d9534f; margin-bottom: 20px;">
+            <p style="font-size: 1em; color: #555;"><strong>Why FoneFax?</strong> Because sometimes the digital world is too fleeting, and we need something we can hold in our hands, something that persists beyond the swipe of a screen.</p>
+        </div>
+        <p style="font-size: 1em; margin-bottom: 20px;">
+            The concept of FoneFax emerged from my broader initiative to infuse intimacy into the instant comforts of 21st-century living. In today's world, where most of our interactions happen through cold, impersonal glass screens, the need for physical, meaningful exchanges is more important than ever. This project is a response to the diminished satisfaction that comes from purely digital interactions, aiming to foster a more intimate connection between individuals.
+        </p>
+        <ul class="bullet-points" style="list-style-type: disc; padding-left: 20px; margin-bottom: 20px;">
+            <li style="margin-bottom: 10px;"><strong>Physical Connection:</strong> FoneFax brings a physicality to digital messages that encourages deeper emotional engagement.</li>
+            <li style="margin-bottom: 10px;"><strong>Analog Meets Digital:</strong> A seamless integration of old-school fax with modern smartphone technology.</li>
+            <li><strong>Tactile Memories:</strong> Creating lasting, tangible memories that can be shared and cherished.</li>
+        </ul>
+        <p style="font-size: 1em; margin-bottom: 20px;">
+            Inspired by my ongoing exploration of analog technologies, FoneFax seeks to bridge the gap between the fleeting nature of digital communication and the permanence of tangible records. By providing a physical printout of digital messages, FoneFax creates a lasting, tactile memory that can be held, shared, and cherished. The process is simple yet profound: users can send messages through a secure interface, and those messages are then printed as tangible records, offering a deeper emotional resonance with the recipient.
+        </p>
+        <blockquote style="border-left: 4px solid #95a6b4; padding-left: 15px; margin: 20px 0; font-style: italic; color: #444;">
+            "Convenience and meaning can coexist. FoneFax is a reminder that technology doesn't have to strip away the humanity of our interactions."
+        </blockquote>
+        <p style="font-size: 1em; margin-bottom: 20px;">
+            This project is not just about the nostalgia of fax technology; it is a commentary on the evolution of intimacy in an increasingly digital world. FoneFax challenges the notion that convenience must come at the cost of meaningful experiences. By combining the best of both worlds—the convenience of modern technology and the warmth of analog interactions—FoneFax invites users to reconsider how they connect with others.
+        </p>
+        <div class="highlight" style="background-color: #f9f9f9; padding: 15px; border-left: 4px solid #d9534f; margin-bottom: 20px;">
+            <p style="font-size: 1em; color: #555;"><strong>Minimal Design:</strong> The interface is intentionally minimal, allowing users to focus on the message rather than the medium. Think of it as a digital love letter—simple, direct, and filled with meaning.</p>
+        </div>
+        <p style="font-size: 1em; margin-bottom: 20px;">
+            The design of FoneFax is intentionally minimal, emphasizing the simplicity of the interaction. The interface is stripped down to its essentials, with a straightforward process that reduces the mental presence of technology. This approach allows users to focus on the message itself rather than the medium, simulating the feeling of pen and paper in a digital context. The goal is to make technology feel less like a barrier and more like a bridge to authentic human connection.
+        </p>
+        <div class="highlight" style="background-color: #f9f9f9; padding: 15px; border-left: 4px solid #d9534f; margin-bottom: 20px;">
+            <p style="font-size: 1em; color: #555;"><strong>Reclaiming Thoughtful Communication:</strong> In an era where messages are often typed and forgotten, FoneFax offers a way to preserve those moments—to make them tangible and enduring.</p>
+        </div>
+        <p style="font-size: 1em;">
+            Ultimately, FoneFax is about reclaiming the lost art of thoughtful communication. In an era where messages are often typed and forgotten, FoneFax offers a way to preserve those moments, to make them tangible and enduring. It is a testament to the power of design in shaping not just how we communicate, but how we connect and relate to one another. Through FoneFax, I hope to inspire others to think more deeply about the role of technology in their lives and to seek out ways to make their interactions more meaningful and personal.
+        </p>
+    </div>
+    
+    
+</body>
+</html>
