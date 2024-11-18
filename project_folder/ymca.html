@@ -8,6 +8,8 @@
     <link rel="icon" type="image/x-icon" href="/img/SketchLogo.png">
     <link href="https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
     <style>
         body {
             margin: 0;
@@ -41,9 +43,6 @@
             display: inline-block;
             margin: 0 20px;
         }
-        .header-image .logo:hover {
-            content: url('img/PinkLogo.png'); /* Change the image on hover */
-        }
 
         .nav-bar ul li a {
             text-decoration: none;
@@ -58,49 +57,36 @@
             font-weight: bold;
         }
 
-        .carousel {
-            padding-top: 5%;
-            position: relative;
-            margin: auto;
+        .marquee-container {
             overflow: hidden;
-            width: 60vh;
-        }
-
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .slide {
-            min-width: 100%;
-            transition: opacity 1s;
-            position: relative;
-            margin-bottom: -7%;
-        }
-
-        .slide img {
-            width: 80%;
-            padding: 10%;
-            display: block;
-        }
-
-        .carousel-controls {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-
-        .prev, .next {
-            background-color: rgb(255, 255, 255);
-            margin-top: 15%;
-            color: rgb(0, 0, 0);
-            font-size: 14pt;
-            border: none;
+            white-space: nowrap;
+            margin: 20px 0;
             padding: 10px;
+        }
+
+        .marquee-images {
+            display: flex;
+            align-items: center;
+            animation: marquee 20s linear infinite;
+        }
+
+        .marquee-images img {
+            width: 250px;
+            height: auto;
+            margin-right: 20px;
+            filter: grayscale(100%);
+            transition: transform 0.3s ease, filter 0.3s ease;
             cursor: pointer;
+        }
+
+        .marquee-images img:hover {
+            transform: scale(1.1);
+            filter: grayscale(0%);
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
         }
 
         .text {
@@ -149,6 +135,52 @@
         .download-link a:hover {
             background-color: #b49595;
         }
+
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        /* 3D Viewer Styles */
+        .lidar-upload {
+            text-align: center;
+            margin: 20px;
+        }
+
+        #viewer-container {
+            width: 100%;
+            height: 500px;
+            background-color: #e0e0e0;
+            margin: 20px 0;
+        }
+
+        .step-by-step {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            font-family: "Neue Haas Grotesk", sans-serif;
+            font-size: 14px;
+            text-align: center;
+        }
+        .step-by-step img,li {
+            margin: 2%;
+        }
+        step
     </style>
 </head>
 <body>
@@ -168,75 +200,89 @@
         </ul>
     </div>
 
-    <!-- Main Content Image Carousel -->
-    <div class="carousel">
-        <div class="slides">
-            <div class="slide">
-                <img src="../img/trophycase1.png" alt="YMCA Trophy Case Design Image 1">
-            </div>
-            <div class="slide">
-                <img src="../img/ymca1.png" alt="YMCA Trophy Case Design Image 2">
-            </div>
-            <div class="slide">
-                <img src="../img/ymca2.png" alt="YMCA Trophy Case Design Image 3">
-            </div>
-          
-         
-            
+    <!-- Main Content Image Marquee -->
+    <div class="marquee-container">
+        <div class="marquee-images">
+            <img src="../img/trophycase1.png" alt="YMCA Trophy Case Design Image 2" onclick="openLightbox(this.src)">
+            <img src="../img/locker10.png" alt="YMCA Trophy Case Design Image 1" onclick="openLightbox(this.src)">
+            <img src="../img/ymca1.png" alt="YMCA Trophy Case Design Image 3" onclick="openLightbox(this.src)">
+            <img src="../img/locker13.png" alt="YMCA Trophy Case Design Image 3" onclick="openLightbox(this.src)">
+            <img src="../img/ymca3.png" alt="YMCA Trophy Case Design Image 4" onclick="openLightbox(this.src)">
+            <img src="../img/locker12.png" alt="YMCA Trophy Case Design Image 2" onclick="openLightbox(this.src)">
+            <img src="../img/ymca2.png" alt="YMCA Trophy Case Design Image 4" onclick="openLightbox(this.src)">
+            <img src="../img/locker-11.png" alt="YMCA Trophy Case Design Image 1" onclick="openLightbox(this.src)">
         </div>
+    </div>
 
-        <div class="carousel-controls">
-            <button class="prev" onclick="prevSlide()">&#10094;</button>
-            <button class="next" onclick="nextSlide()">&#10095;</button>
-        </div>
+    <!-- Lightbox Container -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Enlarged Image">
+    </div>
+
+    <!-- Lidar Upload Section -->
+    <div class="lidar-upload">
+        
+        <model-viewer id="viewer-container" src="../img/o" camera-controls alt="3D model viewer" shadow-intensity="1" auto-rotate></model-viewer>
     </div>
 
     <!-- Description -->
     <div class="text">
         <h5>YMCA Trophy Case Design</h5>
-        <p>The YMCA Trophy Case Design project focuses on creating a visually compelling and functional display to showcase the achievements and legacy of the YMCA community. This design aims to highlight the organization's values, history, and the accomplishments of its members through a modern and elegant presentation.</p>
-
-        <p>My approach to the design of the trophy case emphasizes clean lines, durable materials, and a versatile layout that can adapt to different types of awards and memorabilia. The design not only serves as a place to celebrate achievements but also acts as a central piece that enhances the visual appeal of the YMCA facility.</p>
-
-        <p>Through thoughtful consideration of both aesthetic and practical elements, the trophy case design ensures that the accomplishments of the YMCA community are displayed with pride and respect. It aims to create a sense of unity and inspiration among members, encouraging future generations to strive for excellence and contribute to the organization's enduring legacy.</p>
+        <p>The YMCA Trophy Case Design project showcases the achievements of the YMCA community through a modern, functional display. The design emphasizes clean lines and durable materials to create a versatile space for awards and memorabilia, enhancing the visual appeal of the facility.</p>
+        <p>The trophy case acts as a centerpiece that fosters a sense of pride and unity within the YMCA community. It is designed for adaptability and longevity, making it a lasting testament to member achievements.</p>
         <div class="download-link">
             <a href="../pdfs/YMCA Presentation.pdf" download="YMCA_TitleBlock">Download Title Block</a>
         </div>
     <br>
     </div>
-    
-<br>
 
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
+  <!-- Step-by-Step Guide -->
+<div class="step-by-step">
+    <h5>Locker Project Overview: Site Visits, 3D Scans, and SketchUp Conversion</h5>
+    <p>For this project, I began by conducting site visits to gather accurate data and understand the spatial requirements for the YMCA Trophy Case. During these visits, I used a LiDAR scanner to create detailed 3D scans of the location, which provided the foundation for the design.</p>
+    <p>Once I had the LiDAR scans, I imported the data into SketchUp for conversion into a 3D model. Here is the detailed process:</p>
+    <ol>
+        <li><strong>Site Visit & Data Collection:</strong> Conducted site visits and used a handheld LiDAR scanner to capture the dimensions and spatial layout of the area designated for the trophy case.
+            <br><img src="../img/locker2.jpeg" alt="Site Visit" width="50%">
+        </li>
+        <li><strong>Data Processing:</strong> Imported the LiDAR scans into SketchUp to create an accurate base model of the space, ensuring every element matched the physical environment.
+            <br><img src="../img/lidar.png" alt="LiDAR Data Processing" width="50%">
+        </li>
+        <li><strong>3D Model Conversion:</strong> Cleaned up the scan data to remove any extraneous details and focused on converting key elements into usable geometry within SketchUp.
+            <br><img src="../img/locker.png" alt="3D Model Conversion" width="50%">
+        </li>
+        <li><strong>Design Development:</strong> Used the cleaned-up SketchUp model to develop the trophy case design, experimenting with different materials and configurations while making sure the design would fit seamlessly within the space.
+        </li>
+        <li><strong>Visualization:</strong> Rendered the final model to create visualizations, which helped communicate the design intent clearly to stakeholders and ensure alignment with YMCA's aesthetic values.
+            <br><img src="../img/locker10.png" alt="Final Visualization" width="50%">
+        </li>
+    </ol>
+</div>
 
-        function showSlide(index) {
-            if (index >= slides.length) {
-                currentSlide = 0;
-            } else if (index < 0) {
-                currentSlide = slides.length - 1;
-            } else {
-                currentSlide = index;
-            }
-            const offset = -currentSlide * 100;
-            document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+
+
+<script>
+    function openLightbox(src) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        lightboxImg.src = src;
+        lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.style.display = 'none';
+    }
+
+    function load3DModel(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const url = URL.createObjectURL(file);
+            const viewer = document.getElementById('viewer-container');
+            viewer.src = url;
         }
+    }
+</script>
 
-        function nextSlide() {
-            showSlide(currentSlide + 1);
-        }
-
-        function prevSlide() {
-            showSlide(currentSlide - 1);
-        }
-
-        // Initialize the carousel by showing the first slide
-        showSlide(currentSlide);
-    </script>
-
-    <!-- Download Title Block Section -->
-   
 </body>
 </html>
-
