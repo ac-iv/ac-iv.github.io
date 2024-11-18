@@ -9,25 +9,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <style>
+        /* General Styles */
         body {
             margin: 0;
             font-family: "Pixelify Sans", system-ui;
         }
 
+        h5 {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #95a6b4;
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 10pt;
+            padding: 2%;
+            font-family: "Neue Haas Grotesk", sans-serif;
+            color: #333;
+        }
+
         .header-image {
             width: 100%;
             margin-top: 2%;
-            background-size: cover;
-            background-position: center;
             text-align: center;
         }
-        .header-image .logo:hover {
-            content: url('img/PinkLogo.png'); /* Change the image on hover */
-        }
+
         .nav-bar {
             padding-top: 2%;
             background-color: #fff;
             text-align: center;
+            font-family: "Neue Haas Grotesk", sans-serif;
         }
 
         .nav-bar ul {
@@ -35,11 +48,8 @@
             margin: 0;
             padding: 0;
         }
-        .header-image .logo:hover {
-            content: url('img/PinkLogo.png'); /* Change the image on hover */
-        }
+
         .nav-bar ul li {
-            font-family: Arial, Helvetica, sans-serif;
             display: inline-block;
             margin: 0 20px;
         }
@@ -47,7 +57,6 @@
         .nav-bar ul li a {
             text-decoration: none;
             color: #95a6b4;
-            font-weight: 100;
             font-size: 13px;
             font-variant-caps: small-caps;
         }
@@ -57,12 +66,14 @@
             font-weight: bold;
         }
 
+        /* Carousel Styles */
         .carousel {
-            padding-top: 5%;
-            position: relative;
-            margin: auto;
             overflow: hidden;
-            width: 70vh;
+            position: relative;
+            margin: 40px auto;
+            width: 70%;
+            max-width: 800px;
+            border-radius: 8px;
         }
 
         .slides {
@@ -74,13 +85,12 @@
             min-width: 100%;
             transition: opacity 1s;
             position: relative;
-            margin-bottom: -7%;
         }
 
         .slide img {
-            width: 80%;
-            padding: 10%;
-            display: block;
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
         }
 
         .carousel-controls {
@@ -93,47 +103,59 @@
         }
 
         .prev, .next {
-            background-color: rgb(255, 255, 255);
-            margin-top: 15%;
-            color: rgb(0, 0, 0);
-            font-size: 14pt;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            font-size: 18pt;
             border: none;
             padding: 10px;
             cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: #95a6b4;
+            color: #fff;
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
         }
 
         .text {
-            margin-top: 2%;
             color: #000000;
-            font-size: 15px;
-            padding: 10px;
+            padding: 20px;
             font-family: "Neue Haas Grotesk", sans-serif;
-            font-weight: 200;
-            padding-left: 3%;
-            padding-right: 3%;
             text-align: justify;
+            max-width: 800px;
+            margin: 40px auto;
+            font-weight: 100;
         }
 
-        h5 {
-            font-size: 12pt;
-            font-weight: bold;
-            color: #95a6b4;
-            text-align: center;
-            font-family: "Pixelify Sans", sans-serif;
-        }
-
-        p {
-            text-align: justify;
-            font-size: 10pt;
-            font-weight: 200;
-            padding: 2%;
-            font-family: "Neue Haas Grotesk", sans-serif;
+        .highlight {
+            padding: 15px;
+            border-left: 4px solid #95a6b4;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-
-    <!-- Top Image Section -->
+    <!-- Header -->
     <div class="header-image">
         <a href="../index.html"><img src="../img/SketchLogo.png" alt="Logo" width="15%"></a>
     </div>
@@ -152,13 +174,13 @@
     <div class="carousel">
         <div class="slides">
             <div class="slide">
-                <img src="../img/tents1.jpg" alt="Tent Encampment Richmond Image 1">
+                <img src="../img/tents1.jpg" alt="Tent Encampment Richmond Image 1" onclick="openLightbox(this.src)">
             </div>
             <div class="slide">
-                <img src="../img/tents3.jpg" alt="Tent Encampment Richmond Image 2">
+                <img src="../img/tents3.jpg" alt="Tent Encampment Richmond Image 2" onclick="openLightbox(this.src)">
             </div>
             <div class="slide">
-                <img src="../img/tents2.jpg" alt="Tent Encampment Richmond Image 3">
+                <img src="../img/tents2.jpg" alt="Tent Encampment Richmond Image 3" onclick="openLightbox(this.src)">
             </div>
         </div>
 
@@ -166,6 +188,11 @@
             <button class="prev" onclick="prevSlide()">&#10094;</button>
             <button class="next" onclick="nextSlide()">&#10095;</button>
         </div>
+    </div>
+
+    <!-- Lightbox Container -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Enlarged Image">
     </div>
 
     <!-- Description -->
@@ -202,9 +229,20 @@
             showSlide(currentSlide - 1);
         }
 
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = src;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+        }
+
         // Initialize the carousel by showing the first slide
         showSlide(currentSlide);
     </script>
-
 </body>
 </html>
