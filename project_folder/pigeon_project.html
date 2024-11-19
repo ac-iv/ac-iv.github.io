@@ -13,6 +13,11 @@
             margin: 0;
             font-family: "Pixelify Sans", system-ui;
         }
+        h5{
+            text-align: center;
+            font-size: 16pt;
+            color: #95a6b4;
+        }
 
         .header-image {
             width: 100%;
@@ -60,7 +65,9 @@
             position: relative;
             margin: auto;
             overflow: hidden;
-            width: 40vh;
+            width: 70%;
+            max-width: 800px;
+            border-radius: 8px;
         }
 
         .slides {
@@ -72,13 +79,12 @@
             min-width: 100%;
             transition: opacity 1s;
             position: relative;
-            margin-bottom: -7%;
         }
 
         .slide img {
-            width: 80%;
-            padding: 10%;
-            display: block;
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
         }
 
         .carousel-controls {
@@ -91,42 +97,43 @@
         }
 
         .prev, .next {
-            background-color: rgb(255, 255, 255);
-            margin-top: 15%;
-            color: rgb(0, 0, 0);
-            font-size: 14pt;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            font-size: 18pt;
             border: none;
             padding: 10px;
             cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: #95a6b4;
+            color: #fff;
         }
 
         .text {
-            margin-top: 2%;
             color: #000000;
-            font-size: 15px;
-            padding: 10px;
+            padding: 20px;
             font-family: "Neue Haas Grotesk", sans-serif;
-            font-weight: 200;
-            padding-left: 3%;
-            padding-right: 3%;
             text-align: justify;
-        }
-
-        h5 {
-            font-size: 12pt;
-            font-weight: bold;
-            color: #95a6b4;
-            text-align: center;
-            font-family: "Pixelify Sans", sans-serif;
-        }
-
-        p {
-            text-align: justify;
+            max-width: 800px;
+            margin: 40px auto;
+            font-weight: 100;
             font-size: 10pt;
-            font-weight: 200;
-            padding: 2%;
-            font-family: "Neue Haas Grotesk", sans-serif;
-            text-transform: none; /* Ensure regular capitalization */
+        }
+
+        .highlight {
+            padding: 15px;
+            border-left: 4px solid #95a6b4;
+            margin-bottom: 20px;
+        }
+
+        blockquote {
+            border-left: 4px solid #95a6b4;
+            padding-left: 15px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #444;
         }
 
         .download-link {
@@ -147,6 +154,25 @@
         .download-link a:hover {
             background-color: #b49595;
         }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -160,7 +186,7 @@
     <div class="nav-bar">
         <ul>
             <li><a href="../bio.html">bio</a></li>
-            <li><a href="../work.html">design work</a></li>
+            <li><a href="../work.html">work</a></li>
             <li><a href="../exhibitions.html">exhibitions</a></li>
             <li><a href="../resume.html">resume</a></li>
         </ul>
@@ -170,13 +196,13 @@
     <div class="carousel">
         <div class="slides">
             <div class="slide">
-                <img src="../img/pigeon_front.jpeg" alt="Pigeon Roosting Mitigation Image 1">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Pigeon_roosting.jpg" alt="Pigeon Roosting Mitigation Image 1" onclick="openLightbox(this.src)">
             </div>
             <div class="slide">
-                <img src="../img/pigeon2.jpg" alt="Pigeon Roosting Mitigation Image 2">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Pigeon_and_nest.jpg" alt="Pigeon Roosting Mitigation Image 2" onclick="openLightbox(this.src)">
             </div>
             <div class="slide">
-                <img src="../img/pigeon3.jpg" alt="Pigeon Roosting Mitigation Image 3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Roosting_Pigeons.jpg" alt="Pigeon Roosting Mitigation Image 3" onclick="openLightbox(this.src)">
             </div>
         </div>
 
@@ -186,14 +212,47 @@
         </div>
     </div>
 
+    <!-- Lightbox Container -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Enlarged Image">
+    </div>
+
     <!-- Description -->
     <div class="text">
         <h5>Pigeon Roosting Mitigation - Telegraph-Channing Garage, Berkeley</h5>
-        <p>The pigeon roosting mitigation project at the Telegraph-Channing Garage in Berkeley is a comprehensive effort to address the challenges posed by pigeon roosting in urban infrastructure. This ongoing project, developed in collaboration with the City of Berkeley's Public Works Department, focuses on creating effective, humane, and sustainable solutions to reduce pigeon roosting and its associated impacts on the facility.</p>
+        <p>The <strong>Pigeon Roosting Mitigation Project</strong> at the Telegraph-Channing Garage in Berkeley aims to transform how urban spaces interact with wildlife, specifically pigeons. This initiative, spearheaded in collaboration with the City of Berkeley's Public Works Department, embraces humane and sustainable approaches to mitigate pigeon roosting, addressing a common yet often poorly managed urban issue.</p>
 
-        <p>The project addresses a range of issues caused by pigeon activity, from structural damage to cleanliness and maintenance costs. Our approach includes evaluating existing methods, such as spikes, netting, and sticky solutions, while exploring innovative alternatives that align with both community values and operational needs. One of the project's key objectives is to reduce the annual $20,000 maintenance cost associated with cleaning and upkeep, aiming for a significant reduction in these expenses.</p>
+        <p>Our project recognizes that pigeon activity leads to significant challenges—including structural damage, unsanitary conditions, and high maintenance costs. Historically, solutions like spikes, nets, and chemical deterrents have been deployed with varying success, but these methods often lack compassion and long-term efficacy. Instead, we are investigating innovative solutions that prioritize coexistence with urban wildlife while ensuring the functionality and cleanliness of public spaces.</p>
 
-        <p>Through a combination of design thinking and strategic planning, we are working to transform the Telegraph-Channing Garage into a model of how urban spaces can balance functionality with humane wildlife management. By implementing solutions that deter pigeons without causing harm, we aim to create a space that is both aesthetically pleasing and operationally efficient, setting a new standard for urban design and pest control in public infrastructure.</p>
+        <div class="highlight">
+            <p><strong>Holistic Urban Design:</strong> At the core of our project is a commitment to holistic design principles that not only deter pigeons but also enhance the urban experience. We're exploring new materials, designs, and architectural features that naturally discourage roosting without causing harm.</p>
+        </div>
+
+        <p>Our team has worked on three primary solutions to tackle this problem effectively:</p>
+
+        <h6>Solution 1: Bird Deterrent Spikes</h6>
+        <p>We propose replacing the outdated electric shock system with bird deterrent spikes on all ledges and surfaces. Bird spikes are an effective and low-maintenance solution that prevents pigeons from roosting. By covering these surfaces, we aim to significantly reduce droppings and maintenance costs by preventing pigeons from landing on these areas.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Bird_spikes_on_roof.jpg" alt="Bird spikes on building ledge" style="width: 60%; border-radius: 8px; margin-top: 15px;" onclick="openLightbox(this.src)">
+
+        <h6>Solution 2: Reinforced Netting for Key Areas</h6>
+        <p>To block pigeons from accessing interior areas of the garage, particularly the first four north-facing levels, we recommend replacing the existing nylon netting with galvanized steel netting. Steel netting is more durable and effective for high-traffic areas where pigeons frequently gather. This solution offers a strong, long-lasting barrier to keep pigeons out.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Pigeon_netting.jpg" alt="Pigeon netting example" style="width:60%; border-radius: 8px; margin-top: 15px;" onclick="openLightbox(this.src)">
+
+        <h6>Solution 3: Ultrasonic Predator Deterrent System</h6>
+        <p>We also plan to install an ultrasonic predator deterrent system that emits high-frequency sounds uncomfortable for pigeons but inaudible to humans. The system will be deployed on the roof and within the fenced gutter on the east side of the garage. This innovative approach offers a non-intrusive way to deter pigeons from these difficult-to-reach areas, complementing the spikes and netting installations.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Ultrasonic_animal_repel_device.jpg" alt="Ultrasonic animal repellent device" style="width: 60%; border-radius: 8px; margin-top: 15px;" onclick="openLightbox(this.src)">
+
+        <blockquote>
+            "Our goal is to create a paradigm shift in urban pest control—moving away from adversarial approaches and towards solutions that harmonize with nature."
+        </blockquote>
+
+        <p>Through community engagement, our project ensures that the solutions align with both city needs and public values. We actively collaborate with local residents and stakeholders to foster a shared vision for a cleaner, more welcoming urban environment. One of our primary objectives is to reduce the $20,000 annual maintenance costs associated with cleaning and repairs while creating an infrastructure that is aesthetically pleasing and operationally efficient.</p>
+
+        <div class="highlight">
+            <p><strong>Community Collaboration:</strong> Working closely with Berkeley residents, we gather insights and feedback that inform our strategies, ensuring that the final implementations serve both the community and wildlife ethically.</p>
+        </div>
+
+        <p>The vision of this project transcends pigeon control—it represents a future where cities and wildlife can coexist in balance. By embracing empathy and innovation, we aim to set a new benchmark for how urban environments can integrate humane wildlife management into their infrastructure, transforming challenges into opportunities for smarter, more compassionate city design.</p>
     </div>
 
     <!-- PDF Download Link -->
@@ -211,29 +270,38 @@
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
 
-        function showSlide(index) {
-            if (index >= slides.length) {
-                currentSlide = 0;
-            } else if (index < 0) {
-                currentSlide = slides.length - 1;
-            } else {
-                currentSlide = index;
-            }
-            const offset = -currentSlide * 100;
-            document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+        function showSlide(index) {            slides.forEach((slide, i) => {
+                slide.style.transform = `translateX(${100 * (i - index)}%)`;
+            });
+            currentSlide = index;
         }
 
         function nextSlide() {
-            showSlide(currentSlide + 1);
+            const nextIndex = (currentSlide + 1) % slides.length;
+            showSlide(nextIndex);
         }
 
         function prevSlide() {
-            showSlide(currentSlide - 1);
+            const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(prevIndex);
         }
 
-        // Initialize the carousel by showing the first slide
-        showSlide(currentSlide);
-    </script>
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = src;
+            lightbox.style.display = 'flex';
+        }
 
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+        }
+
+        // Initialize the carousel
+        showSlide(0);
+    </script>
 </body>
 </html>
+
+           
