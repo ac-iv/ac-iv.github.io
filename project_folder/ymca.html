@@ -1,457 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YMCA Trophy Case Design</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" type="image/x-icon" href="/img/SketchLogo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@200&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <style>
-        /* General Styles */
-        body {
-            margin: 0;
-            font-family: "Neue Haas Grotesk", sans-serif;
-        }
-
-        h5 {
-            font-size: 12pt;
-            font-weight: bold;
-            color: #95a6b4;
-            text-align: center;
-            font-family: "Neue Haas Grotesk", sans-serif;
-        }
-
-        p {
-            text-align: justify;
-            font-size: 10pt;
-            font-weight: 200;
-            padding: 2%;
-            font-family: "Neue Haas Grotesk", sans-serif;
-        }
-
-        /* Header and Navigation */
-        .header-image {
-            width: 100%;
-            margin-top: 2%;
-            text-align: center;
-        }
-
-        .header-image .logo:hover {
-            content: url('img/PinkLogo.png');
-        }
-
-        .nav-bar {
-            padding-top: 2%;
-            background-color: #fff;
-            text-align: center;
-        }
-
-        .nav-bar ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-bar ul li {
-            font-family: Arial, Helvetica, sans-serif;
-            display: inline-block;
-            margin: 0 20px;
-        }
-
-        .nav-bar ul li a {
-            text-decoration: none;
-            color: #95a6b4;
-            font-weight: 100;
-            font-size: 13px;
-            font-variant-caps: small-caps;
-        }
-
-        .nav-bar ul li a:hover {
-            color: #b49595;
-            font-weight: bold;
-        }
-
-        /* Image Marquee */
-        .marquee-container {
-            overflow: hidden;
-            white-space: nowrap;
-            margin: 20px 0;
-            padding: 10px;
-        }
-
-        .marquee-images {
-            display: flex;
-            align-items: center;
-            animation: marquee 20s linear infinite;
-        }
-
-        .marquee-images img {
-            width: 250px;
-            height: auto;
-            margin-right: 20px;
-            filter: grayscale(100%);
-            transition: transform 0.3s ease, filter 0.3s ease;
-            cursor: pointer;
-        }
-
-        .marquee-images img:hover {
-            transform: scale(1.1);
-            filter: grayscale(0%);
-        }
-
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
-
-        /* Description Text */
-        .text {
-            margin-top: 2%;
-            color: #000000;
-            font-size: 15px;
-            padding: 10px;
-            font-family: "Neue Haas Grotesk", sans-serif;
-            font-weight: 200;
-            padding-left: 3%;
-            padding-right: 3%;
-            text-align: justify;
-        }
-
-        .download-link {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .download-link a {
-            text-decoration: none;
-            color: #ffffff;
-            background-color: #95a6b4;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 12pt;
-            font-weight: bold;
-        }
-
-        .download-link a:hover {
-            background-color: #b49595;
-        }
-
-        /* Lightbox Styles */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-        }
-
-        /* 3D Viewer Styles */
-        .lidar-upload {
-            text-align: center;
-            margin: 20px;
-        }
-
-        #viewer-container {
-            width: 100%;
-            height: 500px;
-            background-color: #e0e0e0;
-            margin: 20px 0;
-        }
-
-        /* Step-by-Step Carousel */
-        .step-by-step-carousel {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #f5f5f5;
-            border-radius: 5px;
-            font-family: "Neue Haas Grotesk", sans-serif;
-            text-align: center;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .carousel-container {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 20px 0;
-            max-width: 100%;
-            height: 350px; /* Fixed height for consistency */
-            overflow: hidden;
-        }
-
-        .carousel-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            transition: transform 0.3s;
-            z-index: 100;
-        }
-
-        .carousel-arrow.left-arrow {
-            left: 10px;
-        }
-
-        .carousel-arrow.right-arrow {
-            right: 10px;
-        }
-
-        .carousel-arrow svg {
-            fill: #95a6b4;
-            width: 40px;
-            height: 40px;
-        }
-
-        .carousel-arrow:hover svg {
-            fill: #b49595;
-        }
-
-        .carousel-image-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            max-width: 100%;
-            height: 100%;
-        }
-
-        .carousel-image-container img,
-        .carousel-image-container video {
-            max-height: 100%;
-            max-width: 100%;
-            object-fit: contain; /* Ensures image is contained within the area without distortion */
-        }
-
-        .step-text {
-            font-size: 14px;
-            margin-top: 20px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        #step-description {
-            text-align: justify;
-            font-family: "Neue Haas Grotesk", sans-serif;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YMCA Trophy Case Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="icon" type="image/x-icon" href="/img/SketchLogo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@200&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: "Neue Haas Grotesk", sans-serif;
+    }
+    h5 {
+      font-size: 12pt;
+      font-weight: bold;
+      color: #95a6b4;
+      text-align: center;
+      font-family: "Neue Haas Grotesk", sans-serif;
+    }
+    p {
+      text-align: justify;
+      font-size: 10pt;
+      font-weight: 200;
+      padding: 2%;
+      font-family: "Neue Haas Grotesk", sans-serif;
+    }
+    /* Header and Navigation */
+    .header-image {
+      width: 100%;
+      margin-top: 2%;
+      text-align: center;
+    }
+    .header-image .logo:hover {
+      content: url('img/PinkLogo.png');
+    }
+    .nav-bar {
+      padding-top: 2%;
+      background-color: #fff;
+      text-align: center;
+    }
+    .nav-bar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-bar ul li {
+      font-family: Arial, Helvetica, sans-serif;
+      display: inline-block;
+      margin: 0 20px;
+    }
+    .nav-bar ul li a {
+      text-decoration: none;
+      color: #95a6b4;
+      font-weight: 100;
+      font-size: 13px;
+      font-variant-caps: small-caps;
+    }
+    .nav-bar ul li a:hover {
+      color: #b49595;
+      font-weight: bold;
+    }
+    /* Image Marquee */
+    .marquee-container {
+      overflow: hidden;
+      white-space: nowrap;
+      margin: 20px 0;
+      padding: 10px;
+    }
+    .marquee-images {
+      display: flex;
+      align-items: center;
+      animation: marquee 20s linear infinite;
+    }
+    .marquee-images img {
+      width: 250px;
+      height: auto;
+      margin-right: 20px;
+      filter: grayscale(100%);
+      transition: transform 0.3s ease, filter 0.3s ease;
+      cursor: pointer;
+    }
+    .marquee-images img:hover {
+      transform: scale(1.1);
+      filter: grayscale(0%);
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    /* Description Text */
+    .text {
+      margin-top: 2%;
+      color: #000000;
+      font-size: 15px;
+      padding: 10px;
+      font-family: "Neue Haas Grotesk", sans-serif;
+      font-weight: 200;
+      padding-left: 3%;
+      padding-right: 3%;
+      text-align: justify;
+    }
+    .download-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .download-link a {
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #95a6b4;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 12pt;
+      font-weight: bold;
+    }
+    .download-link a:hover {
+      background-color: #b49595;
+    }
+    /* Lightbox Styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+    /* 3D Viewer Styles */
+    .lidar-upload {
+      text-align: center;
+      margin: 20px;
+    }
+    #viewer-container {
+      width: 100%;
+      height: 500px;
+      background-color: #e0e0e0;
+      margin: 20px 0;
+    }
+    /* Step-by-Step Carousel */
+    .step-by-step-carousel {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      font-family: "Neue Haas Grotesk", sans-serif;
+      text-align: center;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .carousel-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+      max-width: 100%;
+      height: 350px; /* Fixed height for consistency */
+      overflow: hidden;
+    }
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      transition: transform 0.3s;
+      z-index: 100;
+    }
+    .carousel-arrow.left-arrow {
+      left: 10px;
+    }
+    .carousel-arrow.right-arrow {
+      right: 10px;
+    }
+    .carousel-arrow svg {
+      fill: #95a6b4;
+      width: 40px;
+      height: 40px;
+    }
+    .carousel-arrow:hover svg {
+      fill: #b49595;
+    }
+    .carousel-image-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+      height: 100%;
+    }
+    .carousel-image-container img,
+    .carousel-image-container video {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .step-text {
+      font-size: 14px;
+      margin-top: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #step-description {
+      text-align: justify;
+      font-family: "Neue Haas Grotesk", sans-serif;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Top Image Section -->
-    <div class="header-image">
-        <a href="../index.html"><img src="../img/SketchLogo.png" alt="Logo" width="15%"></a>
+  <!-- Top Image Section -->
+  <div class="header-image">
+    <a href="../index.html"><img src="../img/SketchLogo.png" alt="Logo" width="15%"></a>
+  </div>
+
+  <!-- Navigation Menu -->
+  <div class="nav-bar">
+    <ul>
+      <li><a href="../bio.html">bio</a></li>
+      <li><a href="../work.html">work</a></li>
+      <li><a href="../exhibitions.html">exhibitions</a></li>
+      <li><a href="../resume.html">resume</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content Image Marquee -->
+  <div class="marquee-container">
+    <div class="marquee-images">
+      <img src="../img/Lobby-F1.png" alt="YMCA Trophy Case Design Image 2" onclick="openLightbox(this.src)">
+      <img src="../img/locker-F1.png" alt="YMCA Trophy Case Design Image 1" onclick="openLightbox(this.src)">
+      <img src="../img/Lobby-F2.png" alt="YMCA Trophy Case Design Image 3" onclick="openLightbox(this.src)">
+      <img src="../img/locker-F2.png" alt="YMCA Trophy Case Design Image 3" onclick="openLightbox(this.src)">
+      <img src="../img/Lobby-F3.png" alt="YMCA Trophy Case Design Image 4" onclick="openLightbox(this.src)">
+      <img src="../img/locker-F3.png" alt="YMCA Trophy Case Design Image 2" onclick="openLightbox(this.src)">
+      <img src="../img/ymca2.png" alt="YMCA Trophy Case Design Image 4" onclick="openLightbox(this.src)">
+      <img src="../img/locker-11.png" alt="YMCA Trophy Case Design Image 1" onclick="openLightbox(this.src)">
     </div>
+  </div>
 
-    <!-- Navigation Menu -->
-    <div class="nav-bar">
-        <ul>
-            <li><a href="../bio.html">bio</a></li>
-            <li><a href="../work.html">work</a></li>
-            <li><a href="../exhibitions.html">exhibitions</a></li>
-            <li><a href="../resume.html">resume</a></li>
-        </ul>
+  <!-- Lightbox Container -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Enlarged Image">
+  </div>
+
+  <!-- Lidar Upload Section -->
+  <div class="lidar-upload">
+    <model-viewer id="viewer-container" src="../img/o" camera-controls alt="3D model viewer" shadow-intensity="1" auto-rotate></model-viewer>
+  </div>
+
+  <!-- Description -->
+  <div class="text">
+    <h5>YMCA Trophy Case Design Case Study</h5>
+    <p>
+      The YMCA Trophy Case Design project celebrates the accomplishments of the YMCA community by creating a modern and functional display. The project focuses on clean lines, durable materials, and a versatile layout to showcase awards and memorabilia, while enhancing the overall aesthetic of the facility.
+    </p>
+    <p>
+      The two trophy cases under review highlight distinct design approaches. One prioritizes elegance and visual impact, using premium materials to create a striking centerpiece. The other emphasizes functionality and adaptability, designed to maximize storage and ease of use while maintaining a polished appearance. Together, they represent a balance between aesthetic appeal and practical utility, reflecting the diverse needs of the YMCA community.
+    </p>
+  </div>
+
+  <!-- Step-by-Step Guide Carousel for Project 1 - Locker -->
+  <div class="step-by-step-carousel">
+    <h5>Project 1 - Locker: Site Visits, 3D Scans, and SketchUp Conversion</h5>
+    <div class="carousel-container">
+      <button class="carousel-arrow left-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>
+      </button>
+      <div class="carousel-image-container">
+        <img src="../img/locker2.jpeg" alt="Step Image">
+      </div>
+      <button class="carousel-arrow right-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
     </div>
-
-    <!-- Main Content Image Marquee -->
-    <div class="marquee-container">
-        <div class="marquee-images">
-            <img src="../img/trophycase1.png" alt="YMCA Trophy Case Design Image 2" onclick="openLightbox(this.src)">
-            <img src="../img/locker10.png" alt="YMCA Trophy Case Design Image 1" onclick="openLightbox(this.src)">
-            <img src="../img/ymca1.png" alt="YMCA Trophy Case Design Image 3" onclick="openLightbox(this.src)">
-            <img src="../img/locker13.png" alt="YMCA Trophy Case Design Image 3" onclick="openLightbox(this.src)">
-            <img src="../img/ymca3.png" alt="YMCA Trophy Case Design Image 4" onclick="openLightbox(this.src)">
-            <img src="../img/locker12.png" alt="YMCA Trophy Case Design Image 2" onclick="openLightbox(this.src)">
-            <img src="../img/ymca2.png" alt="YMCA Trophy Case Design Image 4" onclick="openLightbox(this.src)">
-            <img src="../img/locker-11.png" alt="YMCA Trophy Case Design Image 1" onclick="openLightbox(this.src)">
-        </div>
+    <div class="step-text">
+      <p>
+        <strong>Site Visit & Data Collection:</strong> Conducted site visits and used a handheld LiDAR scanner to capture the dimensions and spatial layout of the area designated for the trophy case.
+      </p>
     </div>
+  </div>
 
-    <!-- Lightbox Container -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <img id="lightbox-img" src="" alt="Enlarged Image">
+  <!-- Step-by-Step Guide Carousel for Project 2 - Lobby -->
+  <div class="step-by-step-carousel">
+    <h5>Project 2 - Lobby: Site Visits, 3D Scans, and SketchUp Conversion</h5>
+    <div class="carousel-container">
+      <button class="carousel-arrow left-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>
+      </button>
+      <div class="carousel-image-container">
+        <img src="../img/lobby1.jpeg" alt="Step Image">
+      </div>
+      <button class="carousel-arrow right-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
     </div>
-
-    <!-- Lidar Upload Section -->
-    <div class="lidar-upload">
-        <model-viewer id="viewer-container" src="../img/o" camera-controls alt="3D model viewer" shadow-intensity="1" auto-rotate></model-viewer>
+    <div class="step-text">
+      <p>
+        <strong>Site Visit & Data Collection:</strong> Conducted site visits to the lobby area and used a handheld LiDAR scanner to capture the dimensions and spatial layout of the space designated for redesign.
+      </p>
     </div>
+  </div>
 
-    <!-- Description -->
-    <div class="text">
-        <h5>YMCA Trophy Case Design Case Study</h5> <p>The YMCA Trophy Case Design project celebrates the accomplishments of the YMCA community by creating a modern and functional display. The project focuses on clean lines, durable materials, and a versatile layout to showcase awards and memorabilia, while enhancing the overall aesthetic of the facility.</p> <p>The two trophy cases under review highlight distinct design approaches. One prioritizes elegance and visual impact, using premium materials to create a striking centerpiece. The other emphasizes functionality and adaptability, designed to maximize storage and ease of use while maintaining a polished appearance. Together, they represent a balance between aesthetic appeal and practical utility, reflecting the diverse needs of the YMCA community.</p>
-       
-    </div>
+  <div class="download-link">
+    <a href="../pdfs/YMCA Presentation.pdf" download="YMCA_TitleBlock">Download Title Block</a>
+  </div>
 
-    <!-- Step-by-Step Guide Carousel -->
-    <div class="step-by-step-carousel">
-        <h5>Project 1 - Locker: Site Visits, 3D Scans, and SketchUp Conversion</h5>
-
-        <div class="carousel-container">
-            <button class="carousel-arrow left-arrow" id="prev-step" onclick="changeStep(-1)">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>
-            </button>
-
-            <div class="carousel-image-container">
-                <img id="step-image" src="../img/locker2.jpeg" alt="Step Image">
-            </div>
-
-            <button class="carousel-arrow right-arrow" id="next-step" onclick="changeStep(1)">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
-            </button>
-        </div>
-
-        <div class="step-text">
-            <p id="step-description">
-                <strong>Site Visit & Data Collection:</strong> Conducted site visits and used a handheld LiDAR scanner to capture the dimensions and spatial layout of the area designated for the trophy case.
-            </p>
-        </div>
-    </div>
-    <div class="step-by-step-carousel">
-        <h5>Project 2 - Lobby: Site Visits, 3D Scans, and SketchUp Conversion</h5>
-    
-        <div class="carousel-container">
-            <button class="carousel-arrow left-arrow" id="prev-step" onclick="changeStepLobby(-1)">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>
-            </button>
-    
-            <div class="carousel-image-container">
-                <img id="step-image-lobby" src="../img/lobby1.jpeg" alt="Step Image">
-            </div>
-    
-            <button class="carousel-arrow right-arrow" id="next-step" onclick="changeStepLobby(1)">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
-            </button>
-        </div>
-    
-        <div class="step-text">
-            <p id="step-description-lobby">
-                <strong>Site Visit & Data Collection:</strong> Conducted site visits to the lobby area and used a handheld LiDAR scanner to capture the dimensions and spatial layout of the space designated for redesign.
-            </p>
-        </div>
-    </div>
-    
-    <script>
-        // Step-by-step data for Lobby Project
-        const stepsLobby = [
-            {
-                image: "../img/lobby1.jpeg",
-                description: "<strong>Site Visit & Data Collection:</strong> Conducted site visits to the lobby area and used a handheld LiDAR scanner to capture the dimensions and spatial layout of the space designated for redesign."
-            },
-            {
-                image: "../img/lobby.mov",
-                description: "<strong>Data Processing:</strong> Imported the LiDAR scans into SketchUp to create an accurate base model of the lobby, ensuring all architectural features were properly captured."
-            },
-            {
-                image: "../img/lobby2.png",
-                description: "<strong>3D Model Conversion:</strong> Cleaned up the scan data and converted it into usable geometry in SketchUp for further design iterations."
-            },
-            {
-                image: "../img/ymca1.png",
-                description: "<strong>Design Development:</strong> Used the 3D model to experiment with different design ideas, incorporating natural lighting and new materials to enhance the lobby's atmosphere."
-            },
-            {
-                image: "../img/lobby3.png",
-                description: "<strong>Visualization:</strong> Rendered the final lobby design, showing proposed changes in seating, decor, and material finishes, ensuring the design meets aesthetic and functional requirements."
-            }
-        ];
-    
-        let currentStepIndexLobby = 0;
-    
-        function changeStepLobby(direction) {
-            currentStepIndexLobby += direction;
-    
-            // Loop around if out of bounds
-            if (currentStepIndexLobby < 0) {
-                currentStepIndexLobby = stepsLobby.length - 1;
-            } else if (currentStepIndexLobby >= stepsLobby.length) {
-                currentStepIndexLobby = 0;
-            }
-    
-            // Update the image and description
-            document.getElementById('step-image-lobby').src = stepsLobby[currentStepIndexLobby].image;
-            document.getElementById('step-description-lobby').innerHTML = stepsLobby[currentStepIndexLobby].description;
+  <script>
+    // Reusable Carousel class for adaptable carousels
+    class Carousel {
+      constructor(carouselContainer, steps) {
+        this.carouselContainer = carouselContainer;
+        this.steps = steps;
+        this.currentIndex = 0;
+        // Locate the image (or video) element within the carousel container
+        this.imageElement = this.carouselContainer.querySelector('.carousel-image-container img, .carousel-image-container video');
+        // Locate the corresponding description element in the sibling .step-text container
+        this.descriptionElement = this.carouselContainer.parentElement.querySelector('.step-text p');
+        // Locate the left and right arrow buttons
+        this.leftArrow = this.carouselContainer.querySelector('.carousel-arrow.left-arrow');
+        this.rightArrow = this.carouselContainer.querySelector('.carousel-arrow.right-arrow');
+        // Bind arrow click events
+        this.leftArrow.addEventListener('click', () => this.changeStep(-1));
+        this.rightArrow.addEventListener('click', () => this.changeStep(1));
+      }
+      
+      changeStep(direction) {
+        this.currentIndex += direction;
+        if (this.currentIndex < 0) {
+          this.currentIndex = this.steps.length - 1;
+        } else if (this.currentIndex >= this.steps.length) {
+          this.currentIndex = 0;
         }
-    </script>
-    
-    <br>
-    <div class="download-link">
-        <a href="../pdfs/YMCA Presentation.pdf" download="YMCA_TitleBlock">Download Title Block</a>
-    </div>
-    <br><br>
+        this.updateCarousel();
+      }
+      
+      updateCarousel() {
+        this.imageElement.src = this.steps[this.currentIndex].image;
+        this.descriptionElement.innerHTML = this.steps[this.currentIndex].description;
+      }
+    }
 
-    <script>
-        // Step-by-step data
-        const steps = [
-            {
-                image: "../img/locker2.jpeg",
-                description: "<strong>Site Visit & Data Collection:</strong> Conducted site visits and used a handheld LiDAR scanner to capture the dimensions and spatial layout of the area designated for the trophy case."
-            },
-            {
-                image: "../img/locker.mov",
-                description: "<strong>Data Processing:</strong> Imported the LiDAR scans into SketchUp to create an accurate base model of the space, ensuring every element matched the physical environment."
-            },
-            {
-                image: "../img/locker.png",
-                description: "<strong>3D Model Conversion:</strong> Cleaned up the scan data to remove any extraneous details and focused on converting key elements into usable geometry within SketchUp."
-            },
-            {
-                image: "../img/locker10.png",
-                description: "<strong>Design Development:</strong> Used the cleaned-up SketchUp model to develop the trophy case design, experimenting with different materials and configurations while making sure the design would fit seamlessly within the space."
-            },
-            {
-                image: "../img/locker13.png",
-                description: "<strong>Visualization:</strong> Rendered the final model to create visualizations, which helped communicate the design intent clearly to stakeholders and ensure alignment with YMCA's aesthetic values."
-            }
-        ];
+    // Instantiate carousels once the DOM is fully loaded
+    document.addEventListener("DOMContentLoaded", () => {
+      // Data for the Locker project carousel
+      const lockerSteps = [
+        {
+          image: "../img/locker2.jpeg",
+          description: "<strong>Site Visit & Data Collection:</strong> Conducted site visits and used a handheld LiDAR scanner to capture the dimensions and spatial layout of the area designated for the trophy case."
+        },
+        {
+          image: "../img/locker.mov",
+          description: "<strong>Data Processing:</strong> Imported the LiDAR scans into SketchUp to create an accurate base model of the space, ensuring every element matched the physical environment."
+        },
+        {
+          image: "../img/locker.png",
+          description: "<strong>3D Model Conversion:</strong> Cleaned up the scan data to remove any extraneous details and focused on converting key elements into usable geometry within SketchUp."
+        },
+        {
+          image: "../img/locker13.png",
 
-        let currentStepIndex = 0;
-
-        function changeStep(direction) {
-            currentStepIndex += direction;
-
-            // Loop around if out of bounds
-            if (currentStepIndex < 0) {
-                currentStepIndex = steps.length - 1;
-            } else if (currentStepIndex >= steps.length) {
-                currentStepIndex = 0;
-            }
-
-            // Update the image and description
-            document.getElementById('step-image').src = steps[currentStepIndex].image;
-            document.getElementById('step-description').innerHTML = steps[currentStepIndex].description;
+          description: "<strong>Design Development:</strong> Used the cleaned-up SketchUp model to develop the trophy case design, experimenting with different materials and configurations while making sure the design would fit seamlessly within the space."
+        },
+        {
+            image: "../img/locker-F1.png",
+          description: "<strong>Final Visualization:</strong> Rendered the final model to create visualizations, which helped communicate the design intent clearly to stakeholders and ensure alignment with YMCA's aesthetic values."
         }
+      ];
 
-        function openLightbox(src) {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            lightboxImg.src = src;
-            lightbox.style.display = 'flex';
+      // Data for the Lobby project carousel
+      const lobbySteps = [
+        {
+          image: "../img/lobby1.jpeg",
+          description: "<strong>Site Visit & Data Collection:</strong> Conducted site visits to the lobby area and used a handheld LiDAR scanner to capture the dimensions and spatial layout of the space designated for redesign."
+        },
+        {
+          image: "../img/lobby.mov",
+          description: "<strong>Data Processing:</strong> Imported the LiDAR scans into SketchUp to create an accurate base model of the lobby, ensuring all architectural features were properly captured."
+        },
+        {
+          image: "../img/lobby2.png",
+          description: "<strong>3D Model Conversion:</strong> Cleaned up the scan data and converted it into usable geometry in SketchUp for further design iterations."
+        },
+        {
+          image: "../img/ymca1.png",
+          description: "<strong>Design Development:</strong> Used the 3D model to experiment with different design ideas, incorporating natural lighting and new materials to enhance the lobby's atmosphere."
+        },
+        {
+          image: "../img/lobby-F1.png",
+          description: "<strong>Final Visualization:</strong> Rendered the final lobby design, showing proposed changes in seating, decor, and material finishes, ensuring the design meets aesthetic and functional requirements."
         }
+      ];
 
-        function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.style.display = 'none';
-        }
-    </script>
+      // Select all carousel containers (assumes order of appearance)
+      const carousels = document.querySelectorAll('.step-by-step-carousel .carousel-container');
+      if (carousels.length >= 2) {
+        new Carousel(carousels[0], lockerSteps);
+        new Carousel(carousels[1], lobbySteps);
+      }
+    });
+
+    // Lightbox functionality
+    function openLightbox(src) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = src;
+      lightbox.style.display = 'flex';
+    }
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      lightbox.style.display = 'none';
+    }
+  </script>
 </body>
 </html>
